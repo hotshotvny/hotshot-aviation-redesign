@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { CheckCircle, Star, Award } from 'lucide-react';
+import { CheckCircle, Star, Award, Plane, Users, Trophy } from 'lucide-react';
 import joshPortrait from '@/assets/josh-portrait.jpg';
 import jonathanPortrait from '@/assets/jonathan-portrait.jpg';
 
@@ -55,7 +55,7 @@ const About = () => {
               </AspectRatio>
               <CardContent className="p-4">
                 <div className="flex items-center mb-2">
-                  <Star className="w-5 h-5 text-aviation-gold mr-2" />
+                  <Plane className="w-5 h-5 text-aviation-gold mr-2" />
                   <h4 className="text-lg font-bold text-foreground">Josh</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -74,7 +74,7 @@ const About = () => {
               </AspectRatio>
               <CardContent className="p-4">
                 <div className="flex items-center mb-2">
-                  <Star className="w-5 h-5 text-aviation-gold mr-2" />
+                  <Trophy className="w-5 h-5 text-aviation-gold mr-2" />
                   <h4 className="text-lg font-bold text-foreground">Jonathan</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -89,7 +89,7 @@ const About = () => {
         {/* About Us Section */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-6">
-            <Star className="w-8 h-8 text-aviation-gold mr-3" />
+            <Users className="w-8 h-8 text-aviation-gold mr-3" />
             <h3 className="text-3xl font-bold text-foreground">About Us</h3>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-none">
@@ -101,7 +101,7 @@ const About = () => {
         <Card className="shadow-elegant mb-16">
           <CardContent className="p-8">
             <div className="flex items-center mb-6">
-              <Star className="w-8 h-8 text-aviation-gold mr-3" />
+              <Award className="w-8 h-8 text-aviation-gold mr-3" />
               <h3 className="text-2xl font-bold text-foreground">Why Are We Different?</h3>
             </div>
             <p className="text-muted-foreground leading-relaxed">
