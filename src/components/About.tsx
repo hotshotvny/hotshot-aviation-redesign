@@ -30,7 +30,7 @@ const About = () => {
       description: 'Advance your skills to fly in clouds and low visibility conditions. Master instrument procedures, approaches, and navigation systems for safer and more versatile flying.'
     },
     'Commercial Pilot': {
-      image: commercialPilotImg,
+      image: '/lovable-uploads/2bbeca1e-1e23-4059-9541-55bf90adaee9.png',
       description: 'Take your flying to a professional level. This rating allows you to fly for compensation and is the foundation for most aviation careers.'
     },
     'CFI': {
