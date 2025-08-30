@@ -13,14 +13,17 @@ const Fleet = () => {
   const aircraft = [
     {
       id: 1,
-      name: 'Piper Archer',
+      name: '1983 Piper Archer II (PA28-181)',
       tailNumber: 'N130JM',
       image: piperArcherImg,
       category: 'Single Engine',
       seats: 4,
       cruiseSpeed: '140 kts',
-      features: ['GPS/WAAS', 'Autopilot', 'Complex', 'High Performance'],
-      description: 'Perfect for cross-country flights and commercial training'
+      engine: '180 HP Lycoming O-360',
+      usefulLoad: '962 lb',
+      hourlyRate: '$180/Hour',
+      features: ['Garmin GTN 650 GPS', 'ADS-B In & Out', 'Surefly Electronic Ignition'],
+      description: 'N130JM does it all! The proven design and forgiving flight characteristics make the Piper Archer the logical choice as a trainer. With 180 horsepower and space for 4, this plane easily meets so many missions for rated pilots too!'
     },
     {
       id: 2,
