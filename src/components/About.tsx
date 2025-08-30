@@ -124,7 +124,7 @@ const About = () => {
             <Card className="shadow-elegant overflow-hidden">
               <AspectRatio ratio={4/5}>
                 <img 
-                  src={jonathanPortrait} 
+                  src="/lovable-uploads/a0a483b9-e9c7-4e17-bf79-ae92032e6da5.png" 
                   alt="Jonathan - Co-founder and Flight Instructor at Hot Shot Aviation" 
                   className="w-full h-full object-cover"
                 />
