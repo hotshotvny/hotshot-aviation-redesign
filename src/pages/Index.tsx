@@ -39,7 +39,7 @@ const Index = () => {
               </div>
               <div className="flex items-center justify-center h-16 w-32 opacity-70 hover:opacity-100 transition-opacity">
                 <img 
-                  src="/lovable-uploads/bbc95750-e052-456c-a0ea-6625a08a010a.png" 
+                  src="/lovable-uploads/d56cc3e4-d7e6-4879-9138-a94a3f750a04.png" 
                   alt="Flight Schedule Pro" 
                   className="max-h-12 max-w-full object-contain filter brightness-0 invert"
                 />
