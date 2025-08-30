@@ -26,7 +26,7 @@ const About = () => {
       description: 'Your first step into aviation. Learn the fundamentals of flight, navigation, and aircraft systems. This foundational rating allows you to fly single-engine aircraft for personal and recreational purposes.'
     },
     'Instrument Rating': {
-      image: instrumentRatingImg,
+      image: '/lovable-uploads/0b0c32cc-0f2a-4667-b41e-20d05c43920f.png',
       description: 'Advance your skills to fly in clouds and low visibility conditions. Master instrument procedures, approaches, and navigation systems for safer and more versatile flying.'
     },
     'Commercial Pilot': {
