@@ -84,7 +84,7 @@ const Fleet = () => {
   ];
 
   return (
-    <section id="fleet" className="py-24 bg-background">
+    <section id="fleet" className="pt-24 pb-12 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
