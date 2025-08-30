@@ -24,14 +24,17 @@ const Fleet = () => {
     },
     {
       id: 2,
-      name: 'Cessna 152',
+      name: '1979 Cessna 152',
       tailNumber: 'N46826',
       image: cessna152Img,
       category: 'Trainer',
       seats: 2,
       cruiseSpeed: '107 kts',
-      features: ['Primary Trainer', 'Economical', 'Reliable'],
-      description: 'Ideal for primary flight training and building hours'
+      engine: '110 HP Lycoming O-235',
+      usefulLoad: '502 lb',
+      hourlyRate: '$120/Hour',
+      features: ['Garmin GNS 430 WAAS GPS', 'ADS-B In & Out', 'Dual Glideslope'],
+      description: "N46826 is perfect for hour building on a budget or for anyone who just enjoys flying low and slow. IFR GPS and dual glideslope indicators mean she's always prepared for shifting weather. You won't find a better rental at this price!"
     },
     {
       id: 3,
