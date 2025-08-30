@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logo from '@/assets/logo.png';
+// Using uploaded logo directly
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <img src={logo} alt="Hot Shot Aviation" className="h-10 w-auto" />
+            <img src="/lovable-uploads/20a231cf-368a-4311-8f40-7e8c1a686c6a.png" alt="Hot Shot Aviation" className="h-10 w-auto" />
           </div>
           
           {/* Desktop Navigation */}
