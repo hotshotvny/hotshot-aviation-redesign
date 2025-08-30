@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { CheckCircle, Star, Award, Plane, Users, Trophy, Shield, Leaf, DollarSign, Heart } from 'lucide-react';
 import { useState } from 'react';
 import joshPortrait from '@/assets/josh-portrait.jpg';
@@ -167,77 +168,115 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="shadow-elegant">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <DollarSign className="w-6 h-6 text-aviation-gold mr-3" />
-                  <h4 className="text-xl font-semibold text-foreground">Simple & Affordable</h4>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  We keep our operation simple. Flying is expensive, so why pay for extras and gimmicks? 
-                  We focus investments in our planes to give you the best experience at the lowest price. 
-                  No physical office, no package deals - just our best rate upfront.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-elegant">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <Shield className="w-6 h-6 text-aviation-gold mr-3" />
-                  <h4 className="text-xl font-semibold text-foreground">Quality Aircraft</h4>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  These aren't just rental planes. We take pride in our aircraft and only rent to pilots 
-                  who will treat them like their own. No shoddy, run down rentals here - only top-quality 
-                  aircraft maintained to the highest standards.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-elegant">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <Heart className="w-6 h-6 text-aviation-gold mr-3" />
-                  <h4 className="text-xl font-semibold text-foreground">Quality Over Quantity</h4>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  We worry about quality, not quantity. We only rent airplanes in top shape to renters 
-                  who help us take care of them. Every step of the way, our goal is to give you the 
-                  best possible experience.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-elegant">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <Leaf className="w-6 h-6 text-aviation-gold mr-3" />
-                  <h4 className="text-xl font-semibold text-foreground">Environmental Care</h4>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  We were the first flight school at Van Nuys Airport approached to use Swift Unleaded 
-                  Fuel UL94. This fuel has less environmental impact compared to traditional fuels and 
-                  provides better reliability too.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-elegant md:col-span-2">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <Users className="w-6 h-6 text-aviation-gold mr-3" />
-                  <h4 className="text-xl font-semibold text-foreground">Instructors Work For You</h4>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  Most flight schools charge for both the plane and instructors, creating instructor 
-                  loyalty to the school first. At Hot Shot Aviation, we checkout instructors in advance, 
-                  so you pay them directly and they work for you - not us.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          <Tabs defaultValue="simple-affordable" className="max-w-4xl mx-auto">
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8">
+              <TabsTrigger value="simple-affordable" className="flex items-center gap-2 text-xs md:text-sm">
+                <DollarSign className="w-4 h-4" />
+                <span className="hidden sm:inline">Simple & Affordable</span>
+                <span className="sm:hidden">Simple</span>
+              </TabsTrigger>
+              <TabsTrigger value="quality-aircraft" className="flex items-center gap-2 text-xs md:text-sm">
+                <Shield className="w-4 h-4" />
+                <span className="hidden sm:inline">Quality Aircraft</span>
+                <span className="sm:hidden">Quality</span>
+              </TabsTrigger>
+              <TabsTrigger value="quality-over-quantity" className="flex items-center gap-2 text-xs md:text-sm">
+                <Heart className="w-4 h-4" />
+                <span className="hidden sm:inline">Quality Over Quantity</span>
+                <span className="sm:hidden">Focus</span>
+              </TabsTrigger>
+              <TabsTrigger value="environmental" className="flex items-center gap-2 text-xs md:text-sm">
+                <Leaf className="w-4 h-4" />
+                <span className="hidden sm:inline">Environmental Care</span>
+                <span className="sm:hidden">Eco</span>
+              </TabsTrigger>
+              <TabsTrigger value="instructors" className="flex items-center gap-2 text-xs md:text-sm">
+                <Users className="w-4 h-4" />
+                <span className="hidden sm:inline">Instructors Work For You</span>
+                <span className="sm:hidden">Instructors</span>
+              </TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="simple-affordable">
+              <Card className="shadow-elegant">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <DollarSign className="w-8 h-8 text-aviation-gold mr-4" />
+                    <h4 className="text-2xl font-semibold text-foreground">Simple & Affordable</h4>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    We keep our operation simple. Flying is expensive, so why pay for extras and gimmicks? 
+                    We focus investments in our planes to give you the best experience at the lowest price. 
+                    No physical office, no package deals - just our best rate upfront.
+                  </p>
+                </CardContent>
+              </Card>
+            </TabsContent>
+            
+            <TabsContent value="quality-aircraft">
+              <Card className="shadow-elegant">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <Shield className="w-8 h-8 text-aviation-gold mr-4" />
+                    <h4 className="text-2xl font-semibold text-foreground">Quality Aircraft</h4>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    These aren't just rental planes. We take pride in our aircraft and only rent to pilots 
+                    who will treat them like their own. No shoddy, run down rentals here - only top-quality 
+                    aircraft maintained to the highest standards.
+                  </p>
+                </CardContent>
+              </Card>
+            </TabsContent>
+            
+            <TabsContent value="quality-over-quantity">
+              <Card className="shadow-elegant">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <Heart className="w-8 h-8 text-aviation-gold mr-4" />
+                    <h4 className="text-2xl font-semibold text-foreground">Quality Over Quantity</h4>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    We worry about quality, not quantity. We only rent airplanes in top shape to renters 
+                    who help us take care of them. Every step of the way, our goal is to give you the 
+                    best possible experience.
+                  </p>
+                </CardContent>
+              </Card>
+            </TabsContent>
+            
+            <TabsContent value="environmental">
+              <Card className="shadow-elegant">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <Leaf className="w-8 h-8 text-aviation-gold mr-4" />
+                    <h4 className="text-2xl font-semibold text-foreground">Environmental Care</h4>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    We were the first flight school at Van Nuys Airport approached to use Swift Unleaded 
+                    Fuel UL94. This fuel has less environmental impact compared to traditional fuels and 
+                    provides better reliability too.
+                  </p>
+                </CardContent>
+              </Card>
+            </TabsContent>
+            
+            <TabsContent value="instructors">
+              <Card className="shadow-elegant">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <Users className="w-8 h-8 text-aviation-gold mr-4" />
+                    <h4 className="text-2xl font-semibold text-foreground">Instructors Work For You</h4>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    Most flight schools charge for both the plane and instructors, creating instructor 
+                    loyalty to the school first. At Hot Shot Aviation, we checkout instructors in advance, 
+                    so you pay them directly and they work for you - not us.
+                  </p>
+                </CardContent>
+              </Card>
+            </TabsContent>
+          </Tabs>
         </div>
 
         {/* Training Programs */}
