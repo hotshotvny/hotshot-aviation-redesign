@@ -51,7 +51,7 @@ const About = () => {
     },
     'Time Building': {
       image: timeBuildingImg,
-      description: 'Build the flight hours you need for advanced ratings or airline careers. Structured programs to help you gain experience efficiently and safely.'
+      description: 'Our Cessna 152 is among the least expensive aircraft in the area. It is fully IFR certified and capable. It is the ideal plane for time building. We also have a pilot group that fly together to time build so pilots can split the bill.'
     },
     'High Performance': {
       image: commercialPilotImg,
