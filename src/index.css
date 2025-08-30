@@ -19,10 +19,10 @@ All colors MUST be HSL.
     --popover-foreground: 0 0% 8%;
 
     /* Hot Shot Aviation Red - Primary Brand Color */
-    --primary: 0 85% 50%;
+    --primary: 2 76% 58%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 0 85% 60%;
-    --primary-dark: 0 85% 40%;
+    --primary-glow: 2 76% 68%;
+    --primary-dark: 2 76% 48%;
 
     /* Sleek Black - Secondary Brand Color */
     --secondary: 0 0% 12%;
@@ -31,7 +31,7 @@ All colors MUST be HSL.
     --muted: 0 0% 95%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 0 85% 50%;
+    --accent: 2 76% 58%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -39,7 +39,7 @@ All colors MUST be HSL.
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 0 85% 50%;
+    --ring: 2 76% 58%;
 
     --radius: 0.75rem;
 
@@ -73,10 +73,10 @@ All colors MUST be HSL.
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 0 85% 55%;
+    --primary: 2 76% 58%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 0 85% 65%;
-    --primary-dark: 0 85% 45%;
+    --primary-glow: 2 76% 68%;
+    --primary-dark: 2 76% 48%;
 
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 95%;
@@ -84,7 +84,7 @@ All colors MUST be HSL.
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 0 85% 55%;
+    --accent: 2 76% 58%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 50%;
@@ -92,10 +92,10 @@ All colors MUST be HSL.
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 0 85% 55%;
+    --ring: 2 76% 58%;
 
     /* Dark mode gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 85% 20%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(2 76% 25%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 8%), hsl(0 0% 12%));
   }
 }
