@@ -15,7 +15,7 @@ const Fleet = () => {
       id: 1,
       name: '1983 Piper Archer II (PA28-181)',
       tailNumber: 'N130JM',
-      image: piperArcherImg,
+      image: '/lovable-uploads/5e57c5db-d4b0-4f3d-a288-682cc13d4377.png',
       category: 'Single Engine',
       seats: 4,
       cruiseSpeed: '140 kts',
