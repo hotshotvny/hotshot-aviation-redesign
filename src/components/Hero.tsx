@@ -62,7 +62,7 @@ const Hero = () => {
             
             <div className="text-center animate-fade-in-up stagger-6 hover-lift">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 hover-glow animate-float" style={{animationDelay: '2s'}}>
-                <Plane className="w-8 h-8 text-white animate-drift" />
+                <Plane className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Modern Fleet</h3>
               <p className="text-white/80">Well-maintained aircraft from single to multi-engine</p>

@@ -126,7 +126,7 @@ const About = () => {
               </AspectRatio>
               <CardContent className="p-4">
                 <div className="flex items-center mb-2">
-                  <Plane className="w-5 h-5 text-aviation-gold mr-2 animate-drift" />
+                  <Plane className="w-5 h-5 text-aviation-gold mr-2" />
                   <h4 className="text-lg font-bold text-foreground">Josh</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -145,7 +145,7 @@ const About = () => {
               </AspectRatio>
               <CardContent className="p-4">
                 <div className="flex items-center mb-2">
-                  <Plane className="w-5 h-5 text-aviation-gold mr-2 animate-drift" />
+                  <Plane className="w-5 h-5 text-aviation-gold mr-2" />
                   <h4 className="text-lg font-bold text-foreground">Jonathan</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -311,7 +311,7 @@ const About = () => {
                 variant={selectedProgram === cert ? "default" : "outline"}
                 className={`text-sm px-4 py-2 cursor-pointer transition-all duration-300 hover:scale-105 interactive-button animate-fade-in-up ${
                   selectedProgram === cert 
-                    ? 'bg-primary text-primary-foreground shadow-glow animate-pulse-glow' 
+                    ? 'bg-primary text-primary-foreground shadow-glow' 
                     : 'hover:bg-primary/10 hover-glow'
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
