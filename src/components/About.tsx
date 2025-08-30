@@ -131,7 +131,7 @@ const About = () => {
               </AspectRatio>
               <CardContent className="p-4">
                 <div className="flex items-center mb-2">
-                  <Trophy className="w-5 h-5 text-aviation-gold mr-2" />
+                  <Plane className="w-5 h-5 text-aviation-gold mr-2" />
                   <h4 className="text-lg font-bold text-foreground">Jonathan</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
