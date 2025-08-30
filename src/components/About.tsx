@@ -35,7 +35,7 @@ const About = () => {
       description: 'Take your flying to a professional level. This rating allows you to fly for compensation and is the foundation for most aviation careers.'
     },
     'CFI': {
-      image: cfiTrainingImg,
+      image: '/lovable-uploads/20befa13-c6d7-4a7a-9f2f-6ebcabc6f926.png',
       description: 'Become a flight instructor and share your passion for aviation. Teach others to fly while building valuable experience and flight time.'
     },
     'CFII': {
