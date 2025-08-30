@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Fuel, Users, Gauge } from 'lucide-react';
+import { Fuel, Users, Gauge, X } from 'lucide-react';
 import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
+import { useState } from 'react';
 
 // Import aircraft images
 import piperArcherImg from '@/assets/piper-archer.jpg';
@@ -13,6 +14,7 @@ import twinComancheImg from '@/assets/twin-comanche.jpg';
 const Fleet = () => {
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
   const { containerRef: fleetRef, visibleItems } = useStaggeredAnimation(5, 150);
+  const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string; name: string } | null>(null);
   
   const aircraft = [
     {
@@ -137,7 +139,7 @@ const Fleet = () => {
               }`}
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="relative h-48 overflow-hidden group">
+              <div className="relative h-48 overflow-hidden group cursor-pointer" onClick={() => setLightboxImage({ src: plane.image, alt: `${plane.name} ${plane.tailNumber}`, name: plane.name })}>
                 <img 
                   src={plane.image} 
                   alt={`${plane.name} ${plane.tailNumber}`}
@@ -209,6 +211,34 @@ const Fleet = () => {
           ))}
         </div>
       </div>
+
+      {/* Lightbox */}
+      {lightboxImage && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setLightboxImage(null)}
+        >
+          <div className="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center">
+            <button 
+              onClick={() => setLightboxImage(null)}
+              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <img 
+              src={lightboxImage.src}
+              alt={lightboxImage.alt}
+              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <div className="absolute bottom-4 left-4 right-4 text-center">
+              <div className="bg-black/70 text-white px-4 py-2 rounded-lg inline-block">
+                <h3 className="text-lg font-semibold">{lightboxImage.name}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
