@@ -22,7 +22,7 @@ const About = () => {
 
   const trainingPrograms = {
     'Private Pilot': {
-      image: privatePilotImg,
+      image: '/lovable-uploads/03d8c6c4-9d38-4f65-a43c-e479b5015bdd.png',
       description: 'Your first step into aviation. Learn the fundamentals of flight, navigation, and aircraft systems. This foundational rating allows you to fly single-engine aircraft for personal and recreational purposes.'
     },
     'Instrument Rating': {
