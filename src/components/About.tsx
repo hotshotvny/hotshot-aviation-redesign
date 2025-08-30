@@ -1,6 +1,11 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { CheckCircle, Star, Award } from 'lucide-react';
+import airlineCaptains from '@/assets/airline-captains.jpg';
+import flightTraining from '@/assets/flight-training.jpg';
+import dpeExamination from '@/assets/dpe-examination.jpg';
+import hangarFacility from '@/assets/hangar-facility.jpg';
 
 const About = () => {
   const certifications = [
@@ -41,20 +46,93 @@ const About = () => {
             </div>
           </div>
           
-          <Card className="shadow-elegant">
-            <CardContent className="p-8">
-              <div className="flex items-center mb-6">
-                <Star className="w-8 h-8 text-aviation-gold mr-3" />
-                <h3 className="text-2xl font-bold text-foreground">Why Are We Different?</h3>
+          <Card className="shadow-elegant overflow-hidden">
+            <AspectRatio ratio={16/9}>
+              <img 
+                src={airlineCaptains} 
+                alt="Hot Shot Aviation airline captains" 
+                className="w-full h-full object-cover"
+              />
+            </AspectRatio>
+            <CardContent className="p-6">
+              <div className="flex items-center mb-4">
+                <Star className="w-6 h-6 text-aviation-gold mr-3" />
+                <h3 className="text-xl font-bold text-foreground">Meet Your Instructors</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                Hot Shot is different because we've taken a simplified approach to deliver the 
-                purest aviation experience. Our goal is simple - give renter and student pilots 
-                access to the best airplanes possible with no gimmicks and no complications.
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Learn from experienced Part 121 Airline Captains who bring real-world expertise 
+                to your training. Our professional approach ensures you receive the highest 
+                quality aviation education.
               </p>
             </CardContent>
           </Card>
         </div>
+
+        {/* Professional Training Environment */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          <Card className="shadow-elegant overflow-hidden">
+            <AspectRatio ratio={4/3}>
+              <img 
+                src={flightTraining} 
+                alt="Flight training classroom environment" 
+                className="w-full h-full object-cover"
+              />
+            </AspectRatio>
+            <CardContent className="p-4">
+              <h4 className="font-semibold text-foreground mb-2">Ground School</h4>
+              <p className="text-sm text-muted-foreground">
+                Modern classroom with latest aviation technology and teaching methods.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-elegant overflow-hidden">
+            <AspectRatio ratio={3/4}>
+              <img 
+                src={dpeExamination} 
+                alt="DPE checkride examination" 
+                className="w-full h-full object-cover"
+              />
+            </AspectRatio>
+            <CardContent className="p-4">
+              <h4 className="font-semibold text-foreground mb-2">In-House DPE</h4>
+              <p className="text-sm text-muted-foreground">
+                Convenient checkrides with our designated pilot examiner.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-elegant overflow-hidden">
+            <AspectRatio ratio={16/9}>
+              <img 
+                src={hangarFacility} 
+                alt="Clean aircraft hangar facility" 
+                className="w-full h-full object-cover"
+              />
+            </AspectRatio>
+            <CardContent className="p-4">
+              <h4 className="font-semibold text-foreground mb-2">Premium Facility</h4>
+              <p className="text-sm text-muted-foreground">
+                Immaculate hangar with the cleanest, best-maintained aircraft.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Why We're Different Card */}
+        <Card className="shadow-elegant mb-16">
+          <CardContent className="p-8">
+            <div className="flex items-center mb-6">
+              <Star className="w-8 h-8 text-aviation-gold mr-3" />
+              <h3 className="text-2xl font-bold text-foreground">Why Are We Different?</h3>
+            </div>
+            <p className="text-muted-foreground leading-relaxed">
+              Hot Shot is different because we've taken a simplified approach to deliver the 
+              purest aviation experience. Our goal is simple - give renter and student pilots 
+              access to the best airplanes possible with no gimmicks and no complications.
+            </p>
+          </CardContent>
+        </Card>
 
         {/* Training Programs */}
         <div className="text-center mb-12">

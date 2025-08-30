@@ -2,7 +2,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import customerService from '@/assets/customer-service.jpg';
+import airportAerial from '@/assets/airport-aerial.jpg';
 
 const Contact = () => {
   return (
@@ -22,6 +25,22 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Info */}
           <div className="space-y-6">
+            {/* Professional Customer Service Image */}
+            <Card className="shadow-elegant overflow-hidden">
+              <AspectRatio ratio={4/3}>
+                <img 
+                  src={customerService} 
+                  alt="Hot Shot Aviation customer service" 
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
+              <CardContent className="p-4">
+                <h3 className="font-semibold text-foreground mb-2">Professional Service</h3>
+                <p className="text-sm text-muted-foreground">
+                  Our experienced team is here to help with all your aviation needs.
+                </p>
+              </CardContent>
+            </Card>
             <Card className="shadow-elegant">
               <CardHeader>
                 <CardTitle className="flex items-center text-lg">
@@ -78,7 +97,24 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 space-y-8">
+            {/* Airport Aerial View */}
+            <Card className="shadow-elegant overflow-hidden">
+              <AspectRatio ratio={16/9}>
+                <img 
+                  src={airportAerial} 
+                  alt="Los Angeles area aviation facilities" 
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
+              <CardContent className="p-4">
+                <h3 className="font-semibold text-foreground mb-2">Los Angeles Area Operations</h3>
+                <p className="text-sm text-muted-foreground">
+                  Conveniently located at premier Southern California airports for easy access.
+                </p>
+              </CardContent>
+            </Card>
+
             <Card className="shadow-elegant">
               <CardHeader>
                 <CardTitle className="text-2xl">Send Us a Message</CardTitle>
