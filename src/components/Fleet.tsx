@@ -97,7 +97,7 @@ const Fleet = () => {
           </p>
           
           <div className="mt-12 mb-12">
-            <div className="bg-card border border-border rounded-lg p-8 shadow-elegant">
+            <div className="bg-secondary/20 border border-border rounded-lg p-8 shadow-elegant">
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
                 NOT JUST RENTAL PLANES
               </h3>
