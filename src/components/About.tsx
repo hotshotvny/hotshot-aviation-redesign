@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { CheckCircle, Star, Award, Plane, Users, Trophy } from 'lucide-react';
+import { CheckCircle, Star, Award, Plane, Users, Trophy, Shield, Leaf, DollarSign, Heart } from 'lucide-react';
 import joshPortrait from '@/assets/josh-portrait.jpg';
 import jonathanPortrait from '@/assets/jonathan-portrait.jpg';
 
@@ -97,20 +97,92 @@ const About = () => {
           </p>
         </div>
 
-        {/* Why We're Different Card */}
-        <Card className="shadow-elegant mb-16">
-          <CardContent className="p-8">
-            <div className="flex items-center mb-6">
+        {/* Why We're Different Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-6">
               <Award className="w-8 h-8 text-aviation-gold mr-3" />
-              <h3 className="text-2xl font-bold text-foreground">Why Are We Different?</h3>
+              <h3 className="text-3xl font-bold text-foreground">Why Are We Different?</h3>
             </div>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
               Hot Shot is different because we've taken a simplified approach to deliver the 
               purest aviation experience. Our goal is simple - give renter and student pilots 
               access to the best airplanes possible with no gimmicks and no complications.
             </p>
-          </CardContent>
-        </Card>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="shadow-elegant">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <DollarSign className="w-6 h-6 text-aviation-gold mr-3" />
+                  <h4 className="text-xl font-semibold text-foreground">Simple & Affordable</h4>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  We keep our operation simple. Flying is expensive, so why pay for extras and gimmicks? 
+                  We focus investments in our planes to give you the best experience at the lowest price. 
+                  No physical office, no package deals - just our best rate upfront.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-elegant">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Shield className="w-6 h-6 text-aviation-gold mr-3" />
+                  <h4 className="text-xl font-semibold text-foreground">Quality Aircraft</h4>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  These aren't just rental planes. We take pride in our aircraft and only rent to pilots 
+                  who will treat them like their own. No shoddy, run down rentals here - only top-quality 
+                  aircraft maintained to the highest standards.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-elegant">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Heart className="w-6 h-6 text-aviation-gold mr-3" />
+                  <h4 className="text-xl font-semibold text-foreground">Quality Over Quantity</h4>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  We worry about quality, not quantity. We only rent airplanes in top shape to renters 
+                  who help us take care of them. Every step of the way, our goal is to give you the 
+                  best possible experience.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-elegant">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Leaf className="w-6 h-6 text-aviation-gold mr-3" />
+                  <h4 className="text-xl font-semibold text-foreground">Environmental Care</h4>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  We were the first flight school at Van Nuys Airport approached to use Swift Unleaded 
+                  Fuel UL94. This fuel has less environmental impact compared to traditional fuels and 
+                  provides better reliability too.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-elegant md:col-span-2">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Users className="w-6 h-6 text-aviation-gold mr-3" />
+                  <h4 className="text-xl font-semibold text-foreground">Instructors Work For You</h4>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Most flight schools charge for both the plane and instructors, creating instructor 
+                  loyalty to the school first. At Hot Shot Aviation, we checkout instructors in advance, 
+                  so you pay them directly and they work for you - not us.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
 
         {/* Training Programs */}
         <div className="text-center mb-12">
