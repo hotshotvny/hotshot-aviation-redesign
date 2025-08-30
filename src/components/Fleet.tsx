@@ -57,7 +57,7 @@ const Fleet = () => {
       id: 4,
       name: '1976 Piper Cherokee 6 (PA32-300)',
       tailNumber: 'N7039C',
-      image: piperCherokeeImg,
+      image: '/lovable-uploads/882e8654-ab69-4c8e-b190-e5342b284d43.png',
       category: 'Single Engine',
       seats: 6,
       cruiseSpeed: '165 kts',
