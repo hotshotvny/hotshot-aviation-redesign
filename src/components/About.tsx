@@ -64,7 +64,7 @@ const About = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {certifications.map((cert) => (
-              <Badge key={cert} variant="secondary" className="text-sm px-4 py-2">
+              <Badge key={cert} variant="default" className="text-sm px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90">
                 {cert}
               </Badge>
             ))}
