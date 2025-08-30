@@ -19,7 +19,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <img src="/lovable-uploads/20a231cf-368a-4311-8f40-7e8c1a686c6a.png" alt="Hot Shot Aviation" className="h-10 w-auto" />
+            <img src="/lovable-uploads/7177dca4-2307-404a-87fe-ba0d3c05090e.png" alt="Hot Shot Aviation" className="h-10 w-auto" />
           </div>
           
           {/* Desktop Navigation */}
