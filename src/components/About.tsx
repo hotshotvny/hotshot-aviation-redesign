@@ -43,7 +43,7 @@ const About = () => {
     },
     'Multi-Engine': {
       image: multiEngineImg,
-      description: 'Learn to fly twin-engine aircraft. Master the complexities of multi-engine operations, systems, and emergency procedures.'
+      description: 'We offer initial multi engine training as well as an accelerated multi engine time building course. Airlines will require at least 25 hours of total multi time, some companies require up to 50 hours.'
     },
     'MEI': {
       image: multiEngineImg,
