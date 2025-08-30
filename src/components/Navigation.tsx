@@ -1,25 +1,34 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link, useLocation } from 'react-router-dom';
 // Using uploaded logo directly
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#fleet', label: 'Fleet' },
-    { href: '#training', label: 'Training' },
-    { href: '#contact', label: 'Contact' },
+    { href: isHomePage ? '#home' : '/#home', label: 'Home' },
+    { href: isHomePage ? '#about' : '/#about', label: 'About' },
+    { href: isHomePage ? '#fleet' : '/#fleet', label: 'Fleet' },
+    { href: isHomePage ? '#training' : '/#training', label: 'Training' },
+    { href: isHomePage ? '#contact' : '/#contact', label: 'Contact' },
+  ];
+
+  const pageLinks = [
+    { to: '/flight-school-guide', label: 'Flight School Guide' },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <img src="/lovable-uploads/7177dca4-2307-404a-87fe-ba0d3c05090e.png" alt="Hot Shot Aviation" className="h-10 w-auto" />
+        <div className="flex items-center">
+            <Link to="/">
+              <img src="/lovable-uploads/7177dca4-2307-404a-87fe-ba0d3c05090e.png" alt="Hot Shot Aviation" className="h-10 w-auto" />
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
@@ -33,6 +42,15 @@ const Navigation = () => {
                 >
                   {link.label}
                 </a>
+              ))}
+              {pageLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                >
+                  {link.label}
+                </Link>
               ))}
               <Button variant="hero" size="sm">
                 Book Now
@@ -66,6 +84,16 @@ const Navigation = () => {
               >
                 {link.label}
               </a>
+            ))}
+            {pageLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="text-foreground hover:text-primary block px-3 py-2 transition-colors duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </Link>
             ))}
             <div className="px-3 py-2">
               <Button variant="hero" size="sm" className="w-full">
