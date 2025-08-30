@@ -1,11 +1,20 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Shield, Plane, DollarSign, Users, BookOpen, Thermometer } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import aviationHero from '@/assets/aviation-hero.jpg';
 
 const PickingFlightSchool = () => {
+  const navigate = useNavigate();
+  
+  const handleContactClick = () => {
+    navigate('/');
+    // Small delay to ensure the page loads before scrolling
+    setTimeout(() => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
   const sections = [
     {
       icon: Shield,
@@ -130,11 +139,14 @@ const PickingFlightSchool = () => {
                 Our airline captain instructors provide the expertise you need to succeed.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/#contact">
-                  <Button variant="hero" size="lg" className="text-lg px-8 py-4">
-                    Contact Us Today
-                  </Button>
-                </Link>
+                <Button 
+                  variant="hero" 
+                  size="lg" 
+                  className="text-lg px-8 py-4"
+                  onClick={handleContactClick}
+                >
+                  Contact Us Today
+                </Button>
                 <Link to="/">
                   <Button variant="outline" size="lg" className="text-lg px-8 py-4">
                     Learn More About Us
