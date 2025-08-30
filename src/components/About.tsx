@@ -39,7 +39,7 @@ const About = () => {
       description: 'Become a flight instructor and share your passion for aviation. Teach others to fly while building valuable experience and flight time.'
     },
     'CFII': {
-      image: instrumentRatingImg,
+      image: '/lovable-uploads/a83fae6c-2e94-4516-8673-0dce32798dda.png',
       description: 'Certified Flight Instructor Instrument - teach instrument flying to students, combining instruction skills with advanced instrument knowledge.'
     },
     'Multi-Engine': {
