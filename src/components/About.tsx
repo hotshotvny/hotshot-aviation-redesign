@@ -2,7 +2,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { CheckCircle, Star, Award } from 'lucide-react';
-import airlineCaptains from '@/assets/airline-captains.jpg';
+import joshPortrait from '@/assets/josh-portrait.jpg';
+import jonathanPortrait from '@/assets/jonathan-portrait.jpg';
 import flightTraining from '@/assets/flight-training.jpg';
 import dpeExamination from '@/assets/dpe-examination.jpg';
 import hangarFacility from '@/assets/hangar-facility.jpg';
@@ -46,20 +47,53 @@ const About = () => {
             </div>
           </div>
           
-          <Card className="shadow-elegant overflow-hidden">
-            <AspectRatio ratio={16/9}>
-              <img 
-                src={airlineCaptains} 
-                alt="Hot Shot Aviation airline captains" 
-                className="w-full h-full object-cover"
-              />
-            </AspectRatio>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="shadow-elegant overflow-hidden">
+              <AspectRatio ratio={4/5}>
+                <img 
+                  src={joshPortrait} 
+                  alt="Josh - Co-founder and Flight Instructor at Hot Shot Aviation" 
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
+              <CardContent className="p-4">
+                <div className="flex items-center mb-2">
+                  <Star className="w-5 h-5 text-aviation-gold mr-2" />
+                  <h4 className="text-lg font-bold text-foreground">Josh</h4>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  Co-founder & Flight Instructor
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-elegant overflow-hidden">
+              <AspectRatio ratio={4/5}>
+                <img 
+                  src={jonathanPortrait} 
+                  alt="Jonathan - Co-founder and Flight Instructor at Hot Shot Aviation" 
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
+              <CardContent className="p-4">
+                <div className="flex items-center mb-2">
+                  <Star className="w-5 h-5 text-aviation-gold mr-2" />
+                  <h4 className="text-lg font-bold text-foreground">Jonathan</h4>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  Co-founder & Flight Instructor
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="shadow-elegant mt-8">
             <CardContent className="p-6">
               <div className="flex items-center mb-4">
                 <Star className="w-6 h-6 text-aviation-gold mr-3" />
                 <h3 className="text-xl font-bold text-foreground">About Us</h3>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Hot Shot Aviation was started by two flight instructors turned airline pilots looking to do things differently. Josh and Jonathan wanted to share access to top-quality airplanes without the typical headaches or woes of flight schools. Our goal is simple - provide access to the cleanest, most reliable, best kept aircraft so you can love aviation the way we do.
               </p>
             </CardContent>
