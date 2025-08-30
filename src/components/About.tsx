@@ -54,7 +54,7 @@ const About = () => {
       description: 'Our Cessna 152 is among the least expensive aircraft in the area. It is fully IFR certified and capable. It is the ideal plane for time building. We also have a pilot group that fly together to time build so pilots can split the bill.'
     },
     'High Performance': {
-      image: commercialPilotImg,
+      image: '/lovable-uploads/84da0cf0-53c5-481b-875b-5c2808ffcdc5.png',
       description: 'This Cherokee Six is a perfect training platform for a High Performance Endorsement. Once trained and checked out it can be rented. It is the only six seater aircraft for rent in the area.'
     },
     'Complex': {
