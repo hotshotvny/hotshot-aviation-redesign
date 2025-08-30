@@ -46,14 +46,17 @@ const Fleet = () => {
     },
     {
       id: 4,
-      name: 'Piper Cherokee Six',
+      name: '1976 Piper Cherokee 6 (PA32-300)',
       tailNumber: 'N7039C',
       image: piperCherokeeImg,
       category: 'Single Engine',
       seats: 6,
       cruiseSpeed: '165 kts',
-      features: ['High Performance', 'Complex', 'Spacious Cabin'],
-      description: 'High-performance single engine for advanced training'
+      engine: '300 HP Lycoming IO-540',
+      usefulLoad: '1,416 lb',
+      hourlyRate: '$250/Hour',
+      features: ['Dual Garmin GTN 650', 'GNS 430 GPS', 'Garmin G5 Digital', 'JPI 930 Engine Monitor', 'ADS-B In & Out'],
+      description: 'Need your high performance endorsement? Need the only 6 seater rental plane in the area? Need the useful load to carry around our 152 in the back? Or do you just want to experience all the joys of flying a Cherokee with some extra space and plenty of power. Whatever you need, N7039C does it.'
     },
     {
       id: 5,
@@ -112,7 +115,7 @@ const Fleet = () => {
                   {plane.description}
                 </p>
                 
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-4 text-sm text-muted-foreground flex-wrap">
                   <div className="flex items-center">
                     <Users className="w-4 h-4 mr-1" />
                     {plane.seats} seats
@@ -121,7 +124,28 @@ const Fleet = () => {
                     <Gauge className="w-4 h-4 mr-1" />
                     {plane.cruiseSpeed}
                   </div>
+                  {plane.engine && (
+                    <div className="flex items-center">
+                      <Fuel className="w-4 h-4 mr-1" />
+                      {plane.engine}
+                    </div>
+                  )}
                 </div>
+                
+                {(plane.usefulLoad || plane.hourlyRate) && (
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground flex-wrap">
+                    {plane.usefulLoad && (
+                      <div className="text-xs">
+                        <strong>Useful Load:</strong> {plane.usefulLoad}
+                      </div>
+                    )}
+                    {plane.hourlyRate && (
+                      <div className="text-xs font-semibold text-primary">
+                        {plane.hourlyRate}
+                      </div>
+                    )}
+                  </div>
+                )}
                 
                 <div className="flex flex-wrap gap-2">
                   {plane.features.map((feature) => (
