@@ -25,22 +25,6 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Info */}
           <div className="space-y-6">
-            {/* Professional Customer Service Image */}
-            <Card className="shadow-elegant overflow-hidden">
-              <AspectRatio ratio={4/3}>
-                <img 
-                  src={customerService} 
-                  alt="Hot Shot Aviation customer service" 
-                  className="w-full h-full object-cover"
-                />
-              </AspectRatio>
-              <CardContent className="p-4">
-                <h3 className="font-semibold text-foreground mb-2">Professional Service</h3>
-                <p className="text-sm text-muted-foreground">
-                  Our experienced team is here to help with all your aviation needs.
-                </p>
-              </CardContent>
-            </Card>
             <Card className="shadow-elegant">
               <CardHeader>
                 <CardTitle className="flex items-center text-lg">
@@ -49,8 +33,8 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">Call us for immediate assistance</p>
-                <p className="font-semibold text-foreground mt-2">(555) 123-HOTSHOT</p>
+                <p className="text-muted-foreground">Text or Call (Email or text preferred)</p>
+                <p className="font-semibold text-foreground mt-2">424-407-1869</p>
               </CardContent>
             </Card>
 
@@ -75,8 +59,11 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">Find us in Southern California</p>
-                <p className="font-semibold text-foreground mt-2">Los Angeles Area Airports</p>
+                <p className="text-muted-foreground">Van Nuys (KVNY)</p>
+                <div className="font-semibold text-foreground mt-2">
+                  <p>16425 Hart Street</p>
+                  <p>Van Nuys, CA 91411</p>
+                </div>
               </CardContent>
             </Card>
 
@@ -97,24 +84,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Airport Aerial View */}
-            <Card className="shadow-elegant overflow-hidden">
-              <AspectRatio ratio={16/9}>
-                <img 
-                  src={airportAerial} 
-                  alt="Los Angeles area aviation facilities" 
-                  className="w-full h-full object-cover"
-                />
-              </AspectRatio>
-              <CardContent className="p-4">
-                <h3 className="font-semibold text-foreground mb-2">Los Angeles Area Operations</h3>
-                <p className="text-sm text-muted-foreground">
-                  Conveniently located at premier Southern California airports for easy access.
-                </p>
-              </CardContent>
-            </Card>
-
+          <div className="lg:col-span-2">
             <Card className="shadow-elegant">
               <CardHeader>
                 <CardTitle className="text-2xl">Send Us a Message</CardTitle>
