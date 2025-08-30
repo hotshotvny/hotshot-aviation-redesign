@@ -57,12 +57,10 @@ const About = () => {
             <CardContent className="p-6">
               <div className="flex items-center mb-4">
                 <Star className="w-6 h-6 text-aviation-gold mr-3" />
-                <h3 className="text-xl font-bold text-foreground">Meet Your Instructors</h3>
+                <h3 className="text-xl font-bold text-foreground">About Us</h3>
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Learn from experienced Part 121 Airline Captains who bring real-world expertise 
-                to your training. Our professional approach ensures you receive the highest 
-                quality aviation education.
+                Hot Shot Aviation was started by two flight instructors turned airline pilots looking to do things differently. Josh and Jonathan wanted to share access to top-quality airplanes without the typical headaches or woes of flight schools. Our goal is simple - provide access to the cleanest, most reliable, best kept aircraft so you can love aviation the way we do.
               </p>
             </CardContent>
           </Card>
