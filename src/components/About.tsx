@@ -58,7 +58,7 @@ const About = () => {
       description: 'This Cherokee Six is a perfect training platform for a High Performance Endorsement. Once trained and checked out it can be rented. It is the only six seater aircraft for rent in the area.'
     },
     'Complex': {
-      image: commercialPilotImg,
+      image: '/lovable-uploads/43ddfc86-a875-4597-8cda-afce20462542.png',
       description: 'Gain proficiency in aircraft with retractable landing gear, constant speed propellers, and flaps. Essential for advanced flying.'
     },
     'ATP': {
