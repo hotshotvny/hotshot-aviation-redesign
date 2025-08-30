@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Fuel, Users, Gauge } from 'lucide-react';
+import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
 
 // Import aircraft images
 import piperArcherImg from '@/assets/piper-archer.jpg';
@@ -10,6 +11,9 @@ import piperCherokeeImg from '@/assets/piper-cherokee-six.jpg';
 import twinComancheImg from '@/assets/twin-comanche.jpg';
 
 const Fleet = () => {
+  const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { containerRef: fleetRef, visibleItems } = useStaggeredAnimation(5, 150);
+  
   const aircraft = [
     {
       id: 1,
@@ -86,12 +90,17 @@ const Fleet = () => {
   return (
     <section id="fleet" className="pt-24 pb-12 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div 
+          ref={headerRef as React.RefObject<HTMLDivElement>}
+          className={`text-center mb-16 transition-all duration-700 ${
+            headerVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up stagger-1">
             Our Fleet
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8 animate-scale-in stagger-2"></div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up stagger-3">
             From primary trainers to multi-engine aircraft, our diverse fleet provides 
             the right aircraft for every stage of your aviation journey
           </p>
@@ -114,20 +123,32 @@ const Fleet = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {aircraft.map((plane) => (
-            <Card key={plane.id} className="overflow-hidden shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105">
-              <div className="relative h-48 overflow-hidden">
+        <div 
+          ref={fleetRef as React.RefObject<HTMLDivElement>}
+          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
+        >
+          {aircraft.map((plane, index) => (
+            <Card 
+              key={plane.id} 
+              className={`overflow-hidden shadow-elegant aviation-card transition-all duration-700 ${
+                visibleItems[index] 
+                  ? 'animate-fade-in-up opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-8'
+              }`}
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              <div className="relative h-48 overflow-hidden group">
                 <img 
                   src={plane.image} 
                   alt={`${plane.name} ${plane.tailNumber}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute top-4 right-4">
-                  <Badge variant="secondary" className="bg-primary text-primary-foreground">
+                  <Badge variant="secondary" className="bg-primary text-primary-foreground animate-bounce-in hover-glow">
                     {plane.category}
                   </Badge>
                 </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
               <CardHeader>

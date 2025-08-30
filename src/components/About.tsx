@@ -4,6 +4,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { CheckCircle, Star, Award, Plane, Users, Trophy, Shield, Leaf, DollarSign, Heart } from 'lucide-react';
 import { useState } from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import joshPortrait from '@/assets/josh-portrait.jpg';
 import jonathanPortrait from '@/assets/jonathan-portrait.jpg';
 import privatePilotImg from '@/assets/private-pilot.jpg';
@@ -15,6 +16,9 @@ import timeBuildingImg from '@/assets/time-building.jpg';
 
 const About = () => {
   const [selectedProgram, setSelectedProgram] = useState<string | null>('Private Pilot');
+  const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { elementRef: contentRef, isVisible: contentVisible } = useScrollAnimation();
+  const { elementRef: programsRef, isVisible: programsVisible } = useScrollAnimation();
 
   const certifications = [
     'Private Pilot', 'Instrument Rating', 'Commercial Pilot', 'CFI', 'CFII',
@@ -71,48 +75,58 @@ const About = () => {
   return (
     <section id="about" className="py-24 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div 
+          ref={headerRef as React.RefObject<HTMLDivElement>}
+          className={`text-center mb-16 transition-all duration-700 ${
+            headerVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             WHO ARE WE?
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8 animate-scale-in"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+        <div 
+          ref={contentRef as React.RefObject<HTMLDivElement>}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16 transition-all duration-700 ${
+            contentVisible ? 'animate-fade-in-left' : 'opacity-0 translate-x-8'
+          }`}
+        >
+          <div className="space-y-6">
+            <p className="text-lg text-muted-foreground leading-relaxed animate-fade-in-up stagger-1">
               Hot Shot is a group of aviation enthusiasts. We are here to give SoCal aviators 
               access to the cleanest, best kept aircraft in the area. We want you to love these 
               planes and love your flights as much as we do.
             </p>
             <div className="space-y-4">
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-primary mr-3" />
+              <div className="flex items-center animate-fade-in-left stagger-2 hover-scale cursor-pointer">
+                <CheckCircle className="w-5 h-5 text-primary mr-3 animate-bounce-in" />
                 <span className="text-foreground">Operated by two Part 121 Airline Captains</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-primary mr-3" />
+              <div className="flex items-center animate-fade-in-left stagger-3 hover-scale cursor-pointer">
+                <CheckCircle className="w-5 h-5 text-primary mr-3 animate-bounce-in" />
                 <span className="text-foreground">In-house Designated Pilot Examiner (DPE)</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-primary mr-3" />
+              <div className="flex items-center animate-fade-in-left stagger-4 hover-scale cursor-pointer">
+                <CheckCircle className="w-5 h-5 text-primary mr-3 animate-bounce-in" />
                 <span className="text-foreground">Premium aircraft maintenance standards</span>
               </div>
             </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="shadow-elegant overflow-hidden">
+            <Card className="shadow-elegant overflow-hidden aviation-card animate-fade-in-right stagger-2">
               <AspectRatio ratio={4/5}>
                 <img 
                   src="/lovable-uploads/b68178ab-f3dd-4ffb-a59b-9744e2a1408c.png" 
                   alt="Josh - Co-founder and Flight Instructor at Hot Shot Aviation" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </AspectRatio>
               <CardContent className="p-4">
                 <div className="flex items-center mb-2">
-                  <Plane className="w-5 h-5 text-aviation-gold mr-2" />
+                  <Plane className="w-5 h-5 text-aviation-gold mr-2 animate-drift" />
                   <h4 className="text-lg font-bold text-foreground">Josh</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -121,17 +135,17 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-elegant overflow-hidden">
+            <Card className="shadow-elegant overflow-hidden aviation-card animate-fade-in-right stagger-3">
               <AspectRatio ratio={4/5}>
                 <img 
                   src="/lovable-uploads/a0a483b9-e9c7-4e17-bf79-ae92032e6da5.png" 
                   alt="Jonathan - Co-founder and Flight Instructor at Hot Shot Aviation" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </AspectRatio>
               <CardContent className="p-4">
                 <div className="flex items-center mb-2">
-                  <Plane className="w-5 h-5 text-aviation-gold mr-2" />
+                  <Plane className="w-5 h-5 text-aviation-gold mr-2 animate-drift" />
                   <h4 className="text-lg font-bold text-foreground">Jonathan</h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -280,21 +294,27 @@ const About = () => {
         </div>
 
         {/* Training Programs */}
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-foreground mb-6">Training Programs</h3>
-          <p className="text-lg text-muted-foreground mb-8">
+        <div 
+          ref={programsRef as React.RefObject<HTMLDivElement>}
+          className={`text-center mb-12 transition-all duration-700 ${
+            programsVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <h3 className="text-3xl font-bold text-foreground mb-6 animate-fade-in-up stagger-1">Training Programs</h3>
+          <p className="text-lg text-muted-foreground mb-8 animate-fade-in-up stagger-2">
             We offer comprehensive training programs from your first lesson to airline transport pilot
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {certifications.map((cert) => (
+            {certifications.map((cert, index) => (
               <Badge 
                 key={cert} 
                 variant={selectedProgram === cert ? "default" : "outline"}
-                className={`text-sm px-4 py-2 cursor-pointer transition-all duration-200 hover:scale-105 ${
+                className={`text-sm px-4 py-2 cursor-pointer transition-all duration-300 hover:scale-105 interactive-button animate-fade-in-up ${
                   selectedProgram === cert 
-                    ? 'bg-primary text-primary-foreground shadow-glow' 
-                    : 'hover:bg-primary/10'
+                    ? 'bg-primary text-primary-foreground shadow-glow animate-pulse-glow' 
+                    : 'hover:bg-primary/10 hover-glow'
                 }`}
+                style={{ animationDelay: `${index * 100}ms` }}
                 onClick={() => setSelectedProgram(selectedProgram === cert ? null : cert)}
               >
                 {cert}
