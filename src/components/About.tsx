@@ -4,9 +4,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { CheckCircle, Star, Award } from 'lucide-react';
 import joshPortrait from '@/assets/josh-portrait.jpg';
 import jonathanPortrait from '@/assets/jonathan-portrait.jpg';
-import flightTraining from '@/assets/flight-training.jpg';
-import dpeExamination from '@/assets/dpe-examination.jpg';
-import hangarFacility from '@/assets/hangar-facility.jpg';
+import foundersHangar from '@/assets/founders-hangar.jpg';
 
 const About = () => {
   const certifications = [
@@ -87,7 +85,14 @@ const About = () => {
             </Card>
           </div>
 
-          <Card className="shadow-elegant mt-8">
+          <Card className="shadow-elegant mt-8 overflow-hidden">
+            <AspectRatio ratio={16/9}>
+              <img 
+                src={foundersHangar} 
+                alt="Hot Shot Aviation founders at their professional aircraft facility" 
+                className="w-full h-full object-cover"
+              />
+            </AspectRatio>
             <CardContent className="p-6">
               <div className="flex items-center mb-4">
                 <Star className="w-6 h-6 text-aviation-gold mr-3" />
@@ -95,57 +100,6 @@ const About = () => {
               </div>
               <p className="text-muted-foreground leading-relaxed">
                 Hot Shot Aviation was started by two flight instructors turned airline pilots looking to do things differently. Josh and Jonathan wanted to share access to top-quality airplanes without the typical headaches or woes of flight schools. Our goal is simple - provide access to the cleanest, most reliable, best kept aircraft so you can love aviation the way we do.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Professional Training Environment */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          <Card className="shadow-elegant overflow-hidden">
-            <AspectRatio ratio={4/3}>
-              <img 
-                src={flightTraining} 
-                alt="Flight training classroom environment" 
-                className="w-full h-full object-cover"
-              />
-            </AspectRatio>
-            <CardContent className="p-4">
-              <h4 className="font-semibold text-foreground mb-2">Ground School</h4>
-              <p className="text-sm text-muted-foreground">
-                Modern classroom with latest aviation technology and teaching methods.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-elegant overflow-hidden">
-            <AspectRatio ratio={3/4}>
-              <img 
-                src={dpeExamination} 
-                alt="DPE checkride examination" 
-                className="w-full h-full object-cover"
-              />
-            </AspectRatio>
-            <CardContent className="p-4">
-              <h4 className="font-semibold text-foreground mb-2">In-House DPE</h4>
-              <p className="text-sm text-muted-foreground">
-                Convenient checkrides with our designated pilot examiner.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-elegant overflow-hidden">
-            <AspectRatio ratio={16/9}>
-              <img 
-                src={hangarFacility} 
-                alt="Clean aircraft hangar facility" 
-                className="w-full h-full object-cover"
-              />
-            </AspectRatio>
-            <CardContent className="p-4">
-              <h4 className="font-semibold text-foreground mb-2">Premium Facility</h4>
-              <p className="text-sm text-muted-foreground">
-                Immaculate hangar with the cleanest, best-maintained aircraft.
               </p>
             </CardContent>
           </Card>
