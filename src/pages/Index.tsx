@@ -62,17 +62,112 @@ const Index = () => {
           </div>
           
           {/* Separator */}
-          <div className="border-t border-muted/20 mb-8"></div>
+          <div className="border-t border-muted/20 my-12"></div>
           
-          {/* Company Info */}
-          <div className="text-center">
-            <p className="mb-2 font-semibold text-xl">Hot Shot Aviation</p>
-            <p className="text-sm opacity-80 mb-4">
-              Premium Flight Training & Aircraft Rental | Operated by Part 121 Airline Captains
-            </p>
-            <p className="text-xs opacity-60">
-              © {new Date().getFullYear()} Hot Shot Aviation. All rights reserved.
-            </p>
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            {/* Company Info */}
+            <div className="lg:col-span-2">
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                Hot Shot Aviation
+              </h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed max-w-md">
+                Elite flight training and aircraft rental services operated by experienced Part 121 airline captains. 
+                Your gateway to professional aviation excellence.
+              </p>
+              <div className="flex flex-col space-y-2 text-sm">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>FAA Part 61 & 141 Certified</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>Professional Airline Captain Instructors</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span>Modern Fleet & Advanced Training</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Training Programs */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4 text-foreground">Training Programs</h4>
+              <ul className="text-muted-foreground space-y-3 text-sm">
+                <li className="hover:text-primary transition-colors cursor-pointer">Private Pilot License</li>
+                <li className="hover:text-primary transition-colors cursor-pointer">Instrument Rating</li>
+                <li className="hover:text-primary transition-colors cursor-pointer">Commercial Pilot</li>
+                <li className="hover:text-primary transition-colors cursor-pointer">Multi-Engine Rating</li>
+                <li className="hover:text-primary transition-colors cursor-pointer">CFI Training</li>
+                <li className="hover:text-primary transition-colors cursor-pointer">Airline Transport Pilot</li>
+              </ul>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4 text-foreground">Services</h4>
+              <ul className="text-muted-foreground space-y-3 text-sm">
+                <li className="hover:text-primary transition-colors cursor-pointer">Aircraft Rental</li>
+                <li className="hover:text-primary transition-colors cursor-pointer">Flight Training</li>
+                <li className="hover:text-primary transition-colors cursor-pointer">Time Building</li>
+                <li className="hover:text-primary transition-colors cursor-pointer">Checkride Prep</li>
+                <li className="hover:text-primary transition-colors cursor-pointer">Ground School</li>
+                <li className="hover:text-primary transition-colors cursor-pointer">Safety Seminars</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Contact Bar */}
+          <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="flex flex-col items-center space-y-2">
+                <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                  <div className="w-4 h-4 bg-primary rounded-full"></div>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Call Us</p>
+                  <p className="text-sm text-muted-foreground">(555) 123-SHOT</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                  <div className="w-4 h-4 bg-primary rounded-full"></div>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Email Us</p>
+                  <p className="text-sm text-muted-foreground">info@hotshotaviation.com</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                  <div className="w-4 h-4 bg-primary rounded-full"></div>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Visit Us</p>
+                  <p className="text-sm text-muted-foreground">Premium Flight Training Facility</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="border-t border-muted/20 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <div className="text-center md:text-left">
+                <p className="text-xs text-muted-foreground">
+                  © {new Date().getFullYear()} Hot Shot Aviation. All rights reserved.
+                </p>
+                <p className="text-xs text-muted-foreground/80 mt-1">
+                  Elevating pilots to new heights since inception
+                </p>
+              </div>
+              <div className="flex space-x-6 text-xs text-muted-foreground">
+                <span className="hover:text-primary transition-colors cursor-pointer">Privacy Policy</span>
+                <span className="hover:text-primary transition-colors cursor-pointer">Terms of Service</span>
+                <span className="hover:text-primary transition-colors cursor-pointer">Safety Standards</span>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
