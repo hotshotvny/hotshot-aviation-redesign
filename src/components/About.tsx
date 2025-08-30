@@ -4,7 +4,6 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { CheckCircle, Star, Award } from 'lucide-react';
 import joshPortrait from '@/assets/josh-portrait.jpg';
 import jonathanPortrait from '@/assets/jonathan-portrait.jpg';
-import foundersHangar from '@/assets/founders-hangar.jpg';
 
 const About = () => {
   const certifications = [
@@ -85,24 +84,17 @@ const About = () => {
             </Card>
           </div>
 
-          <Card className="shadow-elegant mt-8 overflow-hidden">
-            <AspectRatio ratio={16/9}>
-              <img 
-                src={foundersHangar} 
-                alt="Hot Shot Aviation founders at their professional aircraft facility" 
-                className="w-full h-full object-cover"
-              />
-            </AspectRatio>
-            <CardContent className="p-6">
-              <div className="flex items-center mb-4">
-                <Star className="w-6 h-6 text-aviation-gold mr-3" />
-                <h3 className="text-xl font-bold text-foreground">About Us</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed">
-                Hot Shot Aviation was started by two flight instructors turned airline pilots looking to do things differently. Josh and Jonathan wanted to share access to top-quality airplanes without the typical headaches or woes of flight schools. Our goal is simple - provide access to the cleanest, most reliable, best kept aircraft so you can love aviation the way we do.
-              </p>
-            </CardContent>
-          </Card>
+        </div>
+
+        {/* About Us Section */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-6">
+            <Star className="w-8 h-8 text-aviation-gold mr-3" />
+            <h3 className="text-3xl font-bold text-foreground">About Us</h3>
+          </div>
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-none">
+            Hot Shot Aviation was started by two flight instructors turned airline pilots looking to do things differently. Josh and Jonathan wanted to share access to top-quality airplanes without the typical headaches or woes of flight schools. Our goal is simple - provide access to the cleanest, most reliable, best kept aircraft so you can love aviation the way we do.
+          </p>
         </div>
 
         {/* Why We're Different Card */}
