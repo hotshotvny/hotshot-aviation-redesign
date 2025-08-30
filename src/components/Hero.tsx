@@ -38,7 +38,7 @@ const Hero = () => {
               className="text-lg px-8 py-4 border-white text-primary hover:bg-white hover:text-primary"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Go Fly!
+              Rent Aircraft
             </Button>
           </div>
 

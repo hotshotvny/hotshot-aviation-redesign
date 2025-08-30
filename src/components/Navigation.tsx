@@ -52,8 +52,12 @@ const Navigation = () => {
                   {link.label}
                 </Link>
               ))}
-              <Button variant="hero" size="sm">
-                Book Now
+              <Button 
+                variant="hero" 
+                size="sm"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Go Fly!
               </Button>
             </div>
           </div>
@@ -96,8 +100,16 @@ const Navigation = () => {
               </Link>
             ))}
             <div className="px-3 py-2">
-              <Button variant="hero" size="sm" className="w-full">
-                Book Now
+              <Button 
+                variant="hero" 
+                size="sm" 
+                className="w-full"
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsOpen(false);
+                }}
+              >
+                Go Fly!
               </Button>
             </div>
           </div>
