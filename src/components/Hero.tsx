@@ -24,10 +24,20 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="text-lg px-8 py-4"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Start Training
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-white text-primary hover:bg-white hover:text-primary">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg px-8 py-4 border-white text-primary hover:bg-white hover:text-primary"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Rent Aircraft
             </Button>
           </div>
