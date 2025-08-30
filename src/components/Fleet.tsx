@@ -66,14 +66,17 @@ const Fleet = () => {
     },
     {
       id: 5,
-      name: 'Piper Twin Comanche',
+      name: '1969 Piper Twin Comanche (PA30)',
       tailNumber: 'N407AF',
       image: twinComancheImg,
       category: 'Multi-Engine',
       seats: 4,
       cruiseSpeed: '190 kts',
-      features: ['Multi-Engine', 'Complex', 'High Performance', 'MEI Training'],
-      description: 'Multi-engine aircraft for commercial and ATP training'
+      engine: 'Twin 160 HP Lycoming IO-320',
+      usefulLoad: '1,121 lb',
+      hourlyRate: '$300/Hour',
+      features: ['Multi-Engine', 'ADS-B In & Out', 'Dual Instruction Only'],
+      description: 'Level up to multi-engine flying in style and comfort! Available for dual instruction only.'
     }
   ];
 
