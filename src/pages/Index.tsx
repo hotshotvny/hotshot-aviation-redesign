@@ -76,7 +76,7 @@ const Index = () => {
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>FAA Part 61 & 141 Certified</span>
+                <span>FAA Part 61 Certified</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -85,39 +85,6 @@ const Index = () => {
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span>Modern Fleet & Advanced Training</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Bar */}
-          <div className="bg-muted/30 rounded-lg p-6 mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div className="flex flex-col items-center space-y-2">
-                <div className="w-10 h-10 bg-primary/30 rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 bg-primary rounded-full"></div>
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Call Us</p>
-                  <p className="text-sm text-muted-foreground">(555) 123-SHOT</p>
-                </div>
-              </div>
-              <div className="flex flex-col items-center space-y-2">
-                <div className="w-10 h-10 bg-primary/30 rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 bg-primary rounded-full"></div>
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Email Us</p>
-                  <p className="text-sm text-muted-foreground">info@hotshotaviation.com</p>
-                </div>
-              </div>
-              <div className="flex flex-col items-center space-y-2">
-                <div className="w-10 h-10 bg-primary/30 rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 bg-primary rounded-full"></div>
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Visit Us</p>
-                  <p className="text-sm text-muted-foreground">Premium Flight Training Facility</p>
-                </div>
               </div>
             </div>
           </div>
