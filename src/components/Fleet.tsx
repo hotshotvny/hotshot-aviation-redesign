@@ -71,7 +71,7 @@ const Fleet = () => {
       id: 5,
       name: '1969 Piper Twin Comanche (PA30)',
       tailNumber: 'N407AF',
-      image: twinComancheImg,
+      image: '/lovable-uploads/77f5f865-395a-4b9f-a9a0-e4323b9af0ca.png',
       category: 'Multi-Engine',
       seats: 4,
       cruiseSpeed: '190 kts',
