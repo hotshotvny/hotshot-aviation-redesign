@@ -43,7 +43,7 @@ const Fleet = () => {
       id: 3,
       name: '1977 Cessna R172K',
       tailNumber: 'N736DU',
-      image: cessna172Img,
+      image: '/lovable-uploads/717c0e0a-fc87-4d69-8c69-9f1f2f6a0ba6.png',
       category: 'Single Engine',
       seats: 4,
       cruiseSpeed: '122 kts',
