@@ -46,7 +46,7 @@ const About = () => {
       description: 'We offer initial multi engine training as well as an accelerated multi engine time building course. Airlines will require at least 25 hours of total multi time, some companies require up to 50 hours.'
     },
     'MEI': {
-      image: '/lovable-uploads/6af4607a-7410-42f6-a8bf-3358515e8f47.png',
+      image: '/lovable-uploads/5435620b-c54c-42d5-a97f-a44190f0aeb1.png',
       description: 'Multi-Engine Instructor rating allows you to teach others to fly twin-engine aircraft, expanding your instructional capabilities.'
     },
     'Time Building': {
