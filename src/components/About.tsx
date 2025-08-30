@@ -55,7 +55,7 @@ const About = () => {
     },
     'High Performance': {
       image: commercialPilotImg,
-      description: 'Learn to fly aircraft with engines over 200 horsepower. Master the performance characteristics and systems of more powerful aircraft.'
+      description: 'This Cherokee Six is a perfect training platform for a High Performance Endorsement. Once trained and checked out it can be rented. It is the only six seater aircraft for rent in the area.'
     },
     'Complex': {
       image: commercialPilotImg,
