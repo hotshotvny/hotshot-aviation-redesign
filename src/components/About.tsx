@@ -13,7 +13,7 @@ import multiEngineImg from '@/assets/multi-engine.jpg';
 import timeBuildingImg from '@/assets/time-building.jpg';
 
 const About = () => {
-  const [selectedProgram, setSelectedProgram] = useState<string | null>(null);
+  const [selectedProgram, setSelectedProgram] = useState<string | null>('Private Pilot');
 
   const certifications = [
     'Private Pilot', 'Instrument Rating', 'Commercial Pilot', 'CFI', 'CFII',
