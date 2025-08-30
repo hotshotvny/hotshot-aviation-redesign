@@ -1,7 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Shield, Plane, DollarSign, Users, BookOpen, Thermometer, ArrowLeft } from 'lucide-react';
+import { Shield, Plane, DollarSign, Users, BookOpen, Thermometer } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Navigation from '@/components/Navigation';
 import aviationHero from '@/assets/aviation-hero.jpg';
 
 const PickingFlightSchool = () => {
@@ -62,8 +63,9 @@ const PickingFlightSchool = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-24 mt-16 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${aviationHero})` }}
@@ -72,14 +74,6 @@ const PickingFlightSchool = () => {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Link 
-            to="/"
-            className="inline-flex items-center text-white/80 hover:text-white transition-colors mb-8"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Link>
-          
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
             Picking the Right Flight School
           </h1>
