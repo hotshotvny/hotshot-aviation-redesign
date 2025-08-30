@@ -29,7 +29,7 @@ const Fleet = () => {
       id: 2,
       name: '1979 Cessna 152',
       tailNumber: 'N46826',
-      image: '/lovable-uploads/64c64e68-a782-4004-96f7-563232be8f7a.png',
+      image: '/lovable-uploads/01febd13-67cd-4125-a2ea-81866c55961f.png',
       category: 'Trainer',
       seats: 2,
       cruiseSpeed: '107 kts',
