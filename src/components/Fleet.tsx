@@ -35,14 +35,17 @@ const Fleet = () => {
     },
     {
       id: 3,
-      name: 'Cessna 172',
+      name: '1977 Cessna R172K',
       tailNumber: 'N736DU',
       image: cessna172Img,
       category: 'Single Engine',
       seats: 4,
       cruiseSpeed: '122 kts',
-      features: ['GPS', 'Stable Platform', 'Forgiving'],
-      description: 'The most popular training aircraft, perfect for all skill levels'
+      engine: '195 HP Continental IO-360',
+      usefulLoad: '957 lb',
+      hourlyRate: '$200/Hour',
+      features: ['Garmin GTN 750', 'Garmin G5 Digital', 'JPI 930 Engine Monitor', 'ADS-B In & Out'],
+      description: "Looking for more horsepower than a slower standard Cessna while staying in a platform that's tried and true? This Cessna has more speed and capacity! It's the perfect IFR plane or the plane for flying all over the coast!"
     },
     {
       id: 4,
