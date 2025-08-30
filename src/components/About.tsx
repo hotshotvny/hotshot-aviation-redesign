@@ -2,14 +2,70 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { CheckCircle, Star, Award, Plane, Users, Trophy, Shield, Leaf, DollarSign, Heart } from 'lucide-react';
+import { useState } from 'react';
 import joshPortrait from '@/assets/josh-portrait.jpg';
 import jonathanPortrait from '@/assets/jonathan-portrait.jpg';
+import privatePilotImg from '@/assets/private-pilot.jpg';
+import instrumentRatingImg from '@/assets/instrument-rating.jpg';
+import commercialPilotImg from '@/assets/commercial-pilot.jpg';
+import cfiTrainingImg from '@/assets/cfi-training.jpg';
+import multiEngineImg from '@/assets/multi-engine.jpg';
+import timeBuildingImg from '@/assets/time-building.jpg';
 
 const About = () => {
+  const [selectedProgram, setSelectedProgram] = useState<string | null>(null);
+
   const certifications = [
     'Private Pilot', 'Instrument Rating', 'Commercial Pilot', 'CFI', 'CFII',
-    'Multi-Engine', 'MEI', 'High Performance', 'Complex', 'ATP'
+    'Multi-Engine', 'MEI', 'Time Building', 'High Performance', 'Complex', 'ATP'
   ];
+
+  const trainingPrograms = {
+    'Private Pilot': {
+      image: privatePilotImg,
+      description: 'Your first step into aviation. Learn the fundamentals of flight, navigation, and aircraft systems. This foundational rating allows you to fly single-engine aircraft for personal and recreational purposes.'
+    },
+    'Instrument Rating': {
+      image: instrumentRatingImg,
+      description: 'Advance your skills to fly in clouds and low visibility conditions. Master instrument procedures, approaches, and navigation systems for safer and more versatile flying.'
+    },
+    'Commercial Pilot': {
+      image: commercialPilotImg,
+      description: 'Take your flying to a professional level. This rating allows you to fly for compensation and is the foundation for most aviation careers.'
+    },
+    'CFI': {
+      image: cfiTrainingImg,
+      description: 'Become a flight instructor and share your passion for aviation. Teach others to fly while building valuable experience and flight time.'
+    },
+    'CFII': {
+      image: instrumentRatingImg,
+      description: 'Certified Flight Instructor Instrument - teach instrument flying to students, combining instruction skills with advanced instrument knowledge.'
+    },
+    'Multi-Engine': {
+      image: multiEngineImg,
+      description: 'Learn to fly twin-engine aircraft. Master the complexities of multi-engine operations, systems, and emergency procedures.'
+    },
+    'MEI': {
+      image: multiEngineImg,
+      description: 'Multi-Engine Instructor rating allows you to teach others to fly twin-engine aircraft, expanding your instructional capabilities.'
+    },
+    'Time Building': {
+      image: timeBuildingImg,
+      description: 'Build the flight hours you need for advanced ratings or airline careers. Structured programs to help you gain experience efficiently and safely.'
+    },
+    'High Performance': {
+      image: commercialPilotImg,
+      description: 'Learn to fly aircraft with engines over 200 horsepower. Master the performance characteristics and systems of more powerful aircraft.'
+    },
+    'Complex': {
+      image: commercialPilotImg,
+      description: 'Gain proficiency in aircraft with retractable landing gear, constant speed propellers, and flaps. Essential for advanced flying.'
+    },
+    'ATP': {
+      image: commercialPilotImg,
+      description: 'Airline Transport Pilot - the highest level of pilot certification. Required to captain commercial airline flights and the pinnacle of pilot training.'
+    }
+  };
 
   return (
     <section id="about" className="py-24 bg-gradient-subtle">
@@ -190,13 +246,45 @@ const About = () => {
           <p className="text-lg text-muted-foreground mb-8">
             We offer comprehensive training programs from your first lesson to airline transport pilot
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
             {certifications.map((cert) => (
-              <Badge key={cert} variant="default" className="text-sm px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90">
+              <Badge 
+                key={cert} 
+                variant={selectedProgram === cert ? "default" : "outline"}
+                className={`text-sm px-4 py-2 cursor-pointer transition-all duration-200 hover:scale-105 ${
+                  selectedProgram === cert 
+                    ? 'bg-primary text-primary-foreground shadow-glow' 
+                    : 'hover:bg-primary/10'
+                }`}
+                onClick={() => setSelectedProgram(selectedProgram === cert ? null : cert)}
+              >
                 {cert}
               </Badge>
             ))}
           </div>
+
+          {/* Selected Program Display */}
+          {selectedProgram && trainingPrograms[selectedProgram as keyof typeof trainingPrograms] && (
+            <Card className="shadow-elegant max-w-4xl mx-auto animate-fade-in">
+              <CardContent className="p-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                  <AspectRatio ratio={4/3}>
+                    <img 
+                      src={trainingPrograms[selectedProgram as keyof typeof trainingPrograms].image}
+                      alt={`${selectedProgram} training program`}
+                      className="w-full h-full object-cover"
+                    />
+                  </AspectRatio>
+                  <div className="p-6 flex flex-col justify-center">
+                    <h4 className="text-2xl font-bold text-foreground mb-4">{selectedProgram}</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {trainingPrograms[selectedProgram as keyof typeof trainingPrograms].description}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          )}
         </div>
       </div>
     </section>
