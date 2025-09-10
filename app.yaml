@@ -1,43 +1,16 @@
 name: hot-shot-aviation
-services:
-- name: web
-  source_dir: /
+static_sites:
+- name: hot-shot-aviation
   github:
     repo: your-github-username/your-repo-name
     branch: main
     deploy_on_push: true
-  run_command: npm run build
-  environment_slug: node-js
-  instance_count: 1
-  instance_size_slug: basic-xxs
-  static_sites:
-  - name: hot-shot-aviation-static
-    source_dir: dist
-    index_document: index.html
-    error_document: index.html
-    catchall_document: index.html
-    routes:
-    - path: /
-    - path: /flight-school-guide
-    cors:
-      allow_origins:
-      - exact: https://your-domain.com
-      allow_methods:
-      - GET
-      - POST
-      - PUT
-      - PATCH
-      - DELETE
-      - OPTIONS
-      allow_headers:
-      - Content-Type
-      - Authorization
-  # Add environment variables here if needed
-  # envs:
-  # - key: YOUR_ENV_VAR
-  #   value: ${YOUR_ENV_VAR}
-
-# Build specification
-build_command: |
-  npm ci
-  npm run build
+  build_command: |
+    npm ci
+    npm run build
+  output_dir: dist
+  index_document: index.html
+  error_document: index.html
+  catchall_document: index.html
+  routes:
+  - path: /
