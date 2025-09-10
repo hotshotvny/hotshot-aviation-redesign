@@ -1,0 +1,46 @@
+name: hot-shot-aviation
+services:
+- name: web
+  source_dir: /
+  github:
+    repo: your-github-username/your-repo-name
+    branch: main
+    deploy_on_push: true
+  run_command: npm run build
+  environment_slug: node-js
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  static_sites:
+  - name: hot-shot-aviation-static
+    source_dir: dist
+    index_document: index.html
+    error_document: index.html
+    catchall_document: index.html
+    routes:
+    - path: /
+    - path: /flight-school-guide
+    cors:
+      allow_origins:
+      - exact: https://your-domain.com
+      allow_methods:
+      - GET
+      - POST
+      - PUT
+      - PATCH
+      - DELETE
+      - OPTIONS
+      allow_headers:
+      - Content-Type
+      - Authorization
+  envs:
+  - key: VITE_SUPABASE_PROJECT_ID
+    value: ${VITE_SUPABASE_PROJECT_ID}
+  - key: VITE_SUPABASE_PUBLISHABLE_KEY
+    value: ${VITE_SUPABASE_PUBLISHABLE_KEY}
+  - key: VITE_SUPABASE_URL
+    value: ${VITE_SUPABASE_URL}
+
+# Build specification
+build_command: |
+  npm ci
+  npm run build
