@@ -1,5 +1,5 @@
 name: hot-shot-aviation
-static_sites:
+services:
 - name: web
   source_dir: /
   github:
@@ -9,9 +9,12 @@ static_sites:
   build_command: |
     npm ci
     npm run build
-  output_dir: dist
-  index_document: index.html
-  error_document: index.html
+  run_command: npm start
+  environment_slug: node-js
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  http_port: 8080
+  health_check:
+    http_path: /health
   routes:
   - path: /
-  catchall_document: index.html
