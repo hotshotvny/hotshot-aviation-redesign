@@ -7,14 +7,14 @@ const PORT = process.env.PORT || 8080;
 // Serve static files from the dist directory
 app.use(express.static(path.join(__dirname, 'dist')));
 
+// Health check endpoint for Digital Ocean - MUST be before catch-all route
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
+});
+
 // Handle SPA routing - serve index.html for all routes that don't match static files
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
-
-// Health check endpoint for Digital Ocean
-app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
 app.listen(PORT, () => {
