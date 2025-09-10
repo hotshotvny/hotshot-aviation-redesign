@@ -32,13 +32,10 @@ services:
       allow_headers:
       - Content-Type
       - Authorization
-  envs:
-  - key: VITE_SUPABASE_PROJECT_ID
-    value: ${VITE_SUPABASE_PROJECT_ID}
-  - key: VITE_SUPABASE_PUBLISHABLE_KEY
-    value: ${VITE_SUPABASE_PUBLISHABLE_KEY}
-  - key: VITE_SUPABASE_URL
-    value: ${VITE_SUPABASE_URL}
+  # Add environment variables here if needed
+  # envs:
+  # - key: YOUR_ENV_VAR
+  #   value: ${YOUR_ENV_VAR}
 
 # Build specification
 build_command: |
