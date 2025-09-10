@@ -9,7 +9,7 @@ services:
   build_command: |
     npm ci
     npm run build
-  run_command: npm start
+  run_command: node server.cjs
   environment_slug: node-js
   instance_count: 1
   instance_size_slug: basic-xxs
