@@ -2,17 +2,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { CheckCircle, Star, Award, Plane, Users, Trophy, Shield, Leaf, DollarSign, Heart } from 'lucide-react';
+import { CheckCircle, Award, Plane, Users, Shield, Leaf, DollarSign, Heart } from 'lucide-react';
 import { useState } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import joshPortrait from '@/assets/josh-portrait.jpg';
-import jonathanPortrait from '@/assets/jonathan-portrait.jpg';
-import privatePilotImg from '@/assets/private-pilot.jpg';
-import instrumentRatingImg from '@/assets/instrument-rating.jpg';
 import commercialPilotImg from '@/assets/commercial-pilot.jpg';
-import cfiTrainingImg from '@/assets/cfi-training.jpg';
-import multiEngineImg from '@/assets/multi-engine.jpg';
-import timeBuildingImg from '@/assets/time-building.jpg';
 
 const About = () => {
   const [selectedProgram, setSelectedProgram] = useState<string | null>('Private Pilot');

@@ -4,13 +4,6 @@ import { Fuel, Users, Gauge, X } from 'lucide-react';
 import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
 import { useState } from 'react';
 
-// Import aircraft images
-import piperArcherImg from '@/assets/piper-archer.jpg';
-import cessna152Img from '@/assets/cessna-152.jpg';
-import cessna172Img from '@/assets/cessna-172.jpg';
-import piperCherokeeImg from '@/assets/piper-cherokee-six.jpg';
-import twinComancheImg from '@/assets/twin-comanche.jpg';
-
 const Fleet = () => {
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
   const { containerRef: fleetRef, visibleItems } = useStaggeredAnimation(5, 150);
