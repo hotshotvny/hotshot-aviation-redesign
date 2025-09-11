@@ -48,7 +48,7 @@ const About = () => {
       description: 'Multi-Engine Instructor rating allows you to teach others to fly twin-engine aircraft, expanding your instructional capabilities.'
     },
     'Time Building': {
-      image: '/lovable-uploads/64bfbd4a-22e7-4821-8df8-2b0b1dafa71b.png',
+      image: '/lovable-uploads/b2911243-2f4c-40ed-8137-77426b4615e4.png',
       description: 'Our Cessna 152 is among the least expensive aircraft in the area. It is fully IFR certified and capable. It is the ideal plane for time building. We also have a pilot group that fly together to time build so pilots can split the bill.'
     },
     'High Performance': {
