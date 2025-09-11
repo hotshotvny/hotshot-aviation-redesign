@@ -74,20 +74,20 @@ const About = () => {
             headerVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 mobile-px">
             WHO ARE WE?
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8 animate-scale-in"></div>
+          <div className="w-16 sm:w-24 h-1 bg-gradient-primary mx-auto mb-6 sm:mb-8 animate-scale-in"></div>
         </div>
 
         <div 
           ref={contentRef as React.RefObject<HTMLDivElement>}
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16 transition-all duration-700 ${
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-12 sm:mb-16 transition-all duration-700 mobile-px ${
             contentVisible ? 'animate-fade-in-left' : 'opacity-0 translate-x-8'
           }`}
         >
-          <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed animate-fade-in-up stagger-1">
+          <div className="space-y-4 sm:space-y-6">
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed animate-fade-in-up stagger-1">
               Hot Shot is a group of aviation enthusiasts. We are here to give SoCal aviators 
               access to the cleanest, best kept aircraft in the area. We want you to love these 
               planes and love your flights as much as we do.
@@ -108,7 +108,7 @@ const About = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <Card className="shadow-elegant overflow-hidden aviation-card animate-fade-in-right stagger-2">
               <AspectRatio ratio={4/5}>
                 <img 
@@ -117,12 +117,12 @@ const About = () => {
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </AspectRatio>
-              <CardContent className="p-4">
+              <CardContent className="p-3 sm:p-4">
                 <div className="flex items-center mb-2">
-                  <Plane className="w-5 h-5 text-aviation-gold mr-2" />
-                  <h4 className="text-lg font-bold text-foreground">Josh</h4>
+                  <Plane className="w-4 sm:w-5 h-4 sm:h-5 text-aviation-gold mr-2" />
+                  <h4 className="text-base sm:text-lg font-bold text-foreground">Josh</h4>
                 </div>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-xs sm:text-sm">
                   Co-founder & Flight Instructor
                 </p>
               </CardContent>
@@ -136,12 +136,12 @@ const About = () => {
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </AspectRatio>
-              <CardContent className="p-4">
+              <CardContent className="p-3 sm:p-4">
                 <div className="flex items-center mb-2">
-                  <Plane className="w-5 h-5 text-aviation-gold mr-2" />
-                  <h4 className="text-lg font-bold text-foreground">Jonathan</h4>
+                  <Plane className="w-4 sm:w-5 h-4 sm:h-5 text-aviation-gold mr-2" />
+                  <h4 className="text-base sm:text-lg font-bold text-foreground">Jonathan</h4>
                 </div>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-xs sm:text-sm">
                   Co-founder & Flight Instructor
                 </p>
               </CardContent>
@@ -176,29 +176,29 @@ const About = () => {
           </div>
 
           <Tabs defaultValue="simple-affordable" className="max-w-4xl mx-auto">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8">
-              <TabsTrigger value="simple-affordable" className="flex items-center gap-2 text-xs md:text-sm">
-                <DollarSign className="w-4 h-4" />
+            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mb-6 sm:mb-8 h-auto mobile-px">
+              <TabsTrigger value="simple-affordable" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm p-2 sm:p-3 mobile-touch-target">
+                <DollarSign className="w-3 sm:w-4 h-3 sm:h-4" />
                 <span className="hidden sm:inline">Simple & Affordable</span>
                 <span className="sm:hidden">Simple</span>
               </TabsTrigger>
-              <TabsTrigger value="quality-aircraft" className="flex items-center gap-2 text-xs md:text-sm">
-                <Shield className="w-4 h-4" />
+              <TabsTrigger value="quality-aircraft" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm p-2 sm:p-3 mobile-touch-target">
+                <Shield className="w-3 sm:w-4 h-3 sm:h-4" />
                 <span className="hidden sm:inline">Quality Aircraft</span>
                 <span className="sm:hidden">Quality</span>
               </TabsTrigger>
-              <TabsTrigger value="quality-over-quantity" className="flex items-center gap-2 text-xs md:text-sm">
-                <Heart className="w-4 h-4" />
+              <TabsTrigger value="quality-over-quantity" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm p-2 sm:p-3 mobile-touch-target col-span-2 sm:col-span-1">
+                <Heart className="w-3 sm:w-4 h-3 sm:h-4" />
                 <span className="hidden sm:inline">Quality Over Quantity</span>
                 <span className="sm:hidden">Focus</span>
               </TabsTrigger>
-              <TabsTrigger value="environmental" className="flex items-center gap-2 text-xs md:text-sm">
-                <Leaf className="w-4 h-4" />
+              <TabsTrigger value="environmental" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm p-2 sm:p-3 mobile-touch-target">
+                <Leaf className="w-3 sm:w-4 h-3 sm:h-4" />
                 <span className="hidden sm:inline">Environmental Care</span>
                 <span className="sm:hidden">Eco</span>
               </TabsTrigger>
-              <TabsTrigger value="instructors" className="flex items-center gap-2 text-xs md:text-sm">
-                <Users className="w-4 h-4" />
+              <TabsTrigger value="instructors" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm p-2 sm:p-3 mobile-touch-target">
+                <Users className="w-3 sm:w-4 h-3 sm:h-4" />
                 <span className="hidden sm:inline">Instructors Work For You</span>
                 <span className="sm:hidden">Instructors</span>
               </TabsTrigger>

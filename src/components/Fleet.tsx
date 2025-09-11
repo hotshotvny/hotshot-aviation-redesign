@@ -91,11 +91,11 @@ const Fleet = () => {
             headerVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up stagger-1">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 animate-fade-in-up stagger-1 mobile-px">
             Our Fleet
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8 animate-scale-in stagger-2"></div>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up stagger-3">
+          <div className="w-16 sm:w-24 h-1 bg-gradient-primary mx-auto mb-6 sm:mb-8 animate-scale-in stagger-2"></div>
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up stagger-3 mobile-px">
             From primary trainers to multi-engine aircraft, our diverse fleet provides 
             the right aircraft for every stage of your aviation journey
           </p>
@@ -120,7 +120,7 @@ const Fleet = () => {
 
         <div 
           ref={fleetRef as React.RefObject<HTMLDivElement>}
-          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mobile-px"
         >
           {aircraft.map((plane, index) => (
             <Card 
@@ -132,24 +132,24 @@ const Fleet = () => {
               }`}
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="relative h-48 overflow-hidden group cursor-pointer" onClick={() => setLightboxImage({ src: plane.image, alt: `${plane.name} ${plane.tailNumber}`, name: plane.name })}>
+              <div className="relative h-40 sm:h-48 overflow-hidden group cursor-pointer mobile-touch-target" onClick={() => setLightboxImage({ src: plane.image, alt: `${plane.name} ${plane.tailNumber}`, name: plane.name })}>
                 <img 
                   src={plane.image} 
                   alt={`${plane.name} ${plane.tailNumber}`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute top-4 right-4">
-                  <Badge variant="secondary" className="bg-primary text-primary-foreground animate-bounce-in hover-glow">
+                <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
+                  <Badge variant="secondary" className="bg-primary text-primary-foreground animate-bounce-in hover-glow text-xs">
                     {plane.category}
                   </Badge>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  <span>{plane.name}</span>
-                  <Badge variant="outline" className="font-mono text-sm">
+              <CardHeader className="pb-3">
+                <CardTitle className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                  <span className="text-base sm:text-lg leading-tight">{plane.name}</span>
+                  <Badge variant="outline" className="font-mono text-xs sm:text-sm self-start sm:self-center">
                     {plane.tailNumber}
                   </Badge>
                 </CardTitle>
