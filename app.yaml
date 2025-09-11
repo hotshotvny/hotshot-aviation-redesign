@@ -1,0 +1,26 @@
+runtime: nodejs18
+
+env_variables:
+  NODE_ENV: production
+
+handlers:
+- url: /health
+  script: auto
+
+- url: /static
+  static_dir: dist/assets
+  expiration: 1h
+
+- url: /.*
+  script: auto
+  secure: always
+
+automatic_scaling:
+  min_instances: 0
+  max_instances: 10
+  target_cpu_utilization: 0.6
+
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10
