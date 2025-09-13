@@ -76,7 +76,7 @@ const Fleet = () => {
       cruiseSpeed: '190 kts',
       engine: 'Twin 160 HP Lycoming IO-320',
       usefulLoad: '1,121 lb',
-      hourlyRate: '$300/Hour',
+      hourlyRate: '$330/Hour',
       features: ['Multi-Engine', 'ADS-B In & Out', 'Dual Instruction Only'],
       description: 'Level up to multi-engine flying in style and comfort! Available for dual instruction only.'
     }
