@@ -63,7 +63,7 @@ const Fleet = () => {
       engine: '300 HP Lycoming IO-540',
       usefulLoad: '1,416 lb',
       hourlyRate: '$250/Hour',
-      features: ['Dual Garmin GTN 650', 'GNS 430 GPS', 'Garmin G5 Digital', 'JPI 930 Engine Monitor', 'ADS-B In & Out'],
+      features: ['Garmin GTN 650', 'GNS 430 GPS', 'Garmin G5 Digital', 'JPI 930 Engine Monitor', 'ADS-B In & Out'],
       description: 'Need your high performance endorsement? Need the only 6 seater rental plane in the area? Need the useful load to carry around our 152 in the back? Or do you just want to experience all the joys of flying a Cherokee with some extra space and plenty of power. Whatever you need, N7039C does it.'
     },
     {
@@ -77,7 +77,7 @@ const Fleet = () => {
       engine: 'Twin 160 HP Lycoming IO-320',
       usefulLoad: '1,121 lb',
       hourlyRate: '$330/Hour',
-      features: ['Multi-Engine', 'ADS-B In & Out', 'Dual Instruction Only'],
+      features: ['Garmin GTN 750', 'Multi-Engine', 'ADS-B In & Out', 'Dual Instruction Only'],
       description: 'Level up to multi-engine flying in style and comfort! Available for dual instruction only.'
     }
   ];
