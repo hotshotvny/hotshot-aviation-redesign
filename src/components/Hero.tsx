@@ -35,7 +35,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white text-white hover:bg-white hover:text-primary interactive-button transition-all duration-300 mobile-touch-target w-full sm:w-auto"
+              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white text-primary hover:bg-white hover:text-primary interactive-button transition-all duration-300 mobile-touch-target w-full sm:w-auto"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Rent Aircraft
