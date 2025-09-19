@@ -52,9 +52,9 @@ All colors MUST be HSL.
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--primary-dark)) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
-    --gradient-about: linear-gradient(45deg, hsl(var(--primary) / 0.05) 0%, hsl(var(--aviation-gold) / 0.08) 50%, hsl(var(--primary) / 0.03) 100%);
-    --gradient-fleet: linear-gradient(135deg, hsl(var(--aviation-gold) / 0.06) 0%, hsl(var(--background)) 30%, hsl(var(--primary) / 0.04) 100%);
-    --gradient-contact: linear-gradient(225deg, hsl(var(--primary) / 0.12) 0%, hsl(var(--aviation-gold) / 0.06) 50%, hsl(var(--primary) / 0.04) 100%);
+    --gradient-about: linear-gradient(135deg, hsl(var(--aviation-gold) / 0.25) 0%, hsl(var(--background)) 25%, hsl(var(--primary) / 0.2) 60%, hsl(var(--aviation-gold) / 0.15) 100%);
+    --gradient-fleet: linear-gradient(-45deg, hsl(var(--primary) / 0.18) 0%, hsl(var(--background)) 30%, hsl(var(--aviation-gold) / 0.22) 70%, hsl(var(--primary) / 0.12) 100%);
+    --gradient-contact: linear-gradient(45deg, hsl(var(--primary) / 0.3) 0%, hsl(var(--aviation-gold) / 0.2) 30%, hsl(var(--primary) / 0.25) 70%, hsl(var(--aviation-gold) / 0.15) 100%);
     
     /* Shadows */
     --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.2);
@@ -100,9 +100,9 @@ All colors MUST be HSL.
     /* Dark mode gradients */
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(2 76% 25%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 8%), hsl(0 0% 12%));
-    --gradient-about: linear-gradient(45deg, hsl(var(--primary) / 0.08) 0%, hsl(var(--aviation-gold) / 0.12) 50%, hsl(var(--primary) / 0.06) 100%);
-    --gradient-fleet: linear-gradient(135deg, hsl(var(--aviation-gold) / 0.1) 0%, hsl(var(--background)) 30%, hsl(var(--primary) / 0.06) 100%);
-    --gradient-contact: linear-gradient(225deg, hsl(var(--primary) / 0.15) 0%, hsl(var(--aviation-gold) / 0.08) 50%, hsl(var(--primary) / 0.08) 100%);
+    --gradient-about: linear-gradient(135deg, hsl(var(--aviation-gold) / 0.2) 0%, hsl(var(--background)) 25%, hsl(var(--primary) / 0.15) 60%, hsl(var(--aviation-gold) / 0.12) 100%);
+    --gradient-fleet: linear-gradient(-45deg, hsl(var(--primary) / 0.15) 0%, hsl(var(--background)) 30%, hsl(var(--aviation-gold) / 0.18) 70%, hsl(var(--primary) / 0.1) 100%);
+    --gradient-contact: linear-gradient(45deg, hsl(var(--primary) / 0.25) 0%, hsl(var(--aviation-gold) / 0.18) 30%, hsl(var(--primary) / 0.2) 70%, hsl(var(--aviation-gold) / 0.12) 100%);
   }
 }
 
