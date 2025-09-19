@@ -31,7 +31,8 @@ const PickingFlightSchool = () => {
       points: [
         "Ask to walk out and see the planes.",
         "Airplanes should always be clean for better performance and safety inspections.",
-        "If the belly of the plane is black with oil, that means there is a bad leak from the engine, and that's how fires start."
+        "If the belly of the plane is black with oil, that means there is a bad leak from the engine, and that's how fires start.",
+        "Ask to see aircraft logbooks to verify maintenance history and compliance."
       ]
     },
     {
@@ -39,7 +40,8 @@ const PickingFlightSchool = () => {
       title: "Are Packages a Good Thing?",
       points: [
         "In short, packages are not designed to help the client.",
-        "For the flight school, best case is you buy a package and you don't use it all, or you have some left and choose to add a more to use that last of it. And most will not return the left overs."
+        "For the flight school, best case is you buy a package and you don't use it all, or you have some left and choose to add a more to use that last of it. And most will not return the left overs.",
+        "If you finish ahead of schedule, you're essentially paying for someone else's training."
       ]
     },
     {
@@ -47,8 +49,8 @@ const PickingFlightSchool = () => {
       title: "Guaranteed CFI Jobs?",
       points: [
         "You might have seen schools who say they guarantee they will hire anyone who trains in house, but is that a good thing?",
-        "Any Flight School would hire someone they train if they are great, but some companies need the bodies more than the skills so they lower the bar.",
-        "Just because someone has the Certificate doesn't mean they should automatically get the job."
+        "Any flight school would hire someone they train if they are great, but some companies need the bodies more than the skills so they lower the bar.",
+        "Just because someone has the certificate doesn't mean they should automatically get the job."
       ]
     },
     {
