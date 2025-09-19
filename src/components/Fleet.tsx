@@ -145,16 +145,16 @@ const Fleet = () => {
           </p>
           
           <div className="mt-12 mb-12">
-            <div className="bg-primary/5 border border-border rounded-lg p-8 shadow-elegant">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
+            <div className="special-highlight-card rounded-lg p-8">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center">
                 NOT JUST RENTAL PLANES
               </h3>
-              <div className="w-16 h-1 bg-gradient-primary mx-auto mb-8"></div>
+              <div className="w-16 h-1 bg-aviation-gold mx-auto mb-8"></div>
               <div className="max-w-4xl mx-auto space-y-6 text-center">
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg leading-relaxed">
                   At Hot Shot, we take great pride in the how we care for our fleet. These aren't just rental planes, but our own personal aircraft. We keep them clean, stay proactive on maintenance, and invest in the upgrades that will make your flights (and ours) safer and more enjoyable.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg leading-relaxed">
                   From our Cessna 152 and Piper Archer, to our Twin Comanche and Cherokee 6, find out how we offer the best-kept airplanes at Van Nuys.
                 </p>
               </div>
