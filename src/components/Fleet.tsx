@@ -251,17 +251,12 @@ const Fleet = () => {
                       {feature}
                     </Badge>
                   ))}
+                  {plane.bottomBadges.map((badge) => (
+                    <Badge key={badge} variant="secondary" className="text-xs">
+                      {badge}
+                    </Badge>
+                  ))}
                 </div>
-                
-                {plane.bottomBadges.length > 0 && (
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {plane.bottomBadges.map((badge) => (
-                      <Badge key={badge} variant="secondary" className="text-xs">
-                        {badge}
-                      </Badge>
-                    ))}
-                  </div>
-                )}
               </CardContent>
             </Card>
           ))}
