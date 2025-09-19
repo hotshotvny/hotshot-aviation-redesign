@@ -92,7 +92,7 @@ const Fleet = () => {
           }`}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 animate-fade-in-up stagger-1 mobile-px">
-            Our Fleet
+            OUR FLEET
           </h2>
           <div className="w-16 sm:w-24 h-1 bg-gradient-primary mx-auto mb-6 sm:mb-8 animate-scale-in stagger-2"></div>
           <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up stagger-3 mobile-px">

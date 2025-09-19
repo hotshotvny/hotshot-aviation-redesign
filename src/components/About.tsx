@@ -303,7 +303,7 @@ const About = () => {
             programsVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h3 className="text-3xl font-bold text-foreground mb-6 animate-fade-in-up stagger-1">Training Programs</h3>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 animate-fade-in-up stagger-1">TRAINING PROGRAMS</h3>
           <p className="text-lg text-muted-foreground mb-8 animate-fade-in-up stagger-2">
             We offer comprehensive training programs from your first lesson to airline transport pilot
           </p>
