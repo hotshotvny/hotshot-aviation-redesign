@@ -79,7 +79,7 @@ const About = () => {
         >
           <div className="flex items-center justify-center mb-6">
             <Users className="w-8 h-8 text-aviation-gold mr-3" />
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">About Us</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">ABOUT US</h2>
           </div>
           <div className="w-16 sm:w-24 h-1 bg-gradient-primary mx-auto mb-6 sm:mb-8 animate-scale-in"></div>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
@@ -97,7 +97,7 @@ const About = () => {
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-6">
               <Award className="w-8 h-8 text-aviation-gold mr-3" />
-              <h3 className="text-3xl font-bold text-foreground">Why Are We Different?</h3>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">WHY ARE WE DIFFERENT?</h3>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
               Hot Shot is different because we've taken a simplified approach to deliver the 
