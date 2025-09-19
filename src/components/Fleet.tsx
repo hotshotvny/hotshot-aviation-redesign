@@ -183,7 +183,7 @@ const Fleet = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute top-2 sm:top-4 right-2 sm:right-4 flex flex-col gap-1">
-                  <Badge variant="secondary" className="bg-primary text-primary-foreground animate-bounce-in hover-glow text-xs">
+                  <Badge variant="secondary" className="bg-primary text-primary-foreground animate-bounce-in hover-glow text-xs flex items-center justify-center">
                     {plane.category}
                   </Badge>
                   {plane.topRightBadges.map((badge) => (
