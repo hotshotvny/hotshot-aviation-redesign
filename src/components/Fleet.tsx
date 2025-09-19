@@ -190,7 +190,7 @@ const Fleet = () => {
                     <Badge 
                       key={badge} 
                       variant="destructive" 
-                      className="text-xs"
+                      className="text-xs flex items-center justify-center"
                     >
                       {badge}
                     </Badge>
