@@ -166,6 +166,39 @@ All colors MUST be HSL.
     }
   }
   
+  /* Special highlight card for "Not Just Rental Planes" */
+  .special-highlight-card {
+    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--primary-dark)) 100%);
+    border: 1px solid hsl(var(--aviation-gold) / 0.3);
+    box-shadow: 0 0 30px hsl(var(--aviation-gold) / 0.2), var(--shadow-elegant);
+    position: relative;
+  }
+
+  .special-highlight-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, hsl(var(--aviation-gold) / 0.5), hsl(var(--primary) / 0.3));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: exclude;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+
+  .special-highlight-card h4 {
+    color: hsl(var(--aviation-gold));
+  }
+
+  .special-highlight-card p {
+    color: hsl(0 0% 90%);
+  }
+
+  .special-highlight-card .lucide {
+    color: hsl(var(--aviation-gold));
+  }
+  
   /* Scroll-triggered animations */
   .animate-on-scroll {
     opacity: 0;

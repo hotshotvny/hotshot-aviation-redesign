@@ -152,13 +152,13 @@ const About = () => {
             </TabsContent>
             
             <TabsContent value="quality-aircraft">
-              <Card className="shadow-elegant">
+              <Card className="shadow-elegant special-highlight-card">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
-                    <Shield className="w-8 h-8 text-aviation-gold mr-4" />
-                    <h4 className="text-2xl font-semibold text-foreground">Quality Aircraft</h4>
+                    <Shield className="w-8 h-8 mr-4" />
+                    <h4 className="text-2xl font-semibold">Quality Aircraft</h4>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed text-lg">
+                  <p className="leading-relaxed text-lg">
                     These aren't just rental planes. We take pride in our aircraft and only rent to pilots 
                     who will treat them like their own. No shoddy, run down rentals here - only top-quality 
                     aircraft maintained to the highest standards.
