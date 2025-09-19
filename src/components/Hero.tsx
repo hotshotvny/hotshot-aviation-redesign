@@ -20,7 +20,7 @@ const Hero = () => {
             FLY WITH LA'S BEST
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 animate-fade-in-up stagger-2 max-w-3xl mx-auto mobile-px">
-            Premium flight training and aircraft rental operated by two Part 121 Airline Captains
+            Premier flight training and aircraft rental
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 animate-fade-in-up stagger-3 mobile-px">
