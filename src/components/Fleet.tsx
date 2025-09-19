@@ -23,7 +23,7 @@ const Fleet = () => {
       engine: '180 HP Lycoming O-360',
       usefulLoad: '962 lb',
       hourlyRate: '$180/Hour',
-      features: ['Garmin GTN 650 GPS WAAS', 'ADS-B In & Out', 'Surefly Electronic Ignition'],
+      features: ['Garmin GTN 650 WAAS GPS', 'ADS-B In & Out', 'Surefly Electronic Ignition'],
       description: 'N130JM does it all! The proven design and forgiving flight characteristics make the Piper Archer the logical choice as a trainer. With 180 horsepower and space for 4, this plane easily meets so many missions for rated pilots too!',
       topRightBadges: [],
       bottomBadges: []
@@ -55,7 +55,7 @@ const Fleet = () => {
       engine: '195 HP Continental IO-360',
       usefulLoad: '957 lb',
       hourlyRate: '$200/Hour',
-      features: ['Garmin GTN 750 WAAS', 'Garmin G5 Digital', 'JPI 930 Engine Monitor', 'ADS-B In & Out'],
+      features: ['Garmin GTN 750 WAAS GPS', 'Dual Garmin G5\'s', 'JPI 930 Engine Monitor', 'ADS-B In & Out'],
       description: "Looking for more horsepower than a slower standard Cessna while staying in a platform that's tried and true? This Cessna has more speed and capacity! It's the perfect IFR plane or the plane for flying all over the coast!",
       topRightBadges: [],
       bottomBadges: []
@@ -71,7 +71,7 @@ const Fleet = () => {
       engine: '300 HP Lycoming IO-540',
       usefulLoad: '1,416 lb',
       hourlyRate: '$250/Hour',
-      features: ['Garmin GTN 650 WAAS', 'Garmin G5 Digital', 'JPI 930 Engine Monitor', 'ADS-B In & Out'],
+      features: ['Garmin GTN 650 WAAS GPS', 'Dual Garmin G5\'s', 'JPI 930 Engine Monitor', 'ADS-B In & Out'],
       description: 'Need your high performance endorsement? Need the only 6 seater rental plane in the area? Need the useful load to carry around our 152 in the back? Or do you just want to experience all the joys of flying a Cherokee with some extra space and plenty of power. Whatever you need, N7039C does it.',
       topRightBadges: ['High Performance'],
       bottomBadges: []
@@ -87,7 +87,7 @@ const Fleet = () => {
       engine: 'Twin 160 HP Lycoming IO-320',
       usefulLoad: '1,121 lb',
       hourlyRate: '$330/Hour',
-      features: ['Garmin GTN 750 WAAS', 'Dual GI 275s', 'ADS-B In & Out', 'Dual Instruction Only'],
+      features: ['Garmin GTN 750 WAAS GPS', 'Dual GI 275s', 'ADS-B In & Out', 'Dual Instruction Only'],
       description: 'Level up to multi-engine flying in style and comfort! Available for dual instruction only.',
       topRightBadges: ['Complex'],
       bottomBadges: ['Digital Engine Monitor']
@@ -103,7 +103,7 @@ const Fleet = () => {
       engine: '110 HP Lycoming',
       usefulLoad: '500 lb',
       hourlyRate: '$175/Hour',
-      features: ['Garmin GNS 430'],
+      features: ['Garmin GNS 430 WAAS GPS'],
       description: 'Reliable training aircraft perfect for building hours and honing your skills.',
       topRightBadges: [],
       bottomBadges: []
@@ -119,7 +119,7 @@ const Fleet = () => {
       engine: '180 HP Lycoming',
       usefulLoad: '900 lb',
       hourlyRate: '$185/Hour',
-      features: ['Garmin 650 GPS', 'Garmin 375 GPS', 'Dual G5s', 'Three-axis Autopilot', 'Bluetooth Audio Panel w/ ATC Replay'],
+      features: ['Garmin GTN 650 WAAS GPS', 'Garmin 375 GPS', 'Dual Garmin G5\'s', 'Three-axis Autopilot', 'Bluetooth Audio Panel w/ ATC Replay'],
       description: 'State-of-the-art avionics and advanced systems make this aircraft perfect for instrument training and advanced pilot development.',
       topRightBadges: [],
       bottomBadges: ['Technically Advanced Aircraft']
