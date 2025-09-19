@@ -334,7 +334,11 @@ const About = () => {
                     <img 
                       src={trainingPrograms[selectedProgram as keyof typeof trainingPrograms].image}
                       alt={`${selectedProgram} training program`}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full ${
+                        selectedProgram === 'High Performance' 
+                          ? 'object-contain' 
+                          : 'object-cover'
+                      }`}
                     />
                   </AspectRatio>
                   <div className="p-6 flex flex-col justify-center">
