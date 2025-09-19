@@ -67,7 +67,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-24 bg-gradient-subtle">
+    <section id="about" className="py-24" style={{ background: 'var(--gradient-about)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* About Us Section */}

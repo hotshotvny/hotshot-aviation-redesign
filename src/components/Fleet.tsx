@@ -127,7 +127,7 @@ const Fleet = () => {
   ];
 
   return (
-    <section id="fleet" className="pt-24 pb-12 bg-background">
+    <section id="fleet" className="pt-24 pb-12" style={{ background: 'var(--gradient-fleet)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           ref={headerRef as React.RefObject<HTMLDivElement>}
