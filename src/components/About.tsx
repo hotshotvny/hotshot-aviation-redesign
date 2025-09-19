@@ -307,12 +307,12 @@ const About = () => {
           <p className="text-lg text-muted-foreground mb-8 animate-fade-in-up stagger-2">
             We offer comprehensive training programs from your first lesson to airline transport pilot
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-8 max-w-5xl mx-auto justify-items-center">
             {certifications.map((cert, index) => (
               <Badge 
                 key={cert} 
                 variant={selectedProgram === cert ? "default" : "outline"}
-                className={`text-sm px-3 py-2 cursor-pointer transition-all duration-300 hover:scale-105 interactive-button animate-fade-in-up text-center ${
+                className={`text-sm px-3 py-2 cursor-pointer transition-all duration-300 hover:scale-105 interactive-button animate-fade-in-up text-center justify-center flex items-center w-full ${
                   selectedProgram === cert 
                     ? 'bg-primary text-primary-foreground shadow-glow' 
                     : 'hover:bg-primary/10 hover-glow'
