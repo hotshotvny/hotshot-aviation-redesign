@@ -3,6 +3,8 @@ import { Badge } from '@/components/ui/badge';
 import { Fuel, Users, Gauge, X } from 'lucide-react';
 import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
 import { useState } from 'react';
+import n7901cImage from '@/assets/n7901c-aircraft.jpg';
+import n42982Image from '@/assets/n42982-aircraft.jpg';
 
 const Fleet = () => {
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
@@ -22,7 +24,9 @@ const Fleet = () => {
       usefulLoad: '962 lb',
       hourlyRate: '$180/Hour',
       features: ['Garmin GTN 650 GPS WAAS', 'ADS-B In & Out', 'Surefly Electronic Ignition'],
-      description: 'N130JM does it all! The proven design and forgiving flight characteristics make the Piper Archer the logical choice as a trainer. With 180 horsepower and space for 4, this plane easily meets so many missions for rated pilots too!'
+      description: 'N130JM does it all! The proven design and forgiving flight characteristics make the Piper Archer the logical choice as a trainer. With 180 horsepower and space for 4, this plane easily meets so many missions for rated pilots too!',
+      topRightBadges: [],
+      bottomBadges: []
     },
     {
       id: 2,
@@ -36,7 +40,9 @@ const Fleet = () => {
       usefulLoad: '502 lb',
       hourlyRate: '$120/Hour',
       features: ['Garmin GNS 430 WAAS GPS', 'ADS-B In & Out', 'Dual Glideslope'],
-      description: "N46826 is perfect for hour building on a budget or for anyone who just enjoys flying low and slow. IFR GPS and dual glideslope indicators mean she's always prepared for shifting weather. You won't find a better rental at this price!"
+      description: "N46826 is perfect for hour building on a budget or for anyone who just enjoys flying low and slow. IFR GPS and dual glideslope indicators mean she's always prepared for shifting weather. You won't find a better rental at this price!",
+      topRightBadges: [],
+      bottomBadges: ['Digital Engine Monitor']
     },
     {
       id: 3,
@@ -50,7 +56,9 @@ const Fleet = () => {
       usefulLoad: '957 lb',
       hourlyRate: '$200/Hour',
       features: ['Garmin GTN 750 WAAS', 'Garmin G5 Digital', 'JPI 930 Engine Monitor', 'ADS-B In & Out'],
-      description: "Looking for more horsepower than a slower standard Cessna while staying in a platform that's tried and true? This Cessna has more speed and capacity! It's the perfect IFR plane or the plane for flying all over the coast!"
+      description: "Looking for more horsepower than a slower standard Cessna while staying in a platform that's tried and true? This Cessna has more speed and capacity! It's the perfect IFR plane or the plane for flying all over the coast!",
+      topRightBadges: [],
+      bottomBadges: []
     },
     {
       id: 4,
@@ -63,8 +71,10 @@ const Fleet = () => {
       engine: '300 HP Lycoming IO-540',
       usefulLoad: '1,416 lb',
       hourlyRate: '$250/Hour',
-      features: ['Garmin GTN 650 WAAS', 'GNS 430 GPS WAAS', 'Garmin G5 Digital', 'JPI 930 Engine Monitor', 'ADS-B In & Out'],
-      description: 'Need your high performance endorsement? Need the only 6 seater rental plane in the area? Need the useful load to carry around our 152 in the back? Or do you just want to experience all the joys of flying a Cherokee with some extra space and plenty of power. Whatever you need, N7039C does it.'
+      features: ['Garmin GTN 650 WAAS', 'Garmin G5 Digital', 'JPI 930 Engine Monitor', 'ADS-B In & Out'],
+      description: 'Need your high performance endorsement? Need the only 6 seater rental plane in the area? Need the useful load to carry around our 152 in the back? Or do you just want to experience all the joys of flying a Cherokee with some extra space and plenty of power. Whatever you need, N7039C does it.',
+      topRightBadges: ['High Performance'],
+      bottomBadges: []
     },
     {
       id: 5,
@@ -77,8 +87,42 @@ const Fleet = () => {
       engine: 'Twin 160 HP Lycoming IO-320',
       usefulLoad: '1,121 lb',
       hourlyRate: '$330/Hour',
-      features: ['Garmin GTN 750 WAAS', 'Multi-Engine', 'ADS-B In & Out', 'Dual Instruction Only'],
-      description: 'Level up to multi-engine flying in style and comfort! Available for dual instruction only.'
+      features: ['Garmin GTN 750 WAAS', 'Dual GI 275s', 'ADS-B In & Out', 'Dual Instruction Only'],
+      description: 'Level up to multi-engine flying in style and comfort! Available for dual instruction only.',
+      topRightBadges: ['Complex'],
+      bottomBadges: ['Digital Engine Monitor']
+    },
+    {
+      id: 6,
+      name: 'Training Aircraft',
+      tailNumber: 'N7901C',
+      image: n7901cImage,
+      category: 'Single Engine',
+      seats: 2,
+      cruiseSpeed: '105 kts',
+      engine: '110 HP Lycoming',
+      usefulLoad: '500 lb',
+      hourlyRate: '$175/Hour',
+      features: ['Garmin GNS 430'],
+      description: 'Reliable training aircraft perfect for building hours and honing your skills.',
+      topRightBadges: [],
+      bottomBadges: []
+    },
+    {
+      id: 7,
+      name: 'Technically Advanced Aircraft',
+      tailNumber: 'N42982',
+      image: n42982Image,
+      category: 'Single Engine',
+      seats: 4,
+      cruiseSpeed: '140 kts',
+      engine: '180 HP Lycoming',
+      usefulLoad: '900 lb',
+      hourlyRate: '$185/Hour',
+      features: ['Garmin 650 GPS', 'Garmin 375 GPS', 'Dual G5s', 'Three-axis Autopilot', 'Bluetooth Audio Panel w/ ATC Replay'],
+      description: 'State-of-the-art avionics and advanced systems make this aircraft perfect for instrument training and advanced pilot development.',
+      topRightBadges: [],
+      bottomBadges: ['Technically Advanced Aircraft']
     }
   ];
 
@@ -138,10 +182,19 @@ const Fleet = () => {
                   alt={`${plane.name} ${plane.tailNumber}`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
+                <div className="absolute top-2 sm:top-4 right-2 sm:right-4 flex flex-col gap-1">
                   <Badge variant="secondary" className="bg-primary text-primary-foreground animate-bounce-in hover-glow text-xs">
                     {plane.category}
                   </Badge>
+                  {plane.topRightBadges.map((badge) => (
+                    <Badge 
+                      key={badge} 
+                      variant="destructive" 
+                      className="text-xs"
+                    >
+                      {badge}
+                    </Badge>
+                  ))}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -199,6 +252,16 @@ const Fleet = () => {
                     </Badge>
                   ))}
                 </div>
+                
+                {plane.bottomBadges.length > 0 && (
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {plane.bottomBadges.map((badge) => (
+                      <Badge key={badge} variant="outline" className="text-xs bg-muted">
+                        {badge}
+                      </Badge>
+                    ))}
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
