@@ -9,9 +9,10 @@ import commercialPilotImg from '@/assets/commercial-pilot.jpg';
 
 const About = () => {
   const [selectedProgram, setSelectedProgram] = useState<string | null>('Private Pilot');
-  const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
-  const { elementRef: contentRef, isVisible: contentVisible } = useScrollAnimation();
+  const { elementRef: aboutRef, isVisible: aboutVisible } = useScrollAnimation();
+  const { elementRef: differentRef, isVisible: differentVisible } = useScrollAnimation();
   const { elementRef: programsRef, isVisible: programsVisible } = useScrollAnimation();
+  const { elementRef: whoWeAreRef, isVisible: whoWeAreVisible } = useScrollAnimation();
 
   const certifications = [
     'Private Pilot', 'Instrument Rating', 'Commercial Pilot', 'CFI', 'CFII',
@@ -68,101 +69,31 @@ const About = () => {
   return (
     <section id="about" className="py-24 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div 
-          ref={headerRef as React.RefObject<HTMLDivElement>}
-          className={`text-center mb-16 transition-all duration-700 ${
-            headerVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 mobile-px">
-            WHO ARE WE?
-          </h2>
-          <div className="w-16 sm:w-24 h-1 bg-gradient-primary mx-auto mb-6 sm:mb-8 animate-scale-in"></div>
-        </div>
-
-        <div 
-          ref={contentRef as React.RefObject<HTMLDivElement>}
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-12 sm:mb-16 transition-all duration-700 mobile-px ${
-            contentVisible ? 'animate-fade-in-left' : 'opacity-0 translate-x-8'
-          }`}
-        >
-          <div className="space-y-4 sm:space-y-6">
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed animate-fade-in-up stagger-1">
-              Hot Shot is a group of aviation enthusiasts. We are here to give SoCal aviators 
-              access to the cleanest, best kept aircraft in the area. We want you to love these 
-              planes and love your flights as much as we do.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-center animate-fade-in-left stagger-2 hover-scale cursor-pointer">
-                <CheckCircle className="w-5 h-5 text-primary mr-3 animate-bounce-in" />
-                <span className="text-foreground">Operated by two Part 121 Airline Captains</span>
-              </div>
-              <div className="flex items-center animate-fade-in-left stagger-3 hover-scale cursor-pointer">
-                <CheckCircle className="w-5 h-5 text-primary mr-3 animate-bounce-in" />
-                <span className="text-foreground">In-house Designated Pilot Examiner (DPE)</span>
-              </div>
-              <div className="flex items-center animate-fade-in-left stagger-4 hover-scale cursor-pointer">
-                <CheckCircle className="w-5 h-5 text-primary mr-3 animate-bounce-in" />
-                <span className="text-foreground">Premium aircraft maintenance standards</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <Card className="shadow-elegant overflow-hidden aviation-card animate-fade-in-right stagger-2">
-              <AspectRatio ratio={4/5}>
-                <img 
-                  src="/lovable-uploads/b68178ab-f3dd-4ffb-a59b-9744e2a1408c.png" 
-                  alt="Josh - Co-founder and Flight Instructor at Hot Shot Aviation" 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                />
-              </AspectRatio>
-              <CardContent className="p-3 sm:p-4">
-                <div className="flex items-center mb-2">
-                  <Plane className="w-4 sm:w-5 h-4 sm:h-5 text-aviation-gold mr-2" />
-                  <h4 className="text-base sm:text-lg font-bold text-foreground">Josh</h4>
-                </div>
-                <p className="text-muted-foreground text-xs sm:text-sm">
-                  Co-founder & Flight Instructor
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-elegant overflow-hidden aviation-card animate-fade-in-right stagger-3">
-              <AspectRatio ratio={4/5}>
-                <img 
-                  src="/lovable-uploads/a0a483b9-e9c7-4e17-bf79-ae92032e6da5.png" 
-                  alt="Jonathan - Co-founder and Flight Instructor at Hot Shot Aviation" 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                />
-              </AspectRatio>
-              <CardContent className="p-3 sm:p-4">
-                <div className="flex items-center mb-2">
-                  <Plane className="w-4 sm:w-5 h-4 sm:h-5 text-aviation-gold mr-2" />
-                  <h4 className="text-base sm:text-lg font-bold text-foreground">Jonathan</h4>
-                </div>
-                <p className="text-muted-foreground text-xs sm:text-sm">
-                  Co-founder & Flight Instructor
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-        </div>
-
+        
         {/* About Us Section */}
-        <div className="text-center mb-16">
+        <div 
+          ref={aboutRef as React.RefObject<HTMLDivElement>}
+          className={`text-center mb-16 transition-all duration-700 ${
+            aboutVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
+          }`}
+        >
           <div className="flex items-center justify-center mb-6">
             <Users className="w-8 h-8 text-aviation-gold mr-3" />
-            <h3 className="text-3xl font-bold text-foreground">About Us</h3>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">About Us</h2>
           </div>
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-none">
+          <div className="w-16 sm:w-24 h-1 bg-gradient-primary mx-auto mb-6 sm:mb-8 animate-scale-in"></div>
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
             Hot Shot Aviation was started by two flight instructors turned airline pilots looking to do things differently. Josh and Jonathan wanted to share access to top-quality airplanes without the typical headaches or woes of flight schools. Our goal is simple - provide access to the cleanest, most reliable, best kept aircraft so you can love aviation the way we do.
           </p>
         </div>
 
         {/* Why We're Different Section */}
-        <div className="mb-16">
+        <div 
+          ref={differentRef as React.RefObject<HTMLDivElement>}
+          className={`mb-16 transition-all duration-700 ${
+            differentVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
+          }`}
+        >
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-6">
               <Award className="w-8 h-8 text-aviation-gold mr-3" />
@@ -289,7 +220,7 @@ const About = () => {
         {/* Training Programs */}
         <div 
           ref={programsRef as React.RefObject<HTMLDivElement>}
-          className={`text-center mb-12 transition-all duration-700 ${
+          className={`text-center mb-16 transition-all duration-700 ${
             programsVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
           }`}
         >
@@ -338,6 +269,86 @@ const About = () => {
             </Card>
           )}
         </div>
+
+        {/* Who We Are Section */}
+        <div 
+          ref={whoWeAreRef as React.RefObject<HTMLDivElement>}
+          className={`mb-16 transition-all duration-700 ${
+            whoWeAreVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <div className="text-center mb-16">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 mobile-px">
+              WHO ARE WE?
+            </h3>
+            <div className="w-16 sm:w-24 h-1 bg-gradient-primary mx-auto mb-6 sm:mb-8 animate-scale-in"></div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mobile-px">
+            <div className="space-y-4 sm:space-y-6">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed animate-fade-in-up stagger-1">
+                Hot Shot is a group of aviation enthusiasts. We are here to give SoCal aviators 
+                access to the cleanest, best kept aircraft in the area. We want you to love these 
+                planes and love your flights as much as we do.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center animate-fade-in-left stagger-2 hover-scale cursor-pointer">
+                  <CheckCircle className="w-5 h-5 text-primary mr-3 animate-bounce-in" />
+                  <span className="text-foreground">Operated by two Part 121 Airline Captains</span>
+                </div>
+                <div className="flex items-center animate-fade-in-left stagger-3 hover-scale cursor-pointer">
+                  <CheckCircle className="w-5 h-5 text-primary mr-3 animate-bounce-in" />
+                  <span className="text-foreground">In-house Designated Pilot Examiner (DPE)</span>
+                </div>
+                <div className="flex items-center animate-fade-in-left stagger-4 hover-scale cursor-pointer">
+                  <CheckCircle className="w-5 h-5 text-primary mr-3 animate-bounce-in" />
+                  <span className="text-foreground">Premium aircraft maintenance standards</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              <Card className="shadow-elegant overflow-hidden aviation-card animate-fade-in-right stagger-2">
+                <AspectRatio ratio={4/5}>
+                  <img 
+                    src="/lovable-uploads/b68178ab-f3dd-4ffb-a59b-9744e2a1408c.png" 
+                    alt="Josh - Co-founder and Flight Instructor at Hot Shot Aviation" 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </AspectRatio>
+                <CardContent className="p-3 sm:p-4">
+                  <div className="flex items-center mb-2">
+                    <Plane className="w-4 sm:w-5 h-4 sm:h-5 text-aviation-gold mr-2" />
+                    <h4 className="text-base sm:text-lg font-bold text-foreground">Josh</h4>
+                  </div>
+                  <p className="text-muted-foreground text-xs sm:text-sm">
+                    Co-founder & Flight Instructor
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-elegant overflow-hidden aviation-card animate-fade-in-right stagger-3">
+                <AspectRatio ratio={4/5}>
+                  <img 
+                    src="/lovable-uploads/a0a483b9-e9c7-4e17-bf79-ae92032e6da5.png" 
+                    alt="Jonathan - Co-founder and Flight Instructor at Hot Shot Aviation" 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </AspectRatio>
+                <CardContent className="p-3 sm:p-4">
+                  <div className="flex items-center mb-2">
+                    <Plane className="w-4 sm:w-5 h-4 sm:h-5 text-aviation-gold mr-2" />
+                    <h4 className="text-base sm:text-lg font-bold text-foreground">Jonathan</h4>
+                  </div>
+                  <p className="text-muted-foreground text-xs sm:text-sm">
+                    Co-founder & Flight Instructor
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
