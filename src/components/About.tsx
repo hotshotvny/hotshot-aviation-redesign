@@ -152,11 +152,11 @@ const About = () => {
             </TabsContent>
             
             <TabsContent value="quality-aircraft">
-              <Card className="shadow-elegant special-highlight-card">
+              <Card className="special-highlight-card">
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
                     <Shield className="w-8 h-8 mr-4" />
-                    <h4 className="text-2xl font-semibold">Quality Aircraft</h4>
+                    <h4 className="text-2xl font-semibold">⚠️ NOT JUST RENTAL PLANES ⚠️</h4>
                   </div>
                   <p className="leading-relaxed text-lg">
                     These aren't just rental planes. We take pride in our aircraft and only rent to pilots 
