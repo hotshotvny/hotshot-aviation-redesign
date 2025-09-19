@@ -330,15 +330,11 @@ const About = () => {
             <Card className="shadow-elegant max-w-4xl mx-auto animate-fade-in">
               <CardContent className="p-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-                  <AspectRatio ratio={4/3}>
+                  <AspectRatio ratio={selectedProgram === 'High Performance' ? 16/9 : 4/3}>
                     <img 
                       src={trainingPrograms[selectedProgram as keyof typeof trainingPrograms].image}
                       alt={`${selectedProgram} training program`}
-                      className={`w-full h-full ${
-                        selectedProgram === 'High Performance' 
-                          ? 'object-contain' 
-                          : 'object-cover'
-                      }`}
+                      className="w-full h-full object-cover"
                     />
                   </AspectRatio>
                   <div className="p-6 flex flex-col justify-center">
