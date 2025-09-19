@@ -8,7 +8,7 @@ import n42982Image from '@/assets/n42982-aircraft.jpg';
 
 const Fleet = () => {
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
-  const { containerRef: fleetRef, visibleItems } = useStaggeredAnimation(5, 150);
+  const { containerRef: fleetRef, visibleItems } = useStaggeredAnimation(7, 150);
   const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string; name: string } | null>(null);
   
   const aircraft = [
