@@ -231,7 +231,7 @@ const About = () => {
             <div className="w-16 sm:w-24 h-1 bg-gradient-primary mx-auto mb-6 sm:mb-8 animate-scale-in"></div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mobile-px">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mobile-px max-w-4xl mx-auto">
             <div className="space-y-4 sm:space-y-6">
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed animate-fade-in-up stagger-1">
                 Hot Shot is a group of aviation enthusiasts. We are here to give SoCal aviators 
