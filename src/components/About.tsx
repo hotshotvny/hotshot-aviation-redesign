@@ -217,59 +217,6 @@ const About = () => {
           </Tabs>
         </div>
 
-        {/* Training Programs */}
-        <div 
-          ref={programsRef as React.RefObject<HTMLDivElement>}
-          className={`text-center mb-16 transition-all duration-700 ${
-            programsVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          <h3 className="text-3xl font-bold text-foreground mb-6 animate-fade-in-up stagger-1">Training Programs</h3>
-          <p className="text-lg text-muted-foreground mb-8 animate-fade-in-up stagger-2">
-            We offer comprehensive training programs from your first lesson to airline transport pilot
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {certifications.map((cert, index) => (
-              <Badge 
-                key={cert} 
-                variant={selectedProgram === cert ? "default" : "outline"}
-                className={`text-sm px-4 py-2 cursor-pointer transition-all duration-300 hover:scale-105 interactive-button animate-fade-in-up ${
-                  selectedProgram === cert 
-                    ? 'bg-primary text-primary-foreground shadow-glow' 
-                    : 'hover:bg-primary/10 hover-glow'
-                }`}
-                style={{ animationDelay: `${index * 100}ms` }}
-                onClick={() => setSelectedProgram(selectedProgram === cert ? null : cert)}
-              >
-                {cert}
-              </Badge>
-            ))}
-          </div>
-
-          {/* Selected Program Display */}
-          {selectedProgram && trainingPrograms[selectedProgram as keyof typeof trainingPrograms] && (
-            <Card className="shadow-elegant max-w-4xl mx-auto animate-fade-in">
-              <CardContent className="p-0">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-                  <AspectRatio ratio={4/3}>
-                    <img 
-                      src={trainingPrograms[selectedProgram as keyof typeof trainingPrograms].image}
-                      alt={`${selectedProgram} training program`}
-                      className="w-full h-full object-cover"
-                    />
-                  </AspectRatio>
-                  <div className="p-6 flex flex-col justify-center">
-                    <h4 className="text-2xl font-bold text-foreground mb-4">{selectedProgram}</h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {trainingPrograms[selectedProgram as keyof typeof trainingPrograms].description}
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          )}
-        </div>
-
         {/* Who We Are Section */}
         <div 
           ref={whoWeAreRef as React.RefObject<HTMLDivElement>}
@@ -347,6 +294,59 @@ const About = () => {
               </Card>
             </div>
           </div>
+        </div>
+
+        {/* Training Programs */}
+        <div 
+          ref={programsRef as React.RefObject<HTMLDivElement>}
+          className={`text-center mb-16 transition-all duration-700 ${
+            programsVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <h3 className="text-3xl font-bold text-foreground mb-6 animate-fade-in-up stagger-1">Training Programs</h3>
+          <p className="text-lg text-muted-foreground mb-8 animate-fade-in-up stagger-2">
+            We offer comprehensive training programs from your first lesson to airline transport pilot
+          </p>
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {certifications.map((cert, index) => (
+              <Badge 
+                key={cert} 
+                variant={selectedProgram === cert ? "default" : "outline"}
+                className={`text-sm px-4 py-2 cursor-pointer transition-all duration-300 hover:scale-105 interactive-button animate-fade-in-up ${
+                  selectedProgram === cert 
+                    ? 'bg-primary text-primary-foreground shadow-glow' 
+                    : 'hover:bg-primary/10 hover-glow'
+                }`}
+                style={{ animationDelay: `${index * 100}ms` }}
+                onClick={() => setSelectedProgram(selectedProgram === cert ? null : cert)}
+              >
+                {cert}
+              </Badge>
+            ))}
+          </div>
+
+          {/* Selected Program Display */}
+          {selectedProgram && trainingPrograms[selectedProgram as keyof typeof trainingPrograms] && (
+            <Card className="shadow-elegant max-w-4xl mx-auto animate-fade-in">
+              <CardContent className="p-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                  <AspectRatio ratio={4/3}>
+                    <img 
+                      src={trainingPrograms[selectedProgram as keyof typeof trainingPrograms].image}
+                      alt={`${selectedProgram} training program`}
+                      className="w-full h-full object-cover"
+                    />
+                  </AspectRatio>
+                  <div className="p-6 flex flex-col justify-center">
+                    <h4 className="text-2xl font-bold text-foreground mb-4">{selectedProgram}</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {trainingPrograms[selectedProgram as keyof typeof trainingPrograms].description}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          )}
         </div>
 
       </div>
