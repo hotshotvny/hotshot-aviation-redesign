@@ -56,8 +56,8 @@ const Hero = () => {
               <div className="w-14 sm:w-16 h-14 sm:h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 hover-glow animate-float" style={{animationDelay: '1s'}}>
                 <Users className="w-7 sm:w-8 h-7 sm:h-8 text-white" />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Airline Captains</h3>
-              <p className="text-sm sm:text-base text-white/80 leading-relaxed">Operated by two experienced Part 121 Airline Captains</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Experience that Matters</h3>
+              <p className="text-sm sm:text-base text-white/80 leading-relaxed">Bringing you the lessons that count straight from professional aviators</p>
             </div>
             
             <div className="text-center animate-fade-in-up stagger-6 hover-lift">
