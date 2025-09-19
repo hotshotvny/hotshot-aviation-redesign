@@ -187,6 +187,10 @@ All colors MUST be HSL.
     mask-composite: exclude;
   }
 
+  .special-highlight-card h3 {
+    color: #d4af37 !important;
+  }
+
   .special-highlight-card h4 {
     color: #d4af37 !important;
   }
