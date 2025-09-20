@@ -94,7 +94,15 @@ const ContactForm = () => {
         message: ''
       });
     } catch (error) {
+      console.error('=== CONTACT FORM ERROR ===');
       console.error('Error submitting form:', error);
+      console.error('Error message:', error?.message);
+      console.error('Error details:', JSON.stringify(error, null, 2));
+      console.error('Form data at time of error:', formData);
+      
+      // Also try to log to the UI for debugging
+      alert(`Debug Error: ${error?.message || 'Unknown error'}`);
+      
       toast({
         title: "Failed to send message",
         description: "Please try again or call us directly at 424-407-1869.",
