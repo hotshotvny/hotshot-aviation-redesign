@@ -35,7 +35,8 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase
+      // First, store the submission in the database
+      const { data, error } = await supabase
         .from('contact_submissions')
         .insert([
           {
@@ -45,9 +46,26 @@ const ContactForm = () => {
             service_interest: formData.service_interest || null,
             message: formData.message
           }
-        ]);
+        ])
+        .select('id')
+        .single();
 
       if (error) throw error;
+
+      // Then, trigger the email notification
+      try {
+        const { error: emailError } = await supabase.functions.invoke('send-contact-notification', {
+          body: { submissionId: data.id }
+        });
+
+        if (emailError) {
+          console.error('Email notification error:', emailError);
+          // Don't fail the entire submission if email fails
+        }
+      } catch (emailError) {
+        console.error('Failed to send email notification:', emailError);
+        // Continue with success message even if email fails
+      }
 
       toast({
         title: "Message sent successfully!",
