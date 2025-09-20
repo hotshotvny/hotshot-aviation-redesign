@@ -4,7 +4,9 @@ import ContactForm from './ContactForm';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24" style={{ background: 'var(--gradient-contact)' }}>
+    <section id="contact" className="py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-background/30"></div>
+      <div className="relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16 px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
@@ -81,6 +83,7 @@ const Contact = () => {
         <div className="mt-12 sm:mt-16 max-w-4xl mx-auto px-4">
           <ContactForm />
         </div>
+      </div>
       </div>
     </section>
   );

@@ -127,7 +127,9 @@ const Fleet = () => {
   ];
 
   return (
-    <section id="fleet" className="pt-12 pb-12" style={{ background: 'var(--gradient-fleet)' }}>
+    <section id="fleet" className="pt-12 pb-12 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-muted/20 to-background/40"></div>
+      <div className="relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           ref={headerRef as React.RefObject<HTMLDivElement>}
@@ -290,6 +292,7 @@ const Fleet = () => {
           </div>
         </div>
       )}
+      </div>
     </section>
   );
 };
