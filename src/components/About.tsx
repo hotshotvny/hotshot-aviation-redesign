@@ -67,10 +67,8 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-transparent"></div>
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-24" style={{ background: 'var(--gradient-about)' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* About Us Section */}
         <div 
@@ -351,7 +349,6 @@ const About = () => {
           )}
         </div>
 
-        </div>
       </div>
     </section>
   );
