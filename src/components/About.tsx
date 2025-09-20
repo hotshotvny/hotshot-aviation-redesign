@@ -108,27 +108,27 @@ const About = () => {
 
           <Tabs defaultValue="simple-affordable" className="max-w-4xl mx-auto">
             <TabsList className="flex flex-wrap w-full justify-center gap-2 mb-6 sm:mb-8 h-auto mobile-px p-2">
-              <TabsTrigger value="simple-affordable" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target flex-shrink-0">
+              <TabsTrigger value="simple-affordable" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target flex-none min-w-[calc(50%-0.25rem)] sm:min-w-fit">
                 <DollarSign className="w-4 sm:w-5 h-4 sm:h-5" />
                 <span className="hidden sm:inline">Simple & Affordable</span>
                 <span className="sm:hidden">Simple</span>
               </TabsTrigger>
-              <TabsTrigger value="quality-aircraft" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target flex-shrink-0">
+              <TabsTrigger value="quality-aircraft" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target flex-none min-w-[calc(50%-0.25rem)] sm:min-w-fit">
                 <Shield className="w-4 sm:w-5 h-4 sm:h-5" />
                 <span className="hidden sm:inline">Quality Aircraft</span>
                 <span className="sm:hidden">Quality</span>
               </TabsTrigger>
-              <TabsTrigger value="quality-over-quantity" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target flex-shrink-0">
-                <Heart className="w-5 sm:w-7 h-5 sm:h-7" />
+              <TabsTrigger value="quality-over-quantity" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target flex-none min-w-[calc(50%-0.25rem)] sm:min-w-fit">
+                <Heart className="w-4 sm:w-5 h-4 sm:h-5" />
                 <span className="hidden sm:inline">Quality Over Quantity</span>
                 <span className="sm:hidden">Focus</span>
               </TabsTrigger>
-              <TabsTrigger value="environmental" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target flex-shrink-0">
+              <TabsTrigger value="environmental" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target flex-none min-w-[calc(50%-0.25rem)] sm:min-w-fit">
                 <Leaf className="w-4 sm:w-5 h-4 sm:h-5" />
                 <span className="hidden sm:inline">Environmental Care</span>
                 <span className="sm:hidden">Eco</span>
               </TabsTrigger>
-              <TabsTrigger value="instructors" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target flex-shrink-0">
+              <TabsTrigger value="instructors" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target flex-none min-w-[calc(50%-0.25rem)] sm:min-w-fit">
                 <Users className="w-4 sm:w-5 h-4 sm:h-5" />
                 <span className="hidden sm:inline">Instructors Work For You</span>
                 <span className="sm:hidden">Instructors</span>
