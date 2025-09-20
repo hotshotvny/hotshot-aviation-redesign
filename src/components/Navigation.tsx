@@ -32,7 +32,7 @@ const Navigation = () => {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navLinks.map((link) => (
                 <a
@@ -61,6 +61,25 @@ const Navigation = () => {
                 Go Fly!
               </Button>
             </div>
+          </div>
+
+          {/* Tablet/Mobile Navigation */}
+          <div className="hidden md:flex lg:hidden items-baseline space-x-4 text-sm">
+            {navLinks.slice(0, 3).map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              >
+                {link.label}
+              </a>
+            ))}
+            <Link
+              to="/flight-school-guide"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+            >
+              Guide
+            </Link>
           </div>
 
           {/* Mobile menu button */}
