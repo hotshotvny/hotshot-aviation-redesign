@@ -119,7 +119,7 @@ const About = () => {
                 <span className="sm:hidden">Quality</span>
               </TabsTrigger>
               <TabsTrigger value="quality-over-quantity" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm p-2 sm:p-3 mobile-touch-target col-span-2 sm:col-span-1">
-                <Heart className="w-5 sm:w-6 h-5 sm:h-6" />
+                <Heart className="w-8 sm:w-10 h-8 sm:h-10" />
                 <span className="hidden sm:inline">Quality Over Quantity</span>
                 <span className="sm:hidden">Focus</span>
               </TabsTrigger>
