@@ -109,27 +109,27 @@ const About = () => {
           <Tabs defaultValue="simple-affordable" className="max-w-4xl mx-auto">
             <TabsList className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 w-full gap-2 mb-6 sm:mb-8 h-auto mobile-px p-2 place-items-center">
               <TabsTrigger value="simple-affordable" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target w-full justify-center">
-                <DollarSign className="w-4 sm:w-5 lg:w-6 h-4 sm:h-5 lg:h-6" />
+                <DollarSign className="w-5 sm:w-6 lg:w-8 h-5 sm:h-6 lg:h-8 flex-shrink-0" />
                 <span className="hidden sm:inline">Simple & Affordable</span>
                 <span className="sm:hidden">Simple</span>
               </TabsTrigger>
               <TabsTrigger value="quality-aircraft" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target w-full justify-center">
-                <Shield className="w-4 sm:w-5 lg:w-6 h-4 sm:h-5 lg:h-6" />
+                <Shield className="w-5 sm:w-6 lg:w-8 h-5 sm:h-6 lg:h-8 flex-shrink-0" />
                 <span className="hidden sm:inline">Quality Aircraft</span>
                 <span className="sm:hidden">Quality</span>
               </TabsTrigger>
               <TabsTrigger value="quality-over-quantity" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target w-full justify-center col-span-2 sm:col-span-1">
-                <Heart className="w-4 sm:w-5 lg:w-6 h-4 sm:h-5 lg:h-6" />
+                <Heart className="w-5 sm:w-6 lg:w-8 h-5 sm:h-6 lg:h-8 flex-shrink-0" />
                 <span className="hidden sm:inline">Quality Over Quantity</span>
                 <span className="sm:hidden">Focus</span>
               </TabsTrigger>
               <TabsTrigger value="environmental" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target w-full justify-center">
-                <Leaf className="w-4 sm:w-5 lg:w-6 h-4 sm:h-5 lg:h-6" />
+                <Leaf className="w-5 sm:w-6 lg:w-8 h-5 sm:h-6 lg:h-8 flex-shrink-0" />
                 <span className="hidden sm:inline">Environmental Care</span>
                 <span className="sm:hidden">Eco</span>
               </TabsTrigger>
               <TabsTrigger value="instructors" className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 mobile-touch-target w-full justify-center col-span-2 sm:col-span-2 lg:col-span-1">
-                <Users className="w-4 sm:w-5 lg:w-6 h-4 sm:h-5 lg:h-6" />
+                <Users className="w-5 sm:w-6 lg:w-8 h-5 sm:h-6 lg:h-8 flex-shrink-0" />
                 <span className="hidden sm:inline">Instructors Work For You</span>
                 <span className="sm:hidden">Instructors</span>
               </TabsTrigger>
