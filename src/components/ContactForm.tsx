@@ -35,6 +35,14 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
+      console.log('Attempting to submit form with data:', {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || null,
+        service_interest: formData.service_interest || null,
+        message: formData.message
+      });
+
       // First, store the submission in the database
       const { data, error } = await supabase
         .from('contact_submissions')
@@ -50,7 +58,12 @@ const ContactForm = () => {
         .select('id')
         .single();
 
-      if (error) throw error;
+      console.log('Database insert result:', { data, error });
+
+      if (error) {
+        console.error('Database insert error details:', error);
+        throw error;
+      }
 
       // Then, trigger the email notification
       try {
