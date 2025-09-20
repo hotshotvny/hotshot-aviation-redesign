@@ -108,28 +108,28 @@ const About = () => {
 
           <Tabs defaultValue="simple-affordable" className="w-full max-w-none">
             <TabsList className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 w-full max-w-6xl mx-auto gap-2 sm:gap-3 mb-6 sm:mb-8 h-auto mobile-px p-2 sm:p-3">
-              <TabsTrigger value="simple-affordable" className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm lg:text-base px-3 sm:px-4 lg:px-6 py-3 sm:py-4 mobile-touch-target w-full justify-center min-h-[3rem] sm:min-h-[3.5rem] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-secondary data-[state=inactive]:text-secondary-foreground hover:bg-primary/10 transition-all duration-200">
-                <DollarSign className="w-4 sm:w-5 lg:w-6 xl:w-8 h-4 sm:h-5 lg:h-6 xl:h-8 flex-shrink-0 data-[state=active]:text-aviation-gold data-[state=inactive]:text-primary" />
+              <TabsTrigger value="simple-affordable" className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm lg:text-base px-3 sm:px-4 lg:px-6 py-3 sm:py-4 mobile-touch-target w-full justify-center min-h-[3rem] sm:min-h-[3.5rem] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-primary/10 data-[state=inactive]:text-foreground hover:bg-primary/20 transition-all duration-200">
+                <DollarSign className="w-4 sm:w-5 lg:w-6 xl:w-8 h-4 sm:h-5 lg:h-6 xl:h-8 flex-shrink-0 data-[state=active]:text-aviation-gold data-[state=inactive]:text-primary/70" />
                 <span className="hidden sm:inline text-center leading-tight">Simple & Affordable</span>
                 <span className="sm:hidden text-center">Simple</span>
               </TabsTrigger>
-              <TabsTrigger value="quality-aircraft" className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm lg:text-base px-3 sm:px-4 lg:px-6 py-3 sm:py-4 mobile-touch-target w-full justify-center min-h-[3rem] sm:min-h-[3.5rem] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-secondary data-[state=inactive]:text-secondary-foreground hover:bg-primary/10 transition-all duration-200">
-                <Shield className="w-4 sm:w-5 lg:w-6 xl:w-8 h-4 sm:h-5 lg:h-6 xl:h-8 flex-shrink-0 data-[state=active]:text-aviation-gold data-[state=inactive]:text-primary" />
+              <TabsTrigger value="quality-aircraft" className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm lg:text-base px-3 sm:px-4 lg:px-6 py-3 sm:py-4 mobile-touch-target w-full justify-center min-h-[3rem] sm:min-h-[3.5rem] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-primary/10 data-[state=inactive]:text-foreground hover:bg-primary/20 transition-all duration-200">
+                <Shield className="w-4 sm:w-5 lg:w-6 xl:w-8 h-4 sm:h-5 lg:h-6 xl:h-8 flex-shrink-0 data-[state=active]:text-aviation-gold data-[state=inactive]:text-primary/70" />
                 <span className="hidden sm:inline text-center leading-tight">Quality Aircraft</span>
                 <span className="sm:hidden text-center">Quality</span>
               </TabsTrigger>
-              <TabsTrigger value="quality-over-quantity" className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm lg:text-base px-3 sm:px-4 lg:px-6 py-3 sm:py-4 mobile-touch-target w-full justify-center min-h-[3rem] sm:min-h-[3.5rem] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-secondary data-[state=inactive]:text-secondary-foreground hover:bg-primary/10 transition-all duration-200">
-                <Heart className="w-4 sm:w-5 lg:w-6 xl:w-8 h-4 sm:h-5 lg:h-6 xl:h-8 flex-shrink-0 data-[state=active]:text-aviation-gold data-[state=inactive]:text-primary" />
+              <TabsTrigger value="quality-over-quantity" className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm lg:text-base px-3 sm:px-4 lg:px-6 py-3 sm:py-4 mobile-touch-target w-full justify-center min-h-[3rem] sm:min-h-[3.5rem] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-primary/10 data-[state=inactive]:text-foreground hover:bg-primary/20 transition-all duration-200">
+                <Heart className="w-4 sm:w-5 lg:w-6 xl:w-8 h-4 sm:h-5 lg:h-6 xl:h-8 flex-shrink-0 data-[state=active]:text-aviation-gold data-[state=inactive]:text-primary/70" />
                 <span className="hidden sm:inline text-center leading-tight">Quality Over Quantity</span>
                 <span className="sm:hidden text-center">Focus</span>
               </TabsTrigger>
-              <TabsTrigger value="environmental" className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm lg:text-base px-3 sm:px-4 lg:px-6 py-3 sm:py-4 mobile-touch-target w-full justify-center min-h-[3rem] sm:min-h-[3.5rem] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-secondary data-[state=inactive]:text-secondary-foreground hover:bg-primary/10 transition-all duration-200">
-                <Leaf className="w-4 sm:w-5 lg:w-6 xl:w-8 h-4 sm:h-5 lg:h-6 xl:h-8 flex-shrink-0 data-[state=active]:text-aviation-gold data-[state=inactive]:text-primary" />
+              <TabsTrigger value="environmental" className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm lg:text-base px-3 sm:px-4 lg:px-6 py-3 sm:py-4 mobile-touch-target w-full justify-center min-h-[3rem] sm:min-h-[3.5rem] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-primary/10 data-[state=inactive]:text-foreground hover:bg-primary/20 transition-all duration-200">
+                <Leaf className="w-4 sm:w-5 lg:w-6 xl:w-8 h-4 sm:h-5 lg:h-6 xl:h-8 flex-shrink-0 data-[state=active]:text-aviation-gold data-[state=inactive]:text-primary/70" />
                 <span className="hidden sm:inline text-center leading-tight">Environmental Care</span>
                 <span className="sm:hidden text-center">Eco</span>
               </TabsTrigger>
-              <TabsTrigger value="instructors" className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm lg:text-base px-3 sm:px-4 lg:px-6 py-3 sm:py-4 mobile-touch-target w-full justify-center min-h-[3rem] sm:min-h-[3.5rem] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-secondary data-[state=inactive]:text-secondary-foreground hover:bg-primary/10 transition-all duration-200">
-                <Users className="w-4 sm:w-5 lg:w-6 xl:w-8 h-4 sm:h-5 lg:h-6 xl:h-8 flex-shrink-0 data-[state=active]:text-aviation-gold data-[state=inactive]:text-primary" />
+              <TabsTrigger value="instructors" className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm lg:text-base px-3 sm:px-4 lg:px-6 py-3 sm:py-4 mobile-touch-target w-full justify-center min-h-[3rem] sm:min-h-[3.5rem] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-primary/10 data-[state=inactive]:text-foreground hover:bg-primary/20 transition-all duration-200">
+                <Users className="w-4 sm:w-5 lg:w-6 xl:w-8 h-4 sm:h-5 lg:h-6 xl:h-8 flex-shrink-0 data-[state=active]:text-aviation-gold data-[state=inactive]:text-primary/70" />
                 <span className="hidden sm:inline text-center leading-tight">Instructors Work For You</span>
                 <span className="sm:hidden text-center">Instructors</span>
               </TabsTrigger>
