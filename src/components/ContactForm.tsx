@@ -47,15 +47,16 @@ const ContactForm = () => {
             message: formData.message
           }
         ])
-        .select('id')
-        .single();
+        .select('id');
 
       if (error) throw error;
+
+      const submissionId = data?.[0]?.id;
 
       // Then, trigger the email notification
       try {
         const { error: emailError } = await supabase.functions.invoke('send-contact-notification', {
-          body: { submissionId: data.id }
+          body: { submissionId: submissionId }
         });
 
         if (emailError) {
@@ -82,8 +83,9 @@ const ContactForm = () => {
       });
     } catch (error) {
       console.error('Error submitting form:', error);
+      alert(`Current Error: ${error?.message || JSON.stringify(error)}`);
       toast({
-        title: "Failed to send message",
+        title: "Failed to send message", 
         description: "Please try again or call us directly at 424-407-1869.",
         variant: "destructive"
       });
