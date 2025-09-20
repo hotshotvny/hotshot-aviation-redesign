@@ -299,7 +299,7 @@ const About = () => {
         {/* Training Programs */}
         <div 
           ref={programsRef as React.RefObject<HTMLDivElement>}
-          className={`text-center mb-16 transition-all duration-700 ${
+          className={`text-center mb-8 transition-all duration-700 ${
             programsVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
           }`}
         >
@@ -327,7 +327,7 @@ const About = () => {
 
           {/* Selected Program Display */}
           {selectedProgram && trainingPrograms[selectedProgram as keyof typeof trainingPrograms] && (
-            <Card className="shadow-elegant max-w-4xl mx-auto animate-fade-in">
+            <Card className="shadow-elegant max-w-6xl mx-auto animate-fade-in">
               <CardContent className="p-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                   <AspectRatio ratio={4/3}>
