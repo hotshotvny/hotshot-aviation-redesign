@@ -83,9 +83,8 @@ const ContactForm = () => {
       });
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert(`Current Error: ${error?.message || JSON.stringify(error)}`);
       toast({
-        title: "Failed to send message", 
+        title: "Failed to send message",
         description: "Please try again or call us directly at 424-407-1869.",
         variant: "destructive"
       });
