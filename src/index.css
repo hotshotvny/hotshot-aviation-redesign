@@ -56,7 +56,7 @@ All colors MUST be HSL.
     --gradient-contact: linear-gradient(45deg, hsl(var(--primary) / 0.3) 0%, hsl(var(--aviation-gold) / 0.2) 30%, hsl(var(--primary) / 0.25) 70%, hsl(var(--aviation-gold) / 0.15) 100%);
     
     /* Hexagonal Aviation Pattern */
-    --hexagon-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23e53935' stroke-width='0.5' stroke-opacity='0.04'%3E%3Cpolygon points='30,5 45,15 45,35 30,45 15,35 15,15'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    --hexagon-pattern: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23e53935' stroke-width='0.8' stroke-opacity='0.12'%3E%3Cpolygon points='40,8 62,22 62,50 40,64 18,50 18,22'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     
     
     /* Shadows */
@@ -107,7 +107,7 @@ All colors MUST be HSL.
     --gradient-contact: linear-gradient(45deg, hsl(var(--primary) / 0.25) 0%, hsl(var(--aviation-gold) / 0.18) 30%, hsl(var(--primary) / 0.2) 70%, hsl(var(--aviation-gold) / 0.12) 100%);
     
     /* Dark mode hexagonal pattern */
-    --hexagon-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23e53935' stroke-width='0.5' stroke-opacity='0.08'%3E%3Cpolygon points='30,5 45,15 45,35 30,45 15,35 15,15'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    --hexagon-pattern: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23e53935' stroke-width='0.8' stroke-opacity='0.18'%3E%3Cpolygon points='40,8 62,22 62,50 40,64 18,50 18,22'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 }
 
@@ -290,24 +290,8 @@ All colors MUST be HSL.
   .hexagon-bg {
     background-color: hsl(var(--background));
     background-image: var(--hexagon-pattern);
-    background-size: 60px 60px;
+    background-size: 80px 80px;
     position: relative;
-  }
-  
-  .hexagon-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      135deg,
-      hsl(var(--background) / 0.92) 0%,
-      hsl(var(--muted) / 0.05) 50%,
-      hsl(var(--background) / 0.92) 100%
-    );
-    pointer-events: none;
   }
   
   
