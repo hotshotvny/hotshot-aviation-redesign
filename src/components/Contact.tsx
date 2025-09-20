@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import ContactForm from './ContactForm';
 
 const Contact = () => {
   return (
@@ -74,6 +75,11 @@ const Contact = () => {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Contact Form */}
+        <div className="mt-12 sm:mt-16 max-w-4xl mx-auto px-4">
+          <ContactForm />
         </div>
       </div>
     </section>
