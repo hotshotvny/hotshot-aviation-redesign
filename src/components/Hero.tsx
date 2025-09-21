@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Plane, Award, Users } from 'lucide-react';
-import heroImage from '@/assets/aviation-hero.jpg';
+import heroImage from '@/assets/hero-sunset.jpg';
 
 const Hero = () => {
   return (
