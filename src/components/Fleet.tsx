@@ -103,7 +103,7 @@ const Fleet = () => {
       engine: '110 HP Lycoming',
       usefulLoad: '500 lb',
       hourlyRate: '$175/Hour',
-      features: ['Garmin GNS 430 WAAS GPS'],
+      features: ['Garmin GNS 430 GPS'],
       description: 'Reliable training aircraft perfect for building hours and honing your skills.',
       topRightBadges: [],
       bottomBadges: []
@@ -117,9 +117,9 @@ const Fleet = () => {
       seats: 4,
       cruiseSpeed: '140 kts',
       engine: '180 HP Lycoming',
-      usefulLoad: '900 lb',
+      usefulLoad: '956 lb',
       hourlyRate: '$185/Hour',
-      features: ['Garmin GTN 650 WAAS GPS', 'Garmin 375 GPS', 'Dual Garmin G5\'s', 'Three-axis Autopilot', 'Bluetooth Audio Panel w/ ATC Replay'],
+      features: ['Garmin GTN 650 GPS', 'Garmin 375 GPS', 'Dual Garmin G5\'s', 'Three-axis Autopilot', 'Bluetooth Audio Panel w/ ATC Replay'],
       description: 'State-of-the-art avionics and advanced systems make this aircraft perfect for instrument training and advanced pilot development.',
       topRightBadges: [],
       bottomBadges: ['Technically Advanced Aircraft']
