@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { Fuel, Users, Gauge, X } from 'lucide-react';
 import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
 import { useState } from 'react';
-import n7901cImage from '@/assets/n7901c-aircraft.jpg';
+import n7901cImage from '@/assets/n7901c-new.jpg';
 import n42982Image from '@/assets/n42982-new.jpg';
 
 const Fleet = () => {
@@ -34,15 +34,15 @@ const Fleet = () => {
       tailNumber: 'N7901C',
       image: n7901cImage,
       category: 'Single Engine',
-      seats: 2,
-      cruiseSpeed: '105 kts',
-      engine: '110 HP Lycoming',
+      seats: 4,
+      cruiseSpeed: '119 kts',
+      engine: '180 HP Lycoming',
       usefulLoad: '500 lb',
       hourlyRate: '$175/Hour',
       features: ['Garmin GNS 430 GPS'],
-      description: 'Reliable training aircraft perfect for building hours and honing your skills.',
+      description: 'Straight-forward, reliable, and proven. N7901C offers the ideal platform for new pilots to gain experience. A Garmin GPS with ADSB traffic help keep you alert and safe.',
       topRightBadges: [],
-      bottomBadges: []
+      bottomBadges: ['ADSB In & Out']
     },
     {
       id: 3,
