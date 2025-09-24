@@ -15,20 +15,20 @@ const Hero = () => {
         {/* Wind Animation Effect */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Wind streaks */}
-          <div className="absolute inset-0 opacity-40">
-            <div className="absolute top-1/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent animate-wind-flow blur-sm" style={{animationDelay: '0s'}} />
-            <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/50 to-transparent animate-wind-flow" style={{animationDelay: '1.5s'}} />
-            <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/70 to-transparent animate-wind-flow blur-sm" style={{animationDelay: '3s'}} />
-            <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/45 to-transparent animate-wind-flow" style={{animationDelay: '4.5s'}} />
-            <div className="absolute top-3/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent animate-wind-flow blur-sm" style={{animationDelay: '2s'}} />
+          <div className="absolute inset-0 opacity-60">
+            <div className="absolute top-1/4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/80 to-transparent animate-wind-flow blur-sm" style={{animationDelay: '0s'}} />
+            <div className="absolute top-1/3 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/70 to-transparent animate-wind-flow" style={{animationDelay: '1.5s'}} />
+            <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/90 to-transparent animate-wind-flow blur-sm" style={{animationDelay: '3s'}} />
+            <div className="absolute top-2/3 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/65 to-transparent animate-wind-flow" style={{animationDelay: '4.5s'}} />
+            <div className="absolute top-3/4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/80 to-transparent animate-wind-flow blur-sm" style={{animationDelay: '2s'}} />
           </div>
           
           {/* Additional wind particles */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-1/6 left-0 w-4 h-0.5 bg-white/70 animate-wind-particle blur-sm" style={{animationDelay: '0.5s'}} />
-            <div className="absolute top-5/12 left-0 w-2 h-px bg-white/60 animate-wind-particle" style={{animationDelay: '2.5s'}} />
-            <div className="absolute top-7/12 left-0 w-6 h-0.5 bg-white/50 animate-wind-particle blur-sm" style={{animationDelay: '4s'}} />
-            <div className="absolute top-5/6 left-0 w-3 h-px bg-white/65 animate-wind-particle" style={{animationDelay: '1.2s'}} />
+          <div className="absolute inset-0 opacity-50">
+            <div className="absolute top-1/6 left-0 w-6 h-1 bg-white/80 animate-wind-particle blur-sm" style={{animationDelay: '0.5s'}} />
+            <div className="absolute top-5/12 left-0 w-4 h-0.5 bg-white/70 animate-wind-particle" style={{animationDelay: '2.5s'}} />
+            <div className="absolute top-7/12 left-0 w-8 h-1 bg-white/70 animate-wind-particle blur-sm" style={{animationDelay: '4s'}} />
+            <div className="absolute top-5/6 left-0 w-5 h-0.5 bg-white/75 animate-wind-particle" style={{animationDelay: '1.2s'}} />
           </div>
         </div>
       </div>
