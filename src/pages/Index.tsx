@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Fleet from '@/components/Fleet';
 import Contact from '@/components/Contact';
+import signature from '@/assets/signature.png';
 
 const Index = () => {
   return (
@@ -100,10 +101,13 @@ const Index = () => {
                   Elevating pilots to new heights since inception
                 </p>
               </div>
-              <div className="flex space-x-6 text-xs text-muted-foreground">
-                <span className="hover:text-primary transition-colors cursor-pointer">Privacy Policy</span>
-                <span className="hover:text-primary transition-colors cursor-pointer">Terms of Service</span>
-                <span className="hover:text-primary transition-colors cursor-pointer">Safety Standards</span>
+              <div className="flex items-center space-x-3">
+                <span className="text-xs text-muted-foreground">Website design by</span>
+                <img 
+                  src={signature} 
+                  alt="Austin J. Robertson signature" 
+                  className="h-6 opacity-70 hover:opacity-100 transition-opacity filter brightness-0 invert"
+                />
               </div>
             </div>
           </div>
