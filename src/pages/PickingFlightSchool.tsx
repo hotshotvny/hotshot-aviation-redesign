@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Shield, Plane, DollarSign, Users, BookOpen, Thermometer } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
-import aviationHero from '@/assets/aviation-hero.jpg';
+import heroImage from '@/assets/hero-sunset.jpg';
 
 const PickingFlightSchool = () => {
   const navigate = useNavigate();
@@ -79,7 +79,7 @@ const PickingFlightSchool = () => {
       <section className="relative py-24 mt-16 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${aviationHero})` }}
+          style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 bg-gradient-hero opacity-75"></div>
         </div>
