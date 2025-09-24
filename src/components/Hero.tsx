@@ -11,6 +11,26 @@ const Hero = () => {
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="absolute inset-0 bg-gradient-hero opacity-75" />
+        
+        {/* Wind Animation Effect */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Wind streaks */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/40 to-transparent animate-wind-flow" style={{animationDelay: '0s'}} />
+            <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent animate-wind-flow" style={{animationDelay: '1.5s'}} />
+            <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/35 to-transparent animate-wind-flow" style={{animationDelay: '3s'}} />
+            <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/25 to-transparent animate-wind-flow" style={{animationDelay: '4.5s'}} />
+            <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/40 to-transparent animate-wind-flow" style={{animationDelay: '2s'}} />
+          </div>
+          
+          {/* Additional wind particles */}
+          <div className="absolute inset-0 opacity-15">
+            <div className="absolute top-1/6 left-0 w-2 h-px bg-white/50 animate-wind-particle" style={{animationDelay: '0.5s'}} />
+            <div className="absolute top-5/12 left-0 w-1 h-px bg-white/40 animate-wind-particle" style={{animationDelay: '2.5s'}} />
+            <div className="absolute top-7/12 left-0 w-3 h-px bg-white/30 animate-wind-particle" style={{animationDelay: '4s'}} />
+            <div className="absolute top-5/6 left-0 w-1 h-px bg-white/45 animate-wind-particle" style={{animationDelay: '1.2s'}} />
+          </div>
+        </div>
       </div>
 
       {/* Content */}
