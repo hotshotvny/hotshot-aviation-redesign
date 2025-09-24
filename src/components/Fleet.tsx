@@ -4,7 +4,7 @@ import { Fuel, Users, Gauge, X } from 'lucide-react';
 import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
 import { useState } from 'react';
 import n7901cImage from '@/assets/n7901c-aircraft.jpg';
-import n42982Image from '@/assets/n42982-aircraft.jpg';
+import n42982Image from '@/assets/n42982-new.jpg';
 
 const Fleet = () => {
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
@@ -67,12 +67,12 @@ const Fleet = () => {
       image: n42982Image,
       category: 'Single Engine',
       seats: 4,
-      cruiseSpeed: '140 kts',
+      cruiseSpeed: '119 kts',
       engine: '180 HP Lycoming',
       usefulLoad: '956 lb',
       hourlyRate: '$185/Hour',
       features: ['Garmin GTN 650 GPS', 'Garmin 375 GPS', 'Dual Garmin G5\'s', 'Three-axis Autopilot', 'Bluetooth Audio Panel w/ ATC Replay'],
-      description: 'State-of-the-art avionics and advanced systems make this aircraft perfect for instrument training and advanced pilot development.',
+      description: 'With advanced avionics, N42982 gives its pilots a leg up on instrument training while building TAA time. All of this while offering everything that has made the Piper Archer such a popular choice for trainers everywhere.',
       topRightBadges: [],
       bottomBadges: ['Technically Advanced Aircraft']
     },
