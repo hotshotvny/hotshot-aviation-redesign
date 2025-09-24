@@ -73,8 +73,8 @@ const Fleet = () => {
       hourlyRate: '$185/Hour',
       features: ['Garmin GTN 650 GPS', 'Garmin 375 GPS', 'Dual Garmin G5\'s', 'Three-axis Autopilot', 'Bluetooth Audio Panel w/ ATC Replay'],
       description: 'With advanced avionics, N42982 gives its pilots a leg up on instrument training while building TAA time. All of this while offering everything that has made the Piper Archer such a popular choice for trainers everywhere.',
-      topRightBadges: [],
-      bottomBadges: ['Technically Advanced Aircraft']
+      topRightBadges: ['Technically Advanced Aircraft'],
+      bottomBadges: []
     },
     {
       id: 5,
