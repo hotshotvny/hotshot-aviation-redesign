@@ -202,9 +202,16 @@ const Fleet = () => {
               <CardHeader className="pb-3">
                 <CardTitle className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <span className="text-base sm:text-lg leading-tight">{plane.name}</span>
-                  <Badge variant="default" className="font-mono text-xs sm:text-sm self-start sm:self-center">
-                    {plane.tailNumber}
-                  </Badge>
+                  <a 
+                    href={`https://globe.adsbexchange.com/?find=${plane.tailNumber}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Badge variant="default" className="font-mono text-xs sm:text-sm self-start sm:self-center hover:opacity-80 transition-opacity cursor-pointer">
+                      {plane.tailNumber}
+                    </Badge>
+                  </a>
                 </CardTitle>
               </CardHeader>
               
