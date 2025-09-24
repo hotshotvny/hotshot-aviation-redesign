@@ -16,6 +16,7 @@ const Fleet = () => {
       id: 1,
       name: '1979 Cessna 152',
       tailNumber: 'N46826',
+      icaoCode: 'a2e71a',
       image: '/lovable-uploads/01febd13-67cd-4125-a2ea-81866c55961f.png',
       category: 'Single Engine',
       seats: 2,
@@ -32,6 +33,7 @@ const Fleet = () => {
       id: 2,
       name: '1976 Piper Archer II (PA28-181)',
       tailNumber: 'N7901C',
+      icaoCode: 'a8b47c',
       image: n7901cImage,
       category: 'Single Engine',
       seats: 4,
@@ -48,6 +50,7 @@ const Fleet = () => {
       id: 3,
       name: '1983 Piper Archer II (PA28-181)',
       tailNumber: 'N130JM',
+      icaoCode: 'a04e6d',
       image: '/lovable-uploads/5e57c5db-d4b0-4f3d-a288-682cc13d4377.png',
       category: 'Single Engine',
       seats: 4,
@@ -64,6 +67,7 @@ const Fleet = () => {
       id: 4,
       name: '1983 Piper Archer II (PA28-181)',
       tailNumber: 'N42982',
+      icaoCode: 'a2e5e2',
       image: n42982Image,
       category: 'Single Engine',
       seats: 4,
@@ -80,6 +84,7 @@ const Fleet = () => {
       id: 5,
       name: '1977 Cessna R172K',
       tailNumber: 'N736DU',
+      icaoCode: 'a814fe',
       image: '/lovable-uploads/717c0e0a-fc87-4d69-8c69-9f1f2f6a0ba6.png',
       category: 'Single Engine',
       seats: 4,
@@ -96,6 +101,7 @@ const Fleet = () => {
       id: 6,
       name: '1976 Piper Cherokee 6 (PA32-300)',
       tailNumber: 'N7039C',
+      icaoCode: 'a7df1c',
       image: '/lovable-uploads/ca3c3ffa-cb90-4bca-97d4-448f646051da.png',
       category: 'Single Engine',
       seats: 6,
@@ -112,6 +118,7 @@ const Fleet = () => {
       id: 7,
       name: '1969 Piper Twin Comanche (PA30)',
       tailNumber: 'N407AF',
+      icaoCode: 'a4c6a8',
       image: '/lovable-uploads/77f5f865-395a-4b9f-a9a0-e4323b9af0ca.png',
       category: 'Multi-Engine',
       seats: 4,
@@ -203,7 +210,7 @@ const Fleet = () => {
                 <CardTitle className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <span className="text-base sm:text-lg leading-tight">{plane.name}</span>
                   <a 
-                    href={`https://globe.adsbexchange.com/?find=${plane.tailNumber}`}
+                    href={`https://globe.adsbexchange.com/?icao=${plane.icaoCode}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block"
