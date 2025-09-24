@@ -30,7 +30,7 @@ const Fleet = () => {
     },
     {
       id: 2,
-      name: 'Piper Archer II (PA28-181)',
+      name: '1976 Piper Archer II (PA28-181)',
       tailNumber: 'N7901C',
       image: n7901cImage,
       category: 'Single Engine',
@@ -62,7 +62,7 @@ const Fleet = () => {
     },
     {
       id: 4,
-      name: 'Piper Archer II (PA28-181)',
+      name: '1983 Piper Archer II (PA28-181)',
       tailNumber: 'N42982',
       image: n42982Image,
       category: 'Single Engine',
