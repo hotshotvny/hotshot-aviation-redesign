@@ -189,7 +189,8 @@ All colors MUST be HSL.
   }
 
   .special-highlight-card h3 {
-    color: #d4af37 !important;
+    color: #1a1a1a !important;
+    font-weight: 700;
   }
 
   .special-highlight-card h4 {
