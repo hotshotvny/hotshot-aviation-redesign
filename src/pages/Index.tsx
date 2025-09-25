@@ -47,7 +47,7 @@ const Index = () => {
               </div>
               <div className="flex items-center justify-center h-16 w-32 opacity-70 hover:opacity-100 transition-opacity">
                 <img 
-                  src="/lovable-uploads/ad7b7081-3a84-4166-8e50-dbcf3422033f.png" 
+                  src="/lovable-uploads/swift-fuels-logo.png" 
                   alt="Swift Fuels" 
                   className="max-h-12 max-w-full object-contain filter brightness-0 invert"
                 />
