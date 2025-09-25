@@ -48,7 +48,7 @@ const Hero = () => {
               variant="hero" 
               size="lg" 
               className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 interactive-button hover:scale-105 transition-all duration-300 mobile-touch-target w-full sm:w-auto"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('training-programs')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Start Training
             </Button>

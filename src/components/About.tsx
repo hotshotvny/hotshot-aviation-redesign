@@ -298,6 +298,7 @@ const About = () => {
 
         {/* Training Programs */}
         <div 
+          id="training-programs"
           ref={programsRef as React.RefObject<HTMLDivElement>}
           className={`text-center mb-8 transition-all duration-700 ${
             programsVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
