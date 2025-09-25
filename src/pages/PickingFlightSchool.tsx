@@ -73,7 +73,7 @@ const PickingFlightSchool = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ background: 'var(--gradient-about)' }}>
       <Navigation />
       {/* Hero Section */}
       <section className="relative py-24 mt-16 overflow-hidden">
