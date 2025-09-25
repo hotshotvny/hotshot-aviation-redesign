@@ -6,6 +6,7 @@ import { CheckCircle, Award, Plane, Users, Shield, Leaf, DollarSign, Heart } fro
 import { useState } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import commercialPilotImg from '@/assets/commercial-pilot.jpg';
+import atpCockpitImg from '@/assets/atp-cockpit.jpg';
 
 const About = () => {
   const [selectedProgram, setSelectedProgram] = useState<string | null>('Private Pilot');
@@ -61,7 +62,7 @@ const About = () => {
       description: 'Gain proficiency in aircraft with retractable landing gear, constant speed propellers, and flaps. Essential for advanced flying.'
     },
     'ATP': {
-      image: commercialPilotImg,
+      image: atpCockpitImg,
       description: 'Airline Transport Pilot - the highest level of pilot certification. Required to captain commercial airline flights and the pinnacle of pilot training.'
     }
   };
