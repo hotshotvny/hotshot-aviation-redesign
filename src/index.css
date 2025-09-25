@@ -168,9 +168,9 @@ All colors MUST be HSL.
   
   /* Special highlight card for "Not Just Rental Planes" */
   .special-highlight-card {
-    background: linear-gradient(135deg, rgba(64, 64, 64, 0.4) 0%, rgba(96, 96, 96, 0.5) 100%) !important;
+    background: linear-gradient(135deg, rgba(180, 60, 60, 0.4) 0%, rgba(96, 96, 96, 0.4) 100%) !important;
     border: 1px solid rgba(212, 175, 55, 0.6) !important;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2), 0 10px 30px -10px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2), 0 10px 30px -10px rgba(180, 60, 60, 0.2) !important;
     backdrop-filter: blur(10px);
     position: relative;
   }
