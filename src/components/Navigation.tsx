@@ -13,7 +13,7 @@ const Navigation = () => {
     { href: isHomePage ? '#home' : '/#home', label: 'Home' },
     { href: isHomePage ? '#about' : '/#about', label: 'About' },
     { href: isHomePage ? '#fleet' : '/#fleet', label: 'Fleet' },
-    { href: isHomePage ? '#training' : '/#training', label: 'Training' },
+    { href: isHomePage ? '#training-programs' : '/#training-programs', label: 'Training' },
     { href: isHomePage ? '#contact' : '/#contact', label: 'Contact' },
   ];
 
