@@ -22,18 +22,11 @@ const SuccessOverlay = ({
       // Stagger the animations
       setTimeout(() => setShowContent(true), 100);
       setTimeout(() => setShowText(true), 400);
-      
-      // Auto dismiss after 5 seconds
-      const timer = setTimeout(() => {
-        onDismiss();
-      }, 5000);
-
-      return () => clearTimeout(timer);
     } else {
       setShowContent(false);
       setShowText(false);
     }
-  }, [isVisible, onDismiss]);
+  }, [isVisible]);
 
   if (!isVisible) return null;
 
