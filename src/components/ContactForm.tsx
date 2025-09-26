@@ -8,9 +8,11 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { Send, Loader2 } from 'lucide-react';
+import SuccessOverlay from '@/components/ui/SuccessOverlay';
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessOverlay, setShowSuccessOverlay] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -68,10 +70,8 @@ const ContactForm = () => {
         // Continue with success message even if email fails
       }
 
-      toast({
-        title: "Message sent successfully!",
-        description: "Thanks for reaching out. We'll get back to you within 24 hours.",
-      });
+      // Show epic success overlay instead of toast
+      setShowSuccessOverlay(true);
 
       // Reset form
       setFormData({
@@ -94,7 +94,12 @@ const ContactForm = () => {
   };
 
   return (
-    <Card className="shadow-elegant">
+    <Card className="shadow-elegant relative">
+      <SuccessOverlay 
+        isVisible={showSuccessOverlay}
+        onDismiss={() => setShowSuccessOverlay(false)}
+      />
+      
       <CardHeader>
         <CardTitle className="text-xl sm:text-2xl text-center">Send Us a Message</CardTitle>
         <p className="text-muted-foreground text-center">

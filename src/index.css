@@ -382,6 +382,104 @@ All colors MUST be HSL.
   }
 }
 
+@keyframes success-bounce {
+  0% { 
+    transform: scale(0.3) rotate(-10deg); 
+    opacity: 0; 
+  }
+  50% { 
+    transform: scale(1.05) rotate(5deg); 
+    opacity: 0.8; 
+  }
+  100% { 
+    transform: scale(1) rotate(0deg); 
+    opacity: 1; 
+  }
+}
+
+@keyframes success-icon-bounce {
+  0% { 
+    transform: scale(0) rotate(0deg); 
+  }
+  60% { 
+    transform: scale(1.2) rotate(360deg); 
+  }
+  100% { 
+    transform: scale(1) rotate(360deg); 
+  }
+}
+
+@keyframes success-check {
+  0% { 
+    transform: scale(0); 
+    opacity: 0; 
+  }
+  50% { 
+    transform: scale(0); 
+    opacity: 0; 
+  }
+  100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}
+
+@keyframes plane-fly {
+  0% { 
+    transform: translateX(-50px) translateY(10px) rotate(-45deg); 
+    opacity: 0; 
+  }
+  50% { 
+    transform: translateX(20px) translateY(-5px) rotate(15deg); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translateX(0px) translateY(0px) rotate(0deg); 
+    opacity: 1; 
+  }
+}
+
+@keyframes typewriter {
+  0% { 
+    width: 0; 
+    opacity: 0; 
+  }
+  50% { 
+    opacity: 1; 
+  }
+  100% { 
+    width: 100%; 
+    opacity: 1; 
+  }
+}
+
+@keyframes border-glow {
+  0% { 
+    opacity: 0.2; 
+  }
+  50% { 
+    opacity: 0.8; 
+  }
+  100% { 
+    opacity: 0.2; 
+  }
+}
+
+@keyframes particle-float {
+  0% { 
+    transform: translateY(0px) rotate(0deg); 
+    opacity: 0.8; 
+  }
+  50% { 
+    transform: translateY(-20px) rotate(180deg); 
+    opacity: 0.3; 
+  }
+  100% { 
+    transform: translateY(0px) rotate(360deg); 
+    opacity: 0.8; 
+  }
+}
+
 @keyframes wind-particle {
   0% {
     transform: translateX(-10px);
@@ -414,6 +512,92 @@ All colors MUST be HSL.
 
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-success-bounce {
+  animation: success-bounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.animate-success-icon-bounce {
+  animation: success-icon-bounce 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s;
+}
+
+.animate-success-check {
+  animation: success-check 0.6s ease-out 0.8s;
+}
+
+.animate-plane-fly {
+  animation: plane-fly 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s;
+}
+
+.animate-typewriter {
+  animation: typewriter 0.8s ease-out 0.6s;
+}
+
+.animate-border-glow {
+  animation: border-glow 2s ease-in-out infinite;
+}
+
+.animate-particle-float {
+  animation: particle-float 3s ease-in-out infinite;
+}
+
+/* Success overlay particles */
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+  border-radius: 50%;
+  animation: particle-float var(--duration, 3s) ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.particle-1 {
+  top: 10%;
+  left: 20%;
+  --duration: 2.5s;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  top: 20%;
+  right: 15%;
+  --duration: 3.2s;
+  animation-delay: 0.5s;
+}
+
+.particle-3 {
+  bottom: 25%;
+  left: 10%;
+  --duration: 2.8s;
+  animation-delay: 1s;
+}
+
+.particle-4 {
+  bottom: 15%;
+  right: 25%;
+  --duration: 3.5s;
+  animation-delay: 0.3s;
+}
+
+.particle-5 {
+  top: 60%;
+  left: 5%;
+  --duration: 4s;
+  animation-delay: 0.8s;
+}
+
+.particle-6 {
+  top: 40%;
+  right: 8%;
+  --duration: 2.3s;
+  animation-delay: 1.2s;
+}
+
+/* Success glow effect */
+.shadow-success-glow {
+  box-shadow: 0 0 30px hsl(var(--primary) / 0.4), 0 0 60px hsl(var(--primary-glow) / 0.2);
 }
 
 /* Reduced motion preferences */
