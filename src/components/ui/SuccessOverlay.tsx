@@ -32,7 +32,7 @@ const SuccessOverlay = ({
 
   return (
     <div 
-      className="absolute inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-fade-in cursor-pointer"
+      className="absolute inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm animate-fade-in cursor-pointer"
       onClick={onDismiss}
     >
       {/* Animated particles */}
@@ -52,7 +52,6 @@ const SuccessOverlay = ({
           transform transition-all duration-700 ease-out
           ${showContent ? 'scale-100 opacity-100 animate-success-bounce' : 'scale-50 opacity-0'}
         `}
-        onClick={(e) => e.stopPropagation()}
       >
         {/* Success icon with plane animation */}
         <div className="relative mb-6">
@@ -97,7 +96,7 @@ const SuccessOverlay = ({
             transform transition-all duration-500 ease-out delay-700
             ${showText ? 'opacity-100' : 'opacity-0'}
           `}>
-            Click anywhere to dismiss
+            Tap anywhere to close
           </p>
         </div>
 
