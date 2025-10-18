@@ -135,29 +135,140 @@ const handler = async (req: Request): Promise<Response> => {
       to: [submission.email],
       subject: 'Thank you for contacting Hot Shot Aviation',
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h2 style="color: #1e3a8a; margin-bottom: 20px;">Thank you for contacting us!</h2>
-          
-          <p>Dear ${submission.name},</p>
-          
-          <p>Thank you for reaching out to Hot Shot Aviation. We have received your inquiry and will get back to you within 24 hours.</p>
-          
-          <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="margin-top: 0; color: #374151;">Your Message</h3>
-            <p style="white-space: pre-wrap; line-height: 1.6;">${submission.message}</p>
-          </div>
-          
-          <p>In the meantime, feel free to explore our flight training programs and aircraft fleet on our website.</p>
-          
-          <p>Best regards,<br>
-          <strong>The Hot Shot Aviation Team</strong><br>
-          Phone: <a href="tel:+1234567890">(123) 456-7890</a><br>
-          Email: <a href="mailto:info@hotshotaviation.com">info@hotshotaviation.com</a></p>
-          
-          <div style="font-size: 12px; color: #6b7280; border-top: 1px solid #e5e7eb; padding-top: 15px; margin-top: 30px;">
-            <p>This is an automated confirmation. Please do not reply to this email.</p>
-          </div>
-        </div>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Thank You - Hot Shot Aviation</title>
+        </head>
+        <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; background-color: #FAFAFA;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #FAFAFA;">
+            <tr>
+              <td style="padding: 40px 20px;">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width: 600px; margin: 0 auto; background-color: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                  
+                  <!-- Header with Logo and Red Gradient -->
+                  <tr>
+                    <td style="background: linear-gradient(135deg, #EC4C3F 0%, #C53E33 100%); padding: 40px 30px; text-align: center;">
+                      <img src="https://hotshotaviation.com/lovable-uploads/logo.png" alt="Hot Shot Aviation" style="max-width: 180px; height: auto; display: block; margin: 0 auto 20px;">
+                      <div style="height: 2px; width: 60px; background-color: #F5C542; margin: 0 auto;"></div>
+                    </td>
+                  </tr>
+                  
+                  <!-- Hero Section -->
+                  <tr>
+                    <td style="padding: 40px 30px 30px; text-align: center;">
+                      <h1 style="margin: 0 0 16px; color: #1F1F1F; font-size: 28px; font-weight: 700; line-height: 1.3;">
+                        Thank You, ${submission.name}! ✈️
+                      </h1>
+                      <p style="margin: 0; color: #4A5568; font-size: 16px; line-height: 1.6;">
+                        We've received your message and will get back to you within <strong style="color: #EC4C3F;">24 hours</strong>.
+                      </p>
+                    </td>
+                  </tr>
+                  
+                  <!-- Message Recap Card -->
+                  <tr>
+                    <td style="padding: 0 30px 30px;">
+                      <div style="background: linear-gradient(to bottom, #FAFAFA, #F5F5F5); border-left: 4px solid #EC4C3F; border-radius: 8px; padding: 24px; margin: 0;">
+                        <h2 style="margin: 0 0 16px; color: #1F1F1F; font-size: 18px; font-weight: 600;">
+                          Your Message:
+                        </h2>
+                        <p style="margin: 0; color: #4A5568; font-size: 15px; line-height: 1.7; white-space: pre-wrap;">${submission.message}</p>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                  <!-- Call to Action -->
+                  <tr>
+                    <td style="padding: 0 30px 40px; text-align: center;">
+                      <p style="margin: 0 0 20px; color: #4A5568; font-size: 15px;">
+                        While you wait, explore our flight training programs and aircraft fleet:
+                      </p>
+                      <a href="https://hotshotaviation.com" style="display: inline-block; background: linear-gradient(135deg, #EC4C3F 0%, #C53E33 100%); color: #FFFFFF; text-decoration: none; padding: 14px 32px; border-radius: 6px; font-weight: 600; font-size: 16px; box-shadow: 0 4px 6px rgba(236, 76, 63, 0.3);">
+                        Visit Our Website
+                      </a>
+                    </td>
+                  </tr>
+                  
+                  <!-- Aviation Divider -->
+                  <tr>
+                    <td style="padding: 0 30px;">
+                      <div style="height: 1px; background: linear-gradient(to right, transparent, #EC4C3F, #F5C542, #EC4C3F, transparent);"></div>
+                    </td>
+                  </tr>
+                  
+                  <!-- Contact Information -->
+                  <tr>
+                    <td style="padding: 30px; background-color: #FAFAFA;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td style="text-align: center; padding-bottom: 20px;">
+                            <h3 style="margin: 0 0 16px; color: #1F1F1F; font-size: 18px; font-weight: 600;">
+                              Hot Shot Aviation
+                            </h3>
+                            <p style="margin: 0 0 4px; color: #4A5568; font-size: 14px;">
+                              Van Nuys Airport (KVNY)
+                            </p>
+                            <p style="margin: 0 0 20px; color: #4A5568; font-size: 14px;">
+                              16425 Hart Street, Van Nuys, CA 91411
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                              <tr>
+                                <td style="text-align: center; padding: 8px;">
+                                  <p style="margin: 0; color: #4A5568; font-size: 14px;">
+                                    📞 <a href="tel:+14244071869" style="color: #EC4C3F; text-decoration: none; font-weight: 600;">424-407-1869</a>
+                                  </p>
+                                  <p style="margin: 4px 0 0; color: #718096; font-size: 12px;">
+                                    Text or Call
+                                  </p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="text-align: center; padding: 8px;">
+                                  <p style="margin: 0; color: #4A5568; font-size: 14px;">
+                                    ✉️ <a href="mailto:info@hotshotaviation.com" style="color: #EC4C3F; text-decoration: none; font-weight: 600;">info@hotshotaviation.com</a>
+                                  </p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="text-align: center; padding: 8px;">
+                                  <p style="margin: 0; color: #4A5568; font-size: 14px;">
+                                    🕐 <strong style="color: #1F1F1F;">Mon-Sun:</strong> 7:00 AM - 8:00 PM
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  
+                  <!-- Footer -->
+                  <tr>
+                    <td style="padding: 20px 30px; text-align: center; background-color: #1F1F1F;">
+                      <p style="margin: 0 0 8px; color: #F5C542; font-size: 13px; font-weight: 600;">
+                        Where Passion Meets Precision
+                      </p>
+                      <p style="margin: 0; color: #A0AEC0; font-size: 12px; line-height: 1.5;">
+                        This is an automated confirmation. Please do not reply to this email.<br>
+                        For questions, contact us at info@hotshotaviation.com
+                      </p>
+                    </td>
+                  </tr>
+                  
+                </table>
+              </td>
+            </tr>
+          </table>
+        </body>
+        </html>
       `,
     });
 
