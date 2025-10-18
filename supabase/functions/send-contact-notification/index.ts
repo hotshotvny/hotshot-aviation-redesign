@@ -148,11 +148,11 @@ const handler = async (req: Request): Promise<Response> => {
               <td style="padding: 40px 20px;">
                 <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width: 600px; margin: 0 auto; background-color: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                   
-                  <!-- Header with Logo and Red Gradient -->
+                  <!-- Header with Logo and Yellow Gradient -->
                   <tr>
-                    <td style="background: linear-gradient(135deg, #EC4C3F 0%, #C53E33 100%); padding: 40px 30px; text-align: center;">
+                    <td style="background: linear-gradient(135deg, #F5C542 0%, #E6B833 100%); padding: 40px 30px; text-align: center;">
                       <img src="https://hotshotaviation.com/lovable-uploads/logo.png" alt="Hot Shot Aviation" style="max-width: 180px; height: auto; display: block; margin: 0 auto 20px;">
-                      <div style="height: 2px; width: 60px; background-color: #F5C542; margin: 0 auto;"></div>
+                      <div style="height: 2px; width: 60px; background-color: #EC4C3F; margin: 0 auto;"></div>
                     </td>
                   </tr>
                   
