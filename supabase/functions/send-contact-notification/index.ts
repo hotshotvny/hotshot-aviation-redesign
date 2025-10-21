@@ -32,7 +32,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log('Contact notification function triggered');
 
     // Initialize Resend
-    const resend = new Resend(Deno.env.get('RESEND_API_KEY'));
+    const resend = new Resend(Deno.env.get('ResendAPI'));
 
     // Initialize Supabase client
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
