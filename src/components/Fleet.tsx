@@ -39,7 +39,7 @@ const Fleet = () => {
       seats: 4,
       cruiseSpeed: '119 kts',
       engine: '180 HP Lycoming',
-      usefulLoad: '500 lb',
+      usefulLoad: '1013 lb',
       hourlyRate: '$175/Hour',
       features: ['Garmin GNS 430 GPS'],
       description: 'Straight-forward, reliable, and proven. N7901C offers the ideal platform for new pilots to gain experience. A Garmin GPS with ADSB traffic help keep you alert and safe.',
