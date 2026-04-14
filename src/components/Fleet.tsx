@@ -23,7 +23,7 @@ const Fleet = () => {
       cruiseSpeed: '107 kts',
       engine: '110 HP Lycoming O-235',
       usefulLoad: '502 lb',
-      hourlyRate: '$120/Hour',
+      hourlyRate: '$140/Hour',
       features: ['Garmin GNS 430 WAAS GPS', 'ADS-B In & Out', 'Dual Glideslope'],
       description: "N46826 is perfect for hour building on a budget or for anyone who just enjoys flying low and slow. IFR GPS and dual glideslope indicators mean she's always prepared for shifting weather. You won't find a better rental at this price!",
       topRightBadges: [],
