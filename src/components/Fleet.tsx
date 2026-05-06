@@ -5,10 +5,11 @@ import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnim
 import { useState } from 'react';
 import n7901cImage from '@/assets/n7901c-new.jpg';
 import n42982Image from '@/assets/n42982-new.jpg';
+import n888frImage from '@/assets/n888fr.jpg';
 
 const Fleet = () => {
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
-  const { containerRef: fleetRef, visibleItems } = useStaggeredAnimation(7, 150);
+  const { containerRef: fleetRef, visibleItems } = useStaggeredAnimation(8, 150);
   const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string; name: string } | null>(null);
   
   const aircraft = [
@@ -74,9 +75,26 @@ const Fleet = () => {
       cruiseSpeed: '119 kts',
       engine: '180 HP Lycoming',
       usefulLoad: '956 lb',
-      hourlyRate: '$185/Hour',
+      hourlyRate: '$190/Hour',
       features: ['Garmin GTN 650 GPS', 'Garmin 375 GPS', 'Dual Garmin G5\'s', 'Three-axis Autopilot', 'Bluetooth Audio Panel w/ ATC Replay'],
       description: 'With advanced avionics, N42982 gives its pilots a leg up on instrument training while building TAA time. All of this while offering everything that has made the Piper Archer such a popular choice for trainers everywhere.',
+      topRightBadges: ['Technically Advanced Aircraft'],
+      bottomBadges: []
+    },
+    {
+      id: 8,
+      name: '1974 Piper Archer I (PA28-180)',
+      tailNumber: 'N888FR',
+      icaoCode: '',
+      image: n888frImage,
+      category: 'Single Engine',
+      seats: 4,
+      cruiseSpeed: '119 kts',
+      engine: '180 HP',
+      usefulLoad: '925 lb',
+      hourlyRate: '$190/Hour',
+      features: ['Garmin GTN 650 GPS', 'Dual Garmin G5\'s', 'Three-axis Autopilot', 'JPI'],
+      description: 'With advanced avionics, N888FR gives its pilots a leg up on instrument training while building TAA time. All of this while offering everything that has made the Piper Archer such a popular choice for trainers everywhere.',
       topRightBadges: ['Technically Advanced Aircraft'],
       bottomBadges: []
     },
