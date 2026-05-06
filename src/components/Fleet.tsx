@@ -85,7 +85,7 @@ const Fleet = () => {
       id: 8,
       name: '1974 Piper Archer I (PA28-180)',
       tailNumber: 'N888ER',
-      icaoCode: '',
+      icaoCode: 'AC3C01',
       image: n888erImage,
       category: 'Single Engine',
       seats: 4,
