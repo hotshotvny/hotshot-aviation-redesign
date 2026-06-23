@@ -88,6 +88,8 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               className="mobile-touch-target"
+              aria-label="Toggle menu"
+              aria-expanded={isOpen}
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X className="h-5 sm:h-6 w-5 sm:w-6" /> : <Menu className="h-5 sm:h-6 w-5 sm:w-6" />}
