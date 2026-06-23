@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -100,7 +101,14 @@ const Index = () => {
                 <p className="text-xs text-muted-foreground/80 mt-1">
                   Elevating pilots to new heights since inception
                 </p>
-              </div>
+                <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-1 mt-3">
+                  <Link to="/privacy" className="text-xs text-muted-foreground hover:text-primary transition-colors">
+                    Privacy Policy
+                  </Link>
+                  <Link to="/terms" className="text-xs text-muted-foreground hover:text-primary transition-colors">
+                    Terms &amp; Conditions
+                  </Link>
+                </div>
               <div className="flex items-center space-x-3">
                 <span className="text-xs text-muted-foreground">Website design by</span>
                 <img 
