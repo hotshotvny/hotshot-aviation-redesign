@@ -1,9 +1,18 @@
 import Navigation from '@/components/Navigation';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Privacy = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Privacy Policy | Hot Shot Aviation</title>
+        <meta name="description" content="How Hot Shot Aviation collects, uses, and protects your personal information, including SMS communications." />
+        <link rel="canonical" href="https://hotshot-aviation-redesign.lovable.app/privacy" />
+        <meta property="og:title" content="Privacy Policy | Hot Shot Aviation" />
+        <meta property="og:description" content="How Hot Shot Aviation handles your personal data and SMS communications." />
+        <meta property="og:url" content="https://hotshot-aviation-redesign.lovable.app/privacy" />
+      </Helmet>
       <Navigation />
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">Privacy Policy</h1>
