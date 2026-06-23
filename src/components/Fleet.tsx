@@ -6,10 +6,11 @@ import { useState } from 'react';
 import n7901cImage from '@/assets/n7901c-new.jpg';
 import n42982Image from '@/assets/n42982-new.jpg';
 import n888erImage from '@/assets/n888er.jpg';
+import n43957Image from '@/assets/n43957.jpg';
 
 const Fleet = () => {
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
-  const { containerRef: fleetRef, visibleItems } = useStaggeredAnimation(8, 150);
+  const { containerRef: fleetRef, visibleItems } = useStaggeredAnimation(9, 150);
   const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string; name: string } | null>(null);
   
   const aircraft = [
@@ -96,6 +97,23 @@ const Fleet = () => {
       features: ['Garmin GTN 650 GPS', 'Dual Garmin G5\'s', 'Three-axis Autopilot', 'JPI'],
       description: 'With advanced avionics, N888ER gives its pilots a leg up on instrument training while building TAA time. All of this while offering everything that has made the Piper Archer such a popular choice for trainers everywhere.',
       topRightBadges: ['Technically Advanced Aircraft'],
+      bottomBadges: []
+    },
+    {
+      id: 9,
+      name: '1978 Piper Archer II (PA28-181)',
+      tailNumber: 'N43957',
+      icaoCode: 'a547b4',
+      image: n43957Image,
+      category: 'Single Engine',
+      seats: 4,
+      cruiseSpeed: '119 kts',
+      engine: '180 HP',
+      usefulLoad: '970 lb',
+      hourlyRate: '$200/Hour',
+      features: ['Garmin G3X Full Glass Avionics', 'Garmin GTN 750 GPS', 'Three-axis Autopilot', 'Garmin G5 Standby Instruments'],
+      description: 'N43957 is cutting edge! Its full glass avionics package is the most modern system available. Take advantage of modern resources while you train and enjoy a digital 3-axis autopilot.',
+      topRightBadges: ['TAA/Glass Avionics'],
       bottomBadges: []
     },
     {
