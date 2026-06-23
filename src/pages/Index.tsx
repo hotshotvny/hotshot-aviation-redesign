@@ -109,6 +109,7 @@ const Index = () => {
                     Terms &amp; Conditions
                   </Link>
                 </div>
+              </div>
               <div className="flex items-center space-x-3">
                 <span className="text-xs text-muted-foreground">Website design by</span>
                 <img 
