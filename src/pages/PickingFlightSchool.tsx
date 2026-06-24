@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Shield, Plane, DollarSign, Users, BookOpen, Thermometer } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import heroImage from '@/assets/hero-sunset.jpg';
 
@@ -74,6 +75,14 @@ const PickingFlightSchool = () => {
 
   return (
     <div className="min-h-screen" style={{ background: 'var(--gradient-about)' }}>
+      <Helmet>
+        <title>How to Pick a Flight School in Los Angeles | Hot Shot Aviation</title>
+        <meta name="description" content="A practical guide to choosing a safe, well-equipped, and well-priced flight school at Van Nuys Airport and across Los Angeles." />
+        <link rel="canonical" href="https://hotshot-aviation-redesign.lovable.app/flight-school-guide" />
+        <meta property="og:title" content="How to Pick a Flight School in Los Angeles" />
+        <meta property="og:description" content="A practical guide to choosing a flight school at Van Nuys Airport and across LA." />
+        <meta property="og:url" content="https://hotshot-aviation-redesign.lovable.app/flight-school-guide" />
+      </Helmet>
       <Navigation />
       {/* Hero Section */}
       <section className="relative py-24 mt-16 overflow-hidden">
