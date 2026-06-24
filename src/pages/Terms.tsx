@@ -1,9 +1,18 @@
 import Navigation from '@/components/Navigation';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Terms = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Terms &amp; Conditions | Hot Shot Aviation</title>
+        <meta name="description" content="Rental agreement, instruction, SMS program, and service terms for Hot Shot Aviation customers." />
+        <link rel="canonical" href="https://hotshot-aviation-redesign.lovable.app/terms" />
+        <meta property="og:title" content="Terms & Conditions | Hot Shot Aviation" />
+        <meta property="og:description" content="Rental and service terms for Hot Shot Aviation aircraft rental and instruction." />
+        <meta property="og:url" content="https://hotshot-aviation-redesign.lovable.app/terms" />
+      </Helmet>
       <Navigation />
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">Terms &amp; Conditions</h1>

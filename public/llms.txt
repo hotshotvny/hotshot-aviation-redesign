@@ -1,0 +1,12 @@
+# Hot Shot Aviation
+
+> Premier flight training and aircraft rental in Los Angeles, operated by Part 121 airline captains with an in-house DPE.
+
+Hot Shot Aviation offers flight instruction from Private Pilot through ATP, aircraft rental on a modern Piper/Cessna fleet, and on-site checkrides with a Designated Pilot Examiner.
+
+## Pages
+
+- [Home](/): Overview of training programs, fleet, and contact info.
+- [Flight School Guide](/flight-school-guide): How to choose a flight school in Los Angeles.
+- [Privacy Policy](/privacy): How Hot Shot Aviation handles personal data and SMS communications.
+- [Terms & Conditions](/terms): Rental agreement terms and conditions of service.

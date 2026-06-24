@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://hotshot-aviation-redesign.lovable.app/sitemap.xml
