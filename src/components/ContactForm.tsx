@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -10,9 +10,15 @@ import { supabase } from '@/integrations/supabase/client';
 import { Send, Loader2 } from 'lucide-react';
 import SuccessOverlay from '@/components/ui/SuccessOverlay';
 
+const randomDigit = () => Math.floor(Math.random() * 8) + 2;
+
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessOverlay, setShowSuccessOverlay] = useState(false);
+  const [math, setMath] = useState(() => ({ a: randomDigit(), b: randomDigit() }));
+  const [mathAnswer, setMathAnswer] = useState('');
+  const [honeypot, setHoneypot] = useState('');
+  const loadedAt = useRef(Date.now());
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,7 +30,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Required fields missing",
@@ -34,46 +40,35 @@ const ContactForm = () => {
       return;
     }
 
+    if (Number(mathAnswer) !== math.a + math.b) {
+      toast({
+        title: "Verification failed",
+        description: `Please answer the quick check: what is ${math.a} + ${math.b}?`,
+        variant: "destructive"
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      // First, store the submission in the database
-      const { data, error } = await supabase
-        .from('contact_submissions')
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone || null,
-            service_interest: formData.service_interest || null,
-            message: formData.message
-          }
-        ])
-        .select('id');
-
-      if (error) throw error;
-
-      const submissionId = data?.[0]?.id;
-
-      // Then, trigger the email notification
-      try {
-        const { error: emailError } = await supabase.functions.invoke('send-contact-notification', {
-          body: { submissionId: submissionId }
-        });
-
-        if (emailError) {
-          console.error('Email notification error:', emailError);
-          // Don't fail the entire submission if email fails
+      const { data, error } = await supabase.functions.invoke('submit-contact', {
+        body: {
+          ...formData,
+          website: honeypot,
+          elapsedMs: Date.now() - loadedAt.current,
+          mathA: math.a,
+          mathB: math.b,
+          mathAnswer: Number(mathAnswer)
         }
-      } catch (emailError) {
-        console.error('Failed to send email notification:', emailError);
-        // Continue with success message even if email fails
+      });
+
+      if (error || (data && data.error)) {
+        throw new Error((data && data.error) || 'Submission failed');
       }
 
-      // Show epic success overlay instead of toast
       setShowSuccessOverlay(true);
 
-      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -81,6 +76,9 @@ const ContactForm = () => {
         service_interest: '',
         message: ''
       });
+      setMathAnswer('');
+      setMath({ a: randomDigit(), b: randomDigit() });
+      loadedAt.current = Date.now();
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
@@ -92,6 +90,7 @@ const ContactForm = () => {
       setIsSubmitting(false);
     }
   };
+
 
   return (
     <Card className="shadow-elegant relative">
@@ -177,6 +176,34 @@ const ContactForm = () => {
               required
             />
           </div>
+
+          {/* Honeypot — hidden from real users */}
+          <div className="absolute left-[-9999px] top-auto w-px h-px overflow-hidden" aria-hidden="true">
+            <label htmlFor="website">Website</label>
+            <input
+              id="website"
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+            />
+          </div>
+
+          <div className="space-y-2 max-w-xs">
+            <Label htmlFor="math-check">Quick check: what is {math.a} + {math.b}? *</Label>
+            <Input
+              id="math-check"
+              type="text"
+              inputMode="numeric"
+              value={mathAnswer}
+              onChange={(e) => setMathAnswer(e.target.value)}
+              placeholder="Your answer"
+              required
+            />
+          </div>
+
 
           <Button 
             type="submit" 
