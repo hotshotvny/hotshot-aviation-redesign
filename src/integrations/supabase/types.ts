@@ -14,6 +14,24 @@ export type Database = {
   }
   public: {
     Tables: {
+      contact_rate_limits: {
+        Row: {
+          created_at: string
+          id: string
+          ip_hash: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          ip_hash: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          ip_hash?: string
+        }
+        Relationships: []
+      }
       contact_submissions: {
         Row: {
           created_at: string
