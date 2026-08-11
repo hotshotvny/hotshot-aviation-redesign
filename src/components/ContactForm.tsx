@@ -177,6 +177,34 @@ const ContactForm = () => {
             />
           </div>
 
+          {/* Honeypot — hidden from real users */}
+          <div className="absolute left-[-9999px] top-auto w-px h-px overflow-hidden" aria-hidden="true">
+            <label htmlFor="website">Website</label>
+            <input
+              id="website"
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+            />
+          </div>
+
+          <div className="space-y-2 max-w-xs">
+            <Label htmlFor="math-check">Quick check: what is {math.a} + {math.b}? *</Label>
+            <Input
+              id="math-check"
+              type="text"
+              inputMode="numeric"
+              value={mathAnswer}
+              onChange={(e) => setMathAnswer(e.target.value)}
+              placeholder="Your answer"
+              required
+            />
+          </div>
+
+
           <Button 
             type="submit" 
             disabled={isSubmitting}
