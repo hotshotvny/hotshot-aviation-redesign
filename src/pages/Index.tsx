@@ -12,10 +12,10 @@ const Index = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>Hot Shot Aviation | Flight Training in Los Angeles</title>
-        <meta name="description" content="Premier Los Angeles flight training and aircraft rental, operated by Part 121 airline captains with an in-house DPE." />
+        <meta name="description" content="Premier Los Angeles flight training and aircraft rental, operated by Part 121 airline captains whose owner is a DPE." />
         <link rel="canonical" href="https://hotshot-aviation-redesign.lovable.app/" />
         <meta property="og:title" content="Hot Shot Aviation | Flight Training in Los Angeles" />
-        <meta property="og:description" content="Premier LA flight training and aircraft rental by Part 121 airline captains, with an in-house DPE." />
+        <meta property="og:description" content="Premier LA flight training and aircraft rental by Part 121 airline captains, whose owner is a DPE." />
         <meta property="og:url" content="https://hotshot-aviation-redesign.lovable.app/" />
       </Helmet>
       <Navigation />

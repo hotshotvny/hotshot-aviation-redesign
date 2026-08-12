@@ -247,7 +247,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center animate-fade-in-left stagger-3 hover-scale cursor-pointer">
                   <CheckCircle className="w-5 h-5 text-primary mr-3 animate-bounce-in" />
-                  <span className="text-foreground">In-house Designated Pilot Examiner (DPE)</span>
+                  <span className="text-foreground">Owner is a Designated Pilot Examiner (DPE)</span>
                 </div>
                 <div className="flex items-center animate-fade-in-left stagger-4 hover-scale cursor-pointer">
                   <CheckCircle className="w-5 h-5 text-primary mr-3 animate-bounce-in" />
